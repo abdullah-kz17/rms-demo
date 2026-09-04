@@ -19,7 +19,7 @@
       <span>reservations@velmara.com</span>
     </div>
     <div class="topbar-right">
-      <a href="#contact">Make A Reservation Online</a>
+      <a href="#reserve">Make A Reservation Online</a>
     </div>
   </div>
 </div>
@@ -45,7 +45,7 @@
       <a href="#contact">Contact Us</a>
     </nav>
     <div class="nav-cta">
-      <a href="#contact" class="btn btn-primary">Make Reservation</a>
+      <a href="#reserve" class="btn btn-primary">Make Reservation</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -60,7 +60,7 @@
     <h1>FLAVOURS THAT<br>LINGER</h1>
     <p>Experience seasonal cuisine crafted from the finest ingredients — every plate a quiet celebration of taste, texture and time.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary">Book A Table</a>
+      <a href="#reserve" class="btn btn-primary">Book A Table</a>
       <a href="#menu" class="btn btn-outline">Explore Menu</a>
     </div>
   </div>
@@ -137,7 +137,7 @@
         <li><span>02</span> Sommelier-curated wine pairings</li>
         <li><span>03</span> Private dining & event spaces on request</li>
       </ul>
-      <a href="#contact" class="btn btn-primary">Reserve Your Table</a>
+      <a href="#reserve" class="btn btn-primary">Reserve Your Table</a>
     </div>
   </div>
 </section>
@@ -383,6 +383,71 @@
       <a href="#contact" class="btn btn-dark" style="margin-top:1.5rem;">Request A Quote</a>
     </div>
     <img class="reveal reveal-right" src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=700&q=80" alt="Catering">
+  </div>
+</section>
+
+<section class="reservation" id="reserve">
+  <div class="container reservation-grid">
+    <div class="reservation-media reveal reveal-left">
+      <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80" alt="A table set for reservation at Velmara">
+    </div>
+    <div class="reservation-form-wrap reveal reveal-right">
+      <span class="section-label">Book A Table</span>
+      <h2>Reserve Your Evening</h2>
+      <p>Tell us a little about your visit and we'll hold your table — for parties larger than 8, please contact us directly to arrange private dining.</p>
+      <form class="reservation-form" id="reservationForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="res-name">Full Name</label>
+            <input type="text" id="res-name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="res-email">Email</label>
+            <input type="email" id="res-email" name="email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="res-phone">Phone</label>
+            <input type="tel" id="res-phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="res-guests">Guests</label>
+            <select id="res-guests" name="guests" required>
+              <option value="" disabled selected>Select party size</option>
+              <option>1 Guest</option>
+              <option>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4 Guests</option>
+              <option>5 Guests</option>
+              <option>6 Guests</option>
+              <option>7 Guests</option>
+              <option>8 Guests</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="res-date">Date</label>
+            <input type="date" id="res-date" name="date" required>
+          </div>
+          <div class="form-group">
+            <label for="res-time">Time</label>
+            <input type="time" id="res-time" name="time" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="res-notes">Special Requests <span>(optional)</span></label>
+          <textarea id="res-notes" name="notes" rows="3" placeholder="Allergies, celebrations, seating preferences…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary reservation-submit">
+          <span class="btn-label">Confirm Reservation</span>
+        </button>
+        <p class="form-success" id="reservationSuccess" role="status" aria-live="polite" hidden>
+          Thank you — your reservation request has been received. We'll confirm by email shortly.
+        </p>
+      </form>
+    </div>
   </div>
 </section>
 

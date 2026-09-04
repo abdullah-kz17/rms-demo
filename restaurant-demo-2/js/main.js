@@ -214,3 +214,30 @@ if (slider) {
 
   startAutoplay();
 }
+
+// Reservation form
+const reservationForm = document.getElementById('reservationForm');
+if (reservationForm) {
+  const dateInput = document.getElementById('res-date');
+  if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
+
+  const submitBtn = reservationForm.querySelector('.reservation-submit');
+  const successMsg = document.getElementById('reservationSuccess');
+
+  reservationForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!reservationForm.checkValidity()) {
+      reservationForm.reportValidity();
+      return;
+    }
+    submitBtn.classList.add('is-loading');
+    submitBtn.disabled = true;
+    setTimeout(() => {
+      submitBtn.classList.remove('is-loading');
+      submitBtn.disabled = false;
+      successMsg.hidden = false;
+      reservationForm.reset();
+      successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 900);
+  });
+}

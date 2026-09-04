@@ -21,7 +21,7 @@
       <span class="tagline">48 Harborview Lane, Boston, MA</span>
       <span class="brand-name">LUCE<span>RA</span></span>
     </div>
-    <a href="#contact" class="btn btn-outline header-reserve">Reserve a Table</a>
+    <a href="#reserve" class="btn btn-outline header-reserve">Reserve a Table</a>
   </div>
 </header>
 
@@ -35,6 +35,7 @@
     <a href="#menu">Menu</a>
     <a href="#favorites">Favorites</a>
     <a href="#blog">Blog</a>
+    <a href="#reserve">Reserve</a>
     <a href="#contact">Contact</a>
   </nav>
   <div class="offcanvas-contact">
@@ -48,7 +49,10 @@
     <div class="hero-address">48 Harborview Lane, Boston, MA</div>
     <h1>LUCERA</h1>
     <p>Discover a world of Italian-American craft — where every dish is made to celebrate slow food, shared tables and unforgettable evenings.</p>
-    <a href="#menu" class="btn btn-primary">Our Menu</a>
+    <div class="hero-actions">
+      <a href="#reserve" class="btn btn-primary">Reserve a Table</a>
+      <a href="#menu" class="btn btn-outline">Our Menu</a>
+    </div>
   </div>
   <div class="hero-scroll-cue"></div>
 </section>
@@ -316,6 +320,71 @@
         <button class="slider-arrow slider-next" aria-label="Next testimonial"><i class="fa-solid fa-chevron-right"></i></button>
       </div>
       <div class="slider-dots"></div>
+    </div>
+  </div>
+</section>
+
+<section class="reservation" id="reserve">
+  <div class="container reservation-grid">
+    <div class="reservation-media reveal reveal-left">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="A table set for reservation at Lucera">
+    </div>
+    <div class="reservation-form-wrap reveal reveal-right">
+      <span class="script-label">Book A Table</span>
+      <h2>Reserve Your Table</h2>
+      <p>Let us know when you're joining us and we'll have your table ready — for parties of 9 or more, please reach out directly to arrange private dining.</p>
+      <form class="reservation-form" id="reservationForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="res-name">Full Name</label>
+            <input type="text" id="res-name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="res-email">Email</label>
+            <input type="email" id="res-email" name="email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="res-phone">Phone</label>
+            <input type="tel" id="res-phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="res-guests">Guests</label>
+            <select id="res-guests" name="guests" required>
+              <option value="" disabled selected>Select party size</option>
+              <option>1 Guest</option>
+              <option>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4 Guests</option>
+              <option>5 Guests</option>
+              <option>6 Guests</option>
+              <option>7 Guests</option>
+              <option>8 Guests</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="res-date">Date</label>
+            <input type="date" id="res-date" name="date" required>
+          </div>
+          <div class="form-group">
+            <label for="res-time">Time</label>
+            <input type="time" id="res-time" name="time" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="res-notes">Special Requests <span>(optional)</span></label>
+          <textarea id="res-notes" name="notes" rows="3" placeholder="Allergies, celebrations, seating preferences…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary reservation-submit">
+          <span class="btn-label">Confirm Reservation</span>
+        </button>
+        <p class="form-success" id="reservationSuccess" role="status" aria-live="polite" hidden>
+          Thank you — your reservation request has been received. We'll confirm by email shortly.
+        </p>
+      </form>
     </div>
   </div>
 </section>

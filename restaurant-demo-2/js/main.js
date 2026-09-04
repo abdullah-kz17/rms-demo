@@ -36,8 +36,15 @@ function onScroll() {
   header.classList.toggle('scrolled', window.scrollY > 40);
   backToTop.classList.toggle('visible', window.scrollY > 500);
   if (!prefersReducedMotion) {
-    const offset = window.scrollY * 0.3;
-    parallaxEls.forEach((el) => { el.style.transform = `translateY(${offset}px)`; });
+    // Offset is relative to each layer's own container position in the
+    // viewport (not raw page scrollY), so it stays bounded regardless of
+    // how far down the page the section sits.
+    parallaxEls.forEach((el) => {
+      const parent = el.parentElement;
+      const rect = parent.getBoundingClientRect();
+      const offset = rect.top * -0.15;
+      el.style.transform = `translateY(${offset}px)`;
+    });
   }
   ticking = false;
 }

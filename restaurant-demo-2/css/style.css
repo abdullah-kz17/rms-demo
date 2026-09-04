@@ -197,7 +197,7 @@ h2 { font-size: var(--fs-h2); letter-spacing: 1px; text-transform: uppercase; }
 }
 .hero-bg {
   position: absolute;
-  top: -80px; left: 0; right: 0; bottom: -80px;
+  top: -160px; left: 0; right: 0; bottom: -160px;
   background: linear-gradient(180deg, rgba(16,13,11,0.4), rgba(16,13,11,0.68)),
               url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
   will-change: transform;
@@ -433,7 +433,8 @@ h2 { font-size: var(--fs-h2); letter-spacing: 1px; text-transform: uppercase; }
 .promo-slide.active { opacity: 1; visibility: visible; }
 .promo-bg {
   position: absolute;
-  top: -60px; left: 0; right: 0; bottom: -60px;
+  top: -160px; left: 0; right: 0; bottom: -160px;
+  background-color: var(--color-dark);
   background-size: cover;
   background-position: center;
   will-change: transform;

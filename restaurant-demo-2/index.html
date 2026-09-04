@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lucera — Ristorante</title>
+<meta name="description" content="Lucera Ristorante — Italian-American fine dining in Boston. Explore our menu, order online, or reserve a table.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Sacramento&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <button class="header-icon-btn" id="menuOpenBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+    <div class="header-brand">
+      <span class="tagline">48 Harborview Lane, Boston, MA</span>
+      <span class="brand-name">LUCE<span>RA</span></span>
+    </div>
+    <a href="#contact" class="btn btn-outline header-reserve">Reserve a Table</a>
+  </div>
+</header>
+
+<div class="offcanvas-overlay" id="offcanvasOverlay"></div>
+<aside class="offcanvas-menu" id="offcanvasMenu">
+  <button class="offcanvas-close" id="menuCloseBtn" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#order">Order Online</a>
+    <a href="#menu">Menu</a>
+    <a href="#favorites">Favorites</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="offcanvas-contact">
+    48 Harborview Lane<br>Boston, MA 02110<br>+1 617 555 0134
+  </div>
+</aside>
+
+<section class="hero" id="home">
+  <div class="hero-bg" data-parallax></div>
+  <div class="hero-content">
+    <div class="hero-address">48 Harborview Lane, Boston, MA</div>
+    <h1>LUCERA</h1>
+    <p>Discover a world of Italian-American craft — where every dish is made to celebrate slow food, shared tables and unforgettable evenings.</p>
+    <a href="#menu" class="btn btn-primary">Our Menu</a>
+  </div>
+  <div class="hero-scroll-cue"></div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-media">
+      <img class="about-img-main reveal reveal-left" src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80" alt="Chef plating a dish at Lucera">
+      <img class="about-img-float reveal reveal-right stagger-2" src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=500&q=80" alt="Lucera dining room">
+      <div class="about-badge reveal stagger-3">
+        <strong>14+</strong>
+        <span>Years of Craft</span>
+      </div>
+    </div>
+    <div class="about-text reveal reveal-right">
+      <span class="script-label">Our Story</span>
+      <h2>A Table Worth Returning To</h2>
+      <p>Since 2011, Lucera has brought together Italian-American tradition and modern craft — slow-simmered sauces, hand-rolled pasta, and a dining room built for long, unhurried evenings with people who matter.</p>
+      <div class="about-stats">
+        <div class="about-stat">
+          <div class="stat-number">14+</div>
+          <div class="stat-label">Years Serving Boston</div>
+        </div>
+        <div class="about-stat">
+          <div class="stat-number">40+</div>
+          <div class="stat-label">Signature Dishes</div>
+        </div>
+        <div class="about-stat">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Guest Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="order-online" id="order">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="script-label">Delivery Service</span>
+      <h2>Order Online</h2>
+    </div>
+    <div class="carousel">
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="orderTrack">
+          <figure class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=500&q=80" alt="Sushi">
+            <figcaption>Sushi</figcaption>
+          </figure>
+          <figure class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80" alt="Burgers">
+            <figcaption>Burgers</figcaption>
+          </figure>
+          <figure class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=500&q=80" alt="Dinner">
+            <figcaption>Dinner</figcaption>
+          </figure>
+          <figure class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80" alt="Pizza">
+            <figcaption>Pizza</figcaption>
+          </figure>
+          <figure class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=500&q=80" alt="Pasta">
+            <figcaption>Pasta</figcaption>
+          </figure>
+          <figure class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=500&q=80" alt="Salads">
+            <figcaption>Salads</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-arrow" id="orderPrev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="carousel-dots" id="orderDots"></div>
+        <button class="carousel-arrow" id="orderNext" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="promo-slider" id="promoSlider">
+  <div class="promo-slide active">
+    <div class="promo-bg" data-parallax style="background-image:url('https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1600&q=80')"></div>
+    <div class="promo-card">
+      <h3>Weekday Lunch Delight</h3>
+      <p>Treat yourself to our two-course lunch at a special price, Monday to Friday, 11AM to 3PM.</p>
+      <a href="#menu" class="btn btn-primary">Our Menu</a>
+    </div>
+  </div>
+  <div class="promo-slide">
+    <div class="promo-bg" data-parallax style="background-image:url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1600&q=80')"></div>
+    <div class="promo-card">
+      <h3>Weekend Brunch Special</h3>
+      <p>Join us Saturday and Sunday for a leisurely brunch with live music and bottomless coffee.</p>
+      <a href="#menu" class="btn btn-primary">Our Menu</a>
+    </div>
+  </div>
+  <div class="promo-slide">
+    <div class="promo-bg" data-parallax style="background-image:url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=80')"></div>
+    <div class="promo-card">
+      <h3>Chef's Tasting Menu</h3>
+      <p>An intimate seven-course journey through our chef's seasonal favorites, paired with fine wine.</p>
+      <a href="#menu" class="btn btn-primary">Our Menu</a>
+    </div>
+  </div>
+  <button class="promo-arrow promo-prev" aria-label="Previous offer"><i class="fa-solid fa-chevron-left"></i></button>
+  <button class="promo-arrow promo-next" aria-label="Next offer"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+
+<section class="menu" id="menu">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="script-label">Featured Dishes</span>
+      <h2>Our Menu</h2>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-dish reveal reveal-left">
+        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=200&q=80" alt="California Roll">
+        <div class="dish-info">
+          <div class="dish-title-row"><h4>California Roll</h4><span class="dots"></span><span class="price">$7.99</span></div>
+          <p>Fresh crab, avocado and cucumber, wrapped in seaweed and rice, garnished with tobiko.</p>
+        </div>
+      </div>
+      <div class="menu-dish reveal reveal-right">
+        <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=200&q=80" alt="Dragon Roll">
+        <div class="dish-info">
+          <div class="dish-title-row"><h4>Dragon Roll</h4><span class="dots"></span><span class="price">$12.99</span></div>
+          <p>Tempura shrimp and cucumber inside, topped with sliced avocado, eel sauce and sesame seeds.</p>
+        </div>
+      </div>
+      <div class="menu-dish reveal reveal-left">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=200&q=80" alt="Spicy Tuna Roll">
+        <div class="dish-info">
+          <div class="dish-title-row"><h4>Spicy Tuna Roll</h4><span class="dots"></span><span class="price">$8.99</span></div>
+          <p>Fresh tuna mixed with spicy mayo and cucumber, wrapped in seaweed and rice, sesame topped.</p>
+        </div>
+      </div>
+      <div class="menu-dish reveal reveal-right">
+        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=200&q=80" alt="Vegetable Roll">
+        <div class="dish-info">
+          <div class="dish-title-row"><h4>Vegetable Roll</h4><span class="dots"></span><span class="price">$6.99</span></div>
+          <p>A delightful choice for vegetarians, with fresh veggies wrapped in seaweed, rice and bell pepper.</p>
+        </div>
+      </div>
+      <div class="menu-dish reveal reveal-left">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=200&q=80" alt="Pizza BBQ">
+        <div class="dish-info">
+          <div class="dish-title-row"><h4>Pizza BBQ</h4><span class="dots"></span><span class="price">$18.99</span></div>
+          <p>Savory BBQ pizza topped with tender chicken, red onions and mozzarella, in a tangy BBQ sauce.</p>
+        </div>
+      </div>
+      <div class="menu-dish reveal reveal-right">
+        <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=200&q=80" alt="Fritti di Mare">
+        <div class="dish-info">
+          <div class="dish-title-row"><h4>Fritti di Mare</h4><span class="dots"></span><span class="price">$22.99</span></div>
+          <p>Seafood medley of shrimp, calamari and mussels, enhanced with garlic, tomatoes and mozzarella.</p>
+        </div>
+      </div>
+    </div>
+    <div class="menu-cta reveal"><a href="#order" class="btn btn-primary">View Full Menu</a></div>
+  </div>
+</section>
+
+<div class="promo-strip">Free Delivery on Orders Over <span>$59</span></div>
+
+<section class="favorites" id="favorites">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="script-label">Best Sellers for Delivery</span>
+      <h2>Favorite Delivery</h2>
+    </div>
+    <div class="favorites-grid">
+      <div class="favorite-card reveal stagger-1">
+        <span class="favorite-badge">Sale</span>
+        <img src="https://images.unsplash.com/photo-1546241072-48010ad2862c?auto=format&fit=crop&w=500&q=80" alt="Foie Gras with Vegetable Salad">
+        <div class="favorite-body">
+          <h4>Foie Gras with Vegetable Salad</h4>
+          <div class="favorite-price-row">
+            <span class="favorite-price"><span class="old-price">$29.99</span>$23.99</span>
+            <button class="favorite-add">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="favorite-card reveal stagger-2">
+        <span class="favorite-badge favorite-badge-popular">Popular</span>
+        <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=500&q=80" alt="Spicy Salmon Spaghetti">
+        <div class="favorite-body">
+          <h4>Spicy Salmon Spaghetti</h4>
+          <div class="favorite-price-row">
+            <span class="favorite-price">$20.99</span>
+            <button class="favorite-add">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="favorite-card reveal stagger-3">
+        <span class="favorite-badge favorite-badge-new">New</span>
+        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=500&q=80" alt="Creamy Meatball Soup">
+        <div class="favorite-body">
+          <h4>Creamy Meatball Soup</h4>
+          <div class="favorite-price-row">
+            <span class="favorite-price">$8.99</span>
+            <button class="favorite-add">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="news" id="blog">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="script-label">From Our Blog</span>
+      <h2>Latest News</h2>
+    </div>
+    <div class="news-content">
+      <img class="reveal reveal-left" src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=700&q=80" alt="Catering event">
+      <div class="news-text reveal reveal-right">
+        <div class="news-date">July 22, 2026</div>
+        <h3>Elevate Your Event With Our Exceptional Catering Services</h3>
+        <p>Discover how our top-notch catering services can make your next event unforgettable, with customizable menus and impeccable service. Planning an event? Let Lucera take care of your catering needs.</p>
+        <a href="#contact">Read More &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="script-label">What Our Clients Say</span>
+      <h2>Testimonials</h2>
+    </div>
+    <div class="testimonial-slider reveal">
+      <div class="slider-row">
+        <button class="slider-arrow slider-prev" aria-label="Previous testimonial"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="testimonial-viewport">
+          <div class="testimonial-track">
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p>"I had the pleasure of dining at this restaurant with a group of friends and it was truly fantastic. The food was delicious and the service was impeccable."</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Guest">
+                <div><strong>Rachel K.</strong><span>Verified Guest</span></div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p>"I visited this restaurant with my family and we were blown away by the quality of the food and the service. Ambiance was perfect for a relaxed evening."</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Guest">
+                <div><strong>James H.</strong><span>Verified Guest</span></div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p>"I'm so glad I stumbled upon this restaurant. The food is exceptional and the staff is warm and welcoming. I highly recommend it for a memorable dining experience."</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Guest">
+                <div><strong>Sarah P.</strong><span>Verified Guest</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="slider-arrow slider-next" aria-label="Next testimonial"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+      <div class="slider-dots"></div>
+    </div>
+  </div>
+</section>
+
+<section class="map-section" id="contact">
+  <img class="map-img" src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1600&q=80" alt="Map area">
+  <div class="map-pin" style="top:45%; left:32%;">&#128205;</div>
+  <div class="map-pin" style="top:60%; left:55%; animation-delay:0.15s;">&#128205;</div>
+  <div class="map-pin" style="top:35%; left:70%; animation-delay:0.3s;">&#128205;</div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-logo">LUCE<span>RA</span></div>
+  <div class="footer-address">48 Harborview Lane, Boston, MA 02110<br>+1 617 555 0134</div>
+  <span class="footer-badge">Open Until 22:00</span>
+  <div class="footer-socials">
+    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-links">
+      <a href="#order">Order Online</a>
+      <a href="#menu">Menu</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <span>&copy; 2026 Lucera. All Rights Reserved.</span>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

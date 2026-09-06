@@ -1,0 +1,32 @@
+:root {
+  --color-accent: #ff3d2e;
+  --color-accent-dark: #d92c1f;
+  --color-yellow: #ffcc00;
+  --color-dark: #0a0a0c;
+  --color-dark-2: #151517;
+  --color-cream: #f7f7f8;
+  --color-white: #ffffff;
+  --color-text: #b7b7bd;
+  --color-text-light: #7a7a82;
+  --color-border: #232326;
+
+  --font-heading: 'Anton', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --ease-standard: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 0.25s;
+  --duration-base: 0.5s;
+  --duration-slow: 0.9s;
+  --reveal-distance: 32px;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-card-hover: 0 20px 45px rgba(0, 0, 0, 0.5);
+  --shadow-image: 0 25px 60px rgba(0, 0, 0, 0.5);
+
+  --container-width: 1240px;
+}

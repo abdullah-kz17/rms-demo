@@ -1,0 +1,33 @@
+:root {
+  --color-accent: #6d5bf0;
+  --color-accent-dark: #5a48d8;
+  --color-teal: #14b8a6;
+  --color-pink: #f0508a;
+  --color-dark: #0e0b1f;
+  --color-dark-2: #171233;
+  --color-cream: #f7f6fc;
+  --color-white: #ffffff;
+  --color-text: #5c5872;
+  --color-text-light: #9793ab;
+  --color-border: #e9e7f5;
+
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --ease-standard: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 0.25s;
+  --duration-base: 0.5s;
+  --duration-slow: 0.9s;
+  --reveal-distance: 32px;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+
+  --shadow-card: 0 10px 30px rgba(14, 11, 31, 0.08);
+  --shadow-card-hover: 0 20px 45px rgba(14, 11, 31, 0.15);
+  --shadow-image: 0 30px 70px rgba(14, 11, 31, 0.22);
+
+  --container-width: 1240px;
+}

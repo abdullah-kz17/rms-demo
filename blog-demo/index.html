@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Daily Loom — Stories Worth Your Time</title>
+<meta name="description" content="The Daily Loom — a magazine of essays and stories on culture, travel, food and life, updated daily." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#home" class="brand">The Daily <span>Loom</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" aria-expanded="false">Categories <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="nav-dropdown-menu">
+          <a href="#categories">Culture</a>
+          <a href="#categories">Travel</a>
+          <a href="#categories">Food</a>
+          <a href="#categories">Life</a>
+        </div>
+      </div>
+      <a href="#about">About</a>
+      <a href="#footer">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <a href="#newsletter" class="btn btn-primary">Subscribe</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="search-panel" id="searchPanel">
+    <div class="container">
+      <form id="searchForm"><i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Search articles, authors, topics..." aria-label="Search"><button type="button" class="icon-btn" id="searchClose" aria-label="Close search"><i class="fa-solid fa-xmark"></i></button></form>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-bg" data-parallax style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1800&q=80');"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-inner reveal">
+    <span class="section-label section-label-light">Culture &middot; Featured</span>
+    <h1>The Quiet Art Of Doing Nothing, On Purpose</h1>
+    <p>Why the busiest people you know are starting to schedule empty time — and what it's actually doing to their work.</p>
+    <div class="hero-meta">
+      <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=100&q=80" alt="Author avatar">
+      <div><strong>Maren Aoki</strong><span>Sept 2, 2026 &middot; 7 min read</span></div>
+    </div>
+    <a href="post.html?id=1" class="btn btn-primary hero-read-btn">Read Full Story <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+  <div class="hero-scroll-cue"><span></span></div>
+</section>
+
+<section class="featured" id="featured">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Fresh Off The Press</span>
+      <h2>Featured Posts</h2>
+    </div>
+    <div class="post-grid">
+      <article class="post-card reveal stagger-1">
+        <a href="post.html?id=2" class="post-media"><img src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?auto=format&fit=crop&w=600&q=80" alt="Mountain travel"><span class="post-cat">Travel</span></a>
+        <div class="post-body">
+          <span class="post-date">Sept 1, 2026</span>
+          <h3><a href="post.html?id=2">Five Days Alone In The Dolomites</a></h3>
+          <p>A solo hiking trip turned into the reset I didn't know I needed.</p>
+          <div class="post-footer"><div class="post-author"><img src="https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&w=80&q=80" alt="Author"> Leo Marsh</div><a href="post.html?id=2" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a></div>
+        </div>
+      </article>
+      <article class="post-card reveal stagger-2">
+        <a href="post.html?id=3" class="post-media"><img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=600&q=80" alt="Home cooked food"><span class="post-cat">Food</span></a>
+        <div class="post-body">
+          <span class="post-date">Aug 29, 2026</span>
+          <h3><a href="post.html?id=3">The One-Pan Dinners That Saved My Week</a></h3>
+          <p>Seven recipes for nights when cooking feels like one task too many.</p>
+          <div class="post-footer"><div class="post-author"><img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=80&q=80" alt="Author"> Priya Nair</div><a href="post.html?id=3" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a></div>
+        </div>
+      </article>
+      <article class="post-card reveal stagger-3">
+        <a href="post.html?id=4" class="post-media"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Laptop workspace"><span class="post-cat">Tech</span></a>
+        <div class="post-body">
+          <span class="post-date">Aug 26, 2026</span>
+          <h3><a href="post.html?id=4">I Deleted Every App Except Four. Here's What Happened</a></h3>
+          <p>A month-long experiment in radical digital minimalism.</p>
+          <div class="post-footer"><div class="post-author"><img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=80&q=80" alt="Author"> Devon Cole</div><a href="post.html?id=4" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a></div>
+        </div>
+      </article>
+      <article class="post-card reveal stagger-4">
+        <a href="post.html?id=5" class="post-media"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="City street life"><span class="post-cat">Culture</span></a>
+        <div class="post-body">
+          <span class="post-date">Aug 22, 2026</span>
+          <h3><a href="post.html?id=5">What Small Towns Get Right About Community</a></h3>
+          <p>Notes from six months of working remotely out of towns under 5,000 people.</p>
+          <div class="post-footer"><div class="post-author"><img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?auto=format&fit=crop&w=80&q=80" alt="Author"> Maren Aoki</div><a href="post.html?id=5" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a></div>
+        </div>
+      </article>
+      <article class="post-card reveal stagger-1">
+        <a href="post.html?id=6" class="post-media"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80" alt="Journaling desk"><span class="post-cat">Life</span></a>
+        <div class="post-body">
+          <span class="post-date">Aug 18, 2026</span>
+          <h3><a href="post.html?id=6">The Two-Minute Journal Habit That Actually Stuck</a></h3>
+          <p>Forget the elaborate morning pages — this is the version that survives busy weeks.</p>
+          <div class="post-footer"><div class="post-author"><img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=80&q=80" alt="Author"> Priya Nair</div><a href="post.html?id=6" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a></div>
+        </div>
+      </article>
+      <article class="post-card reveal stagger-2">
+        <a href="post.html?id=7" class="post-media"><img src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?auto=format&fit=crop&w=600&q=80" alt="Coastal travel"><span class="post-cat">Travel</span></a>
+        <div class="post-body">
+          <span class="post-date">Aug 14, 2026</span>
+          <h3><a href="post.html?id=7">The Coastal Towns Everyone Skips On Their Way South</a></h3>
+          <p>Three under-the-radar stops worth the detour on any Mediterranean road trip.</p>
+          <div class="post-footer"><div class="post-author"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=80" alt="Author"> Leo Marsh</div><a href="post.html?id=7" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="categories" id="categories">
+  <div class="container categories-row reveal">
+    <a href="#latest" class="category-chip active"><i class="fa-solid fa-layer-group"></i> All</a>
+    <a href="#latest" class="category-chip"><i class="fa-solid fa-masks-theater"></i> Culture</a>
+    <a href="#latest" class="category-chip"><i class="fa-solid fa-plane"></i> Travel</a>
+    <a href="#latest" class="category-chip"><i class="fa-solid fa-utensils"></i> Food</a>
+    <a href="#latest" class="category-chip"><i class="fa-solid fa-leaf"></i> Life</a>
+    <a href="#latest" class="category-chip"><i class="fa-solid fa-laptop"></i> Tech</a>
+  </div>
+</section>
+
+<section class="latest" id="latest">
+  <div class="container latest-layout">
+    <div class="latest-main">
+      <div class="section-head-row reveal">
+        <div><span class="section-label">Just Published</span><h2>Latest Posts</h2></div>
+      </div>
+      <div class="post-list">
+        <article class="post-row reveal">
+          <a href="post.html?id=8" class="post-row-media"><img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=300&q=80" alt="Forest path"></a>
+          <div class="post-row-body">
+            <span class="post-cat post-cat-inline">Life</span>
+            <h3><a href="post.html?id=8">Learning To Sit With Boredom Again</a></h3>
+            <p>What happened when I banned my phone from every waiting room for a month.</p>
+            <div class="post-row-meta"><span class="post-date">Aug 10, 2026</span><span>Maren Aoki</span><a href="post.html?id=8" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a></div>
+          </div>
+        </article>
+        <article class="post-row reveal">
+          <a href="post.html?id=9" class="post-row-media"><img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=300&q=80" alt="Cafe scene"></a>
+          <div class="post-row-body">
+            <span class="post-cat post-cat-inline">Food</span>
+            <h3><a href="post.html?id=9">The Neighbourhood Cafés That Made Me A Regular</a></h3>
+            <p>Three counters, three baristas who know my order, and why that matters.</p>
+            <div class="post-row-meta"><span class="post-date">Aug 6, 2026</span><span>Priya Nair</span><a href="post.html?id=9" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a></div>
+          </div>
+        </article>
+        <article class="post-row reveal">
+          <a href="post.html?id=10" class="post-row-media"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" alt="Portrait writing"></a>
+          <div class="post-row-body">
+            <span class="post-cat post-cat-inline">Culture</span>
+            <h3><a href="post.html?id=10">Why We Still Write Letters In 2026</a></h3>
+            <p>A short defence of slow correspondence in an instant-everything world.</p>
+            <div class="post-row-meta"><span class="post-date">Aug 2, 2026</span><span>Devon Cole</span><a href="post.html?id=10" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a></div>
+          </div>
+        </article>
+        <article class="post-row reveal">
+          <a href="post.html?id=11" class="post-row-media"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=300&q=80" alt="Reading nook"></a>
+          <div class="post-row-body">
+            <span class="post-cat post-cat-inline">Life</span>
+            <h3><a href="post.html?id=11">Building A Reading Habit That Outlasts January</a></h3>
+            <p>The one-page rule that finally made reading a daily habit instead of a resolution.</p>
+            <div class="post-row-meta"><span class="post-date">Jul 28, 2026</span><span>Leo Marsh</span><a href="post.html?id=11" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a></div>
+          </div>
+        </article>
+      </div>
+      <div class="section-cta reveal"><a href="#latest" class="btn btn-outline">Load More Stories</a></div>
+    </div>
+
+    <aside class="latest-sidebar">
+      <div class="sidebar-card newsletter-box reveal-right">
+        <i class="fa-solid fa-envelope-open-text"></i>
+        <h4>Never Miss A Story</h4>
+        <p>One thoughtful email a week. No spam, unsubscribe anytime.</p>
+        <form id="sidebarNewsletter">
+          <input type="email" placeholder="you@example.com" required aria-label="Email address">
+          <button type="submit" class="btn btn-primary btn-sm">Join</button>
+        </form>
+      </div>
+      <div class="sidebar-card reveal-right stagger-1">
+        <h4>Popular Tags</h4>
+        <div class="tag-cloud">
+          <a href="#" class="tag-pill">Mindfulness</a>
+          <a href="#" class="tag-pill">Solo Travel</a>
+          <a href="#" class="tag-pill">Remote Work</a>
+          <a href="#" class="tag-pill">Cooking</a>
+          <a href="#" class="tag-pill">Minimalism</a>
+          <a href="#" class="tag-pill">Journaling</a>
+          <a href="#" class="tag-pill">Slow Living</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="popular" id="popular">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Reader Favourites</span>
+      <h2>Popular &amp; Trending Posts</h2>
+    </div>
+    <div class="carousel reveal">
+      <div class="carousel-track" id="trendingTrack">
+        <article class="trending-card">
+          <div class="trending-media"><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=500&q=80" alt="Quiet reading"><span class="post-cat">Culture</span></div>
+          <div class="trending-body">
+            <h3><a href="post.html?id=1">The Quiet Art Of Doing Nothing, On Purpose</a></h3>
+            <div class="trending-meta"><span><i class="fa-solid fa-eye"></i> 12.4k</span><span><i class="fa-solid fa-comment"></i> 86</span></div>
+          </div>
+        </article>
+        <article class="trending-card">
+          <div class="trending-media"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500&q=80" alt="Laptop workspace"><span class="post-cat">Tech</span></div>
+          <div class="trending-body">
+            <h3><a href="post.html?id=4">I Deleted Every App Except Four. Here's What Happened</a></h3>
+            <div class="trending-meta"><span><i class="fa-solid fa-eye"></i> 9.8k</span><span><i class="fa-solid fa-comment"></i> 64</span></div>
+          </div>
+        </article>
+        <article class="trending-card">
+          <div class="trending-media"><img src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?auto=format&fit=crop&w=500&q=80" alt="Mountain travel"><span class="post-cat">Travel</span></div>
+          <div class="trending-body">
+            <h3><a href="post.html?id=2">Five Days Alone In The Dolomites</a></h3>
+            <div class="trending-meta"><span><i class="fa-solid fa-eye"></i> 8.1k</span><span><i class="fa-solid fa-comment"></i> 51</span></div>
+          </div>
+        </article>
+        <article class="trending-card">
+          <div class="trending-media"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80" alt="City street life"><span class="post-cat">Culture</span></div>
+          <div class="trending-body">
+            <h3><a href="post.html?id=5">What Small Towns Get Right About Community</a></h3>
+            <div class="trending-meta"><span><i class="fa-solid fa-eye"></i> 7.3k</span><span><i class="fa-solid fa-comment"></i> 44</span></div>
+          </div>
+        </article>
+        <article class="trending-card">
+          <div class="trending-media"><img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=500&q=80" alt="Home cooked food"><span class="post-cat">Food</span></div>
+          <div class="trending-body">
+            <h3><a href="post.html?id=3">The One-Pan Dinners That Saved My Week</a></h3>
+            <div class="trending-meta"><span><i class="fa-solid fa-eye"></i> 6.5k</span><span><i class="fa-solid fa-comment"></i> 39</span></div>
+          </div>
+        </article>
+        <article class="trending-card">
+          <div class="trending-media"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=500&q=80" alt="Journaling desk"><span class="post-cat">Life</span></div>
+          <div class="trending-body">
+            <h3><a href="post.html?id=6">The Two-Minute Journal Habit That Actually Stuck</a></h3>
+            <div class="trending-meta"><span><i class="fa-solid fa-eye"></i> 5.9k</span><span><i class="fa-solid fa-comment"></i> 33</span></div>
+          </div>
+        </article>
+      </div>
+      <div class="slider-row">
+        <button class="slider-arrow trending-prev" aria-label="Previous"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="slider-dots" id="trendingDots"></div>
+        <button class="slider-arrow trending-next" aria-label="Next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-media reveal-left">
+      <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=600&q=80" alt="Maren Aoki, founding editor of The Daily Loom">
+      <div class="about-badge"><strong>7+</strong><span>Years Publishing</span></div>
+    </div>
+    <div class="about-content reveal-right">
+      <span class="section-label">About The Blog</span>
+      <h2>Stories For People Who Read Slowly, On Purpose</h2>
+      <p>The Daily Loom started in 2019 as a weekend newsletter from founding editor Maren Aoki and has grown into a small, independent team of writers covering culture, travel, food and everyday life — without the algorithm-chasing or the clickbait.</p>
+      <p>We believe good writing takes time to make and time to read. Every piece here is edited by a human, fact-checked where it matters, and written by someone who actually lived the story.</p>
+      <a href="#footer" class="btn btn-outline">Meet The Full Team</a>
+      <div class="authors-strip">
+        <div class="author-chip"><img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=100&q=80" alt="Maren Aoki"><span>Maren Aoki</span></div>
+        <div class="author-chip"><img src="https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&w=100&q=80" alt="Leo Marsh"><span>Leo Marsh</span></div>
+        <div class="author-chip"><img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=100&q=80" alt="Priya Nair"><span>Priya Nair</span></div>
+        <div class="author-chip"><img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=100&q=80" alt="Devon Cole"><span>Devon Cole</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter-cta" id="newsletter">
+  <div class="newsletter-cta-bg" data-parallax style="background-image: url('https://images.unsplash.com/photo-1493612276216-ee3925520721?auto=format&fit=crop&w=1800&q=80');"></div>
+  <div class="newsletter-cta-overlay"></div>
+  <div class="container newsletter-cta-inner reveal">
+    <span class="section-label section-label-light">Join 40,000+ Readers</span>
+    <h2>Get The Best Of The Loom In Your Inbox</h2>
+    <p>A weekly digest of our favourite stories, curated by the editors. No noise, just the good stuff.</p>
+    <form class="cta-form" id="ctaNewsletter">
+      <input type="email" placeholder="Enter your email" required aria-label="Email address">
+      <button type="submit" class="btn btn-primary">Subscribe Free</button>
+    </form>
+    <p class="form-success" id="ctaSuccess" role="status" aria-live="polite" hidden><i class="fa-solid fa-circle-check"></i> You're in! Check your inbox to confirm.</p>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Reader Love</span>
+      <h2>What Our Readers Say</h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card reveal stagger-1">
+        <i class="fa-solid fa-quote-left"></i>
+        <p>"The only newsletter I actually open every single week. Consistently the best-written thing in my inbox."</p>
+        <div class="testimonial-author"><img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=80&q=80" alt="Reader"><div><strong>Elena Ford</strong><span>Subscriber since 2021</span></div></div>
+      </div>
+      <div class="testimonial-card reveal stagger-2">
+        <i class="fa-solid fa-quote-left"></i>
+        <p>"Rare to find a blog that feels handwritten instead of optimized. It's why I've stuck around for years."</p>
+        <div class="testimonial-author"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=80" alt="Reader"><div><strong>Ravi Chandra</strong><span>Subscriber since 2022</span></div></div>
+      </div>
+      <div class="testimonial-card reveal stagger-3">
+        <i class="fa-solid fa-quote-left"></i>
+        <p>"I've recommended The Daily Loom to more friends than any other publication. It just gets better."</p>
+        <div class="testimonial-author"><img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=80&q=80" alt="Reader"><div><strong>Sofia Marchetti</strong><span>Subscriber since 2020</span></div></div>
+      </div>
+    </div>
+    <div class="stats-strip reveal">
+      <div><strong>40k+</strong><span>Newsletter Subscribers</span></div>
+      <div><strong>4.9/5</strong><span>Average Reader Rating</span></div>
+      <div><strong>250+</strong><span>Stories Published</span></div>
+      <div><strong>12</strong><span>Writing Awards</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="social">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Follow Along</span>
+      <h2>@TheDailyLoom On Instagram</h2>
+    </div>
+    <div class="social-grid reveal">
+      <a href="#" class="social-item"><img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=300&q=80" alt="Instagram post"><span><i class="fa-brands fa-instagram"></i></span></a>
+      <a href="#" class="social-item"><img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=300&q=80" alt="Instagram post"><span><i class="fa-brands fa-instagram"></i></span></a>
+      <a href="#" class="social-item"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" alt="Instagram post"><span><i class="fa-brands fa-instagram"></i></span></a>
+      <a href="#" class="social-item"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=300&q=80" alt="Instagram post"><span><i class="fa-brands fa-instagram"></i></span></a>
+      <a href="#" class="social-item"><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=300&q=80" alt="Instagram post"><span><i class="fa-brands fa-instagram"></i></span></a>
+      <a href="#" class="social-item"><img src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?auto=format&fit=crop&w=300&q=80" alt="Instagram post"><span><i class="fa-brands fa-instagram"></i></span></a>
+    </div>
+    <div class="section-cta reveal"><a href="#" class="btn btn-outline"><i class="fa-brands fa-instagram"></i> Follow @TheDailyLoom</a></div>
+  </div>
+</section>
+
+<footer class="site-footer" id="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="brand">The Daily <span>Loom</span></a>
+      <p>Essays and stories on culture, travel, food and life — published every weekday.</p>
+      <div class="footer-social"><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-pinterest"></i></a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <a href="#latest">Culture</a><a href="#latest">Travel</a><a href="#latest">Food</a><a href="#latest">Life</a><a href="#latest">Tech</a>
+    </div>
+    <div class="footer-col">
+      <h4>The Loom</h4>
+      <a href="#home">Home</a><a href="#about">About</a><a href="#newsletter">Newsletter</a><a href="#footer">Contact</a>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Get In Touch</h4>
+      <p><i class="fa-solid fa-envelope"></i> hello@dailyloom.com</p>
+      <p><i class="fa-solid fa-location-dot"></i> Portland, Oregon</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>&copy; 2026 The Daily Loom. All rights reserved.</span>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

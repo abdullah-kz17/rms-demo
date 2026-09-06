@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nuvora — Everyday Essentials, Elevated</title>
+<meta name="description" content="Nuvora — thoughtfully made clothing, home goods, electronics and beauty essentials." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="announce-bar">
+  <div class="announce-track">
+    <span><i class="fa-solid fa-truck-fast"></i> Free shipping on orders over $75</span>
+    <span><i class="fa-solid fa-tag"></i> Up to 30% off select styles</span>
+    <span><i class="fa-solid fa-clock"></i> Flash sale ends Sunday</span>
+    <span><i class="fa-solid fa-truck-fast"></i> Free shipping on orders over $75</span>
+    <span><i class="fa-solid fa-tag"></i> Up to 30% off select styles</span>
+    <span><i class="fa-solid fa-clock"></i> Flash sale ends Sunday</span>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="brand">Nuvora</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" aria-expanded="false">Categories <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="nav-dropdown-menu">
+          <a href="#shop-category">Men</a>
+          <a href="#shop-category">Women</a>
+          <a href="#shop-category">Electronics</a>
+          <a href="#shop-category">Home</a>
+          <a href="#shop-category">Beauty</a>
+        </div>
+      </div>
+      <a href="#deals">Deals</a>
+      <a href="#brand-story">About</a>
+      <a href="#footer">Contact</a>
+    </nav>
+    <div class="header-search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Search products..." aria-label="Search products">
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Account"><i class="fa-regular fa-user"></i></button>
+      <button class="icon-btn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+      <button class="icon-btn cart-btn" id="cartBtn" aria-label="Cart"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count" id="cartCount">0</span></button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-content reveal">
+      <span class="section-label">New Season</span>
+      <h1>Everyday Essentials, <em>Elevated</em></h1>
+      <p>Thoughtfully made clothing, home goods and tech — designed to last longer than a season and look good doing it.</p>
+      <div class="hero-actions">
+        <a href="#featured" class="btn btn-primary">Shop Now</a>
+        <a href="#shop-category" class="btn btn-outline">Browse Categories</a>
+      </div>
+    </div>
+    <div class="hero-media reveal-right">
+      <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80" alt="Featured product">
+      <div class="hero-badge"><strong>30%</strong><span>Off Knitwear</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="shop-category" id="shop-category">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Explore</span>
+      <h2>Shop By Category</h2>
+    </div>
+    <div class="category-grid">
+      <a href="#featured" class="category-card reveal stagger-1"><img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=500&q=80" alt="Men's clothing"><span>Men</span></a>
+      <a href="#featured" class="category-card reveal stagger-2"><img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=500&q=80" alt="Women's clothing"><span>Women</span></a>
+      <a href="#featured" class="category-card reveal stagger-3"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80" alt="Electronics"><span>Electronics</span></a>
+      <a href="#featured" class="category-card reveal stagger-4"><img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?auto=format&fit=crop&w=500&q=80" alt="Home goods"><span>Home</span></a>
+      <a href="#featured" class="category-card reveal stagger-1"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=500&q=80" alt="Beauty"><span>Beauty</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="products-section" id="featured">
+  <div class="container">
+    <div class="section-head-row reveal">
+      <div><span class="section-label">Handpicked</span><h2>Featured Products</h2></div>
+    </div>
+    <div class="product-grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<section class="products-section bg-tint" id="new-arrivals">
+  <div class="container">
+    <div class="section-head-row reveal">
+      <div><span class="section-label">Just Landed</span><h2>New Arrivals</h2></div>
+    </div>
+    <div class="product-grid" id="newArrivalsGrid"></div>
+  </div>
+</section>
+
+<section class="products-section" id="best-sellers">
+  <div class="container">
+    <div class="section-head-row reveal">
+      <div><span class="section-label">Customer Favourites</span><h2>Best Sellers</h2></div>
+    </div>
+    <div class="product-grid" id="bestSellersGrid"></div>
+  </div>
+</section>
+
+<section class="deals" id="deals">
+  <div class="deals-bg" data-parallax style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1800&q=80');"></div>
+  <div class="deals-overlay"></div>
+  <div class="container deals-inner">
+    <div class="deals-head reveal">
+      <span class="section-label section-label-light">Flash Sale</span>
+      <h2>Special Offers End In</h2>
+      <div class="countdown" id="countdown">
+        <div><span id="cdHours">00</span><small>Hours</small></div>
+        <div><span id="cdMinutes">00</span><small>Minutes</small></div>
+        <div><span id="cdSeconds">00</span><small>Seconds</small></div>
+      </div>
+    </div>
+    <div class="product-grid product-grid-light" id="dealsGrid"></div>
+  </div>
+</section>
+
+<section class="collection">
+  <div class="container collection-grid">
+    <div class="collection-media reveal-left">
+      <img src="https://images.unsplash.com/photo-1571945153237-4929e783af4a?auto=format&fit=crop&w=800&q=80" alt="Autumn collection">
+    </div>
+    <div class="collection-content reveal-right">
+      <span class="section-label">Featured Collection</span>
+      <h2>The Autumn Edit</h2>
+      <p>A curated capsule of ten pieces built to layer — soft knits, tailored trousers and the outerwear that ties them together. Fewer, better things.</p>
+      <a href="#featured" class="btn btn-primary">Shop The Edit</a>
+    </div>
+  </div>
+</section>
+
+<section class="brand-story" id="brand-story">
+  <div class="container brand-story-grid">
+    <div class="brand-story-content reveal-left">
+      <span class="section-label">Our Story</span>
+      <h2>Made To Be Used, Not Just Owned</h2>
+      <p>Nuvora started in 2018 with a simple frustration: too many "quality" products fell apart within a year. We work with a small group of long-term manufacturing partners, pay them fairly, and price honestly — so what you buy from us is built to actually last.</p>
+      <div class="brand-stats">
+        <div><strong>120k+</strong><span>Happy Customers</span></div>
+        <div><strong>4.7/5</strong><span>Average Rating</span></div>
+        <div><strong>7</strong><span>Years In Business</span></div>
+      </div>
+    </div>
+    <div class="brand-story-media reveal-right">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=700&q=80" alt="Nuvora product craftsmanship">
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Customer Love</span>
+      <h2>What Shoppers Are Saying</h2>
+    </div>
+    <div class="review-grid">
+      <div class="review-card reveal stagger-1">
+        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"The merino crewneck is genuinely the softest sweater I own, and it still looks new after a dozen washes."</p>
+        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=200&q=80" alt="Customer photo of trousers" class="review-photo">
+        <div class="review-author"><strong>Hannah Cole</strong><span>Verified Buyer</span></div>
+      </div>
+      <div class="review-card reveal stagger-2">
+        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+        <p>"Headphones arrived two days early and the noise cancelling is legitimately better than my old $300 pair."</p>
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=200&q=80" alt="Customer photo of headphones" class="review-photo">
+        <div class="review-author"><strong>Marcus Ide</strong><span>Verified Buyer</span></div>
+      </div>
+      <div class="review-card reveal stagger-3">
+        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"Customer support helped me swap sizes within minutes over chat. That kind of service keeps me coming back."</p>
+        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=200&q=80" alt="Customer photo of serum" class="review-photo">
+        <div class="review-author"><strong>Priya Shah</strong><span>Verified Buyer</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="container trust-grid">
+    <div class="trust-item reveal stagger-1"><i class="fa-solid fa-truck-fast"></i><h4>Free Shipping</h4><p>On all orders over $75</p></div>
+    <div class="trust-item reveal stagger-2"><i class="fa-solid fa-rotate-left"></i><h4>Easy Returns</h4><p>30-day hassle-free returns</p></div>
+    <div class="trust-item reveal stagger-3"><i class="fa-solid fa-lock"></i><h4>Secure Payment</h4><p>100% encrypted checkout</p></div>
+    <div class="trust-item reveal stagger-4"><i class="fa-solid fa-headset"></i><h4>24/7 Support</h4><p>Real humans, real fast</p></div>
+  </div>
+</section>
+
+<section class="newsletter-cta">
+  <div class="container newsletter-cta-inner reveal">
+    <span class="section-label section-label-light">Join The List</span>
+    <h2>Get 15% Off Your First Order</h2>
+    <p>Subscribe for early access to drops, restocks and subscriber-only discounts.</p>
+    <form class="cta-form" id="ctaNewsletter">
+      <input type="email" placeholder="Enter your email" required aria-label="Email address">
+      <button type="submit" class="btn btn-primary">Get My Code</button>
+    </form>
+    <p class="form-success" id="ctaSuccess" role="status" aria-live="polite" hidden><i class="fa-solid fa-circle-check"></i> Check your inbox — your code is on its way.</p>
+  </div>
+</section>
+
+<section class="social">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Tag Us</span>
+      <h2>@Nuvora On Instagram</h2>
+    </div>
+    <div class="social-grid reveal">
+      <a href="#" class="social-item"><img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=300&q=80" alt="Instagram post"><span><i class="fa-brands fa-instagram"></i></span></a>
+      <a href="#" class="social-item"><img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=300&q=80" alt="Instagram post"><span><i class="fa-brands fa-instagram"></i></span></a>
+      <a href="#" class="social-item"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80" alt="Instagram post"><span><i class="fa-brands fa-instagram"></i></span></a>
+      <a href="#" class="social-item"><img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?auto=format&fit=crop&w=300&q=80" alt="Instagram post"><span><i class="fa-brands fa-instagram"></i></span></a>
+      <a href="#" class="social-item"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=300&q=80" alt="Instagram post"><span><i class="fa-brands fa-instagram"></i></span></a>
+      <a href="#" class="social-item"><img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=300&q=80" alt="Instagram post"><span><i class="fa-brands fa-instagram"></i></span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" id="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand">Nuvora</a>
+      <p>Thoughtfully made clothing, home goods and everyday essentials since 2018.</p>
+      <div class="footer-social"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-pinterest"></i></a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="#shop-category">Men</a><a href="#shop-category">Women</a><a href="#shop-category">Electronics</a><a href="#shop-category">Home</a><a href="#shop-category">Beauty</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="#brand-story">About</a><a href="#footer">Contact</a><a href="#">FAQ</a><a href="#">Shipping &amp; Returns</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>We Accept</h4>
+      <div class="payment-icons">
+        <i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i><i class="fa-brands fa-cc-paypal"></i><i class="fa-brands fa-apple-pay"></i>
+      </div>
+      <p><i class="fa-solid fa-envelope"></i> support@nuvora.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>&copy; 2026 Nuvora. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

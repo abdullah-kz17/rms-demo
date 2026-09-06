@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Estoria Realty — Find Your Perfect Home</title>
+<meta name="description" content="Estoria Realty — premium real estate agency helping you buy, sell and rent exceptional properties." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#home" class="brand">Estoria<span>Realty</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#properties">Properties</a>
+      <a href="#about">About</a>
+      <a href="#agents">Agents</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:+19876543210" class="header-phone"><i class="fa-solid fa-phone"></i> +1 987 654 3210</a>
+      <a href="#contact" class="btn btn-primary">List Your Property</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<section class="hero" id="home">
+  <div class="hero-bg" data-parallax style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80');"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-inner">
+    <div class="hero-text reveal">
+      <span class="section-label section-label-light">Estoria Realty</span>
+      <h1>Find The Address<br>Your Life Deserves</h1>
+      <p>Browse thousands of verified homes, apartments and commercial spaces — matched with an agent who actually knows your market.</p>
+      <form class="hero-search" id="heroSearch">
+        <div class="hero-search-field">
+          <i class="fa-solid fa-location-dot"></i>
+          <input type="text" placeholder="City, neighbourhood or ZIP" aria-label="Location">
+        </div>
+        <div class="hero-search-field">
+          <i class="fa-solid fa-house"></i>
+          <select aria-label="Property type">
+            <option>Buy</option>
+            <option>Rent</option>
+            <option>Commercial</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+      </form>
+      <div class="hero-stats">
+        <div><strong>1500+</strong><span>Happy Clients</span></div>
+        <div><strong>1900+</strong><span>Properties Sold</span></div>
+        <div><strong>1125+</strong><span>Agents Nationwide</span></div>
+      </div>
+    </div>
+    <div class="hero-card reveal-right">
+      <span class="tag">Featured Listing</span>
+      <h2>Fort View Villa</h2>
+      <div class="hero-card-price">$4,999,000</div>
+      <div class="hero-card-meta"><span><i class="fa-solid fa-bed"></i> 6 Beds</span><span><i class="fa-solid fa-bath"></i> 5 Baths</span><span><i class="fa-solid fa-ruler-combined"></i> 5,400 sqft</span></div>
+      <a href="property.html?id=1" class="btn btn-outline-light btn-sm">View Details</a>
+    </div>
+  </div>
+  <div class="hero-scroll-cue"><span></span></div>
+</section>
+
+<section class="intro">
+  <div class="container intro-grid">
+    <div class="intro-media reveal-left">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=700&q=80" alt="Estoria Realty agents team" />
+    </div>
+    <div class="intro-content reveal-right">
+      <span class="section-label">Who We Are</span>
+      <h2>Your Trusted Partner In Every Move</h2>
+      <p>For over 15 years Estoria Realty has connected families and investors with properties they love — backed by local market expertise, honest advice and a network of vetted agents across the region.</p>
+      <div class="intro-features">
+        <div class="intro-feature">
+          <i class="fa-solid fa-house-chimney"></i>
+          <div><h4>Genuine Listings</h4><p>Every property is personally verified before it goes live.</p></div>
+        </div>
+        <div class="intro-feature">
+          <i class="fa-solid fa-handshake"></i>
+          <div><h4>24/7 Support</h4><p>Our agents are on call to guide you through every step.</p></div>
+        </div>
+        <div class="intro-feature">
+          <i class="fa-solid fa-file-signature"></i>
+          <div><h4>Hassle-Free Paperwork</h4><p>We handle contracts and closing so you don't have to.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="properties" id="properties">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Handpicked</span>
+      <h2>Top Properties In London</h2>
+    </div>
+    <div class="property-grid">
+      <a href="property.html?id=2" class="property-card reveal stagger-1">
+        <div class="property-media">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Hill View Home">
+          <span class="property-badge">For Sale</span>
+        </div>
+        <div class="property-body">
+          <div class="property-price">$680,000</div>
+          <h3>Hill View Home</h3>
+          <p><i class="fa-solid fa-location-dot"></i> Camden, London</p>
+          <div class="property-meta"><span><i class="fa-solid fa-bed"></i> 4 Beds</span><span><i class="fa-solid fa-bath"></i> 3 Baths</span><span><i class="fa-solid fa-ruler-combined"></i> 2,400 sqft</span></div>
+        </div>
+      </a>
+      <a href="property.html?id=3" class="property-card reveal stagger-2">
+        <div class="property-media">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=600&q=80" alt="Luxury House">
+          <span class="property-badge">For Sale</span>
+        </div>
+        <div class="property-body">
+          <div class="property-price">$1,250,000</div>
+          <h3>Luxury House</h3>
+          <p><i class="fa-solid fa-location-dot"></i> Kensington, London</p>
+          <div class="property-meta"><span><i class="fa-solid fa-bed"></i> 5 Beds</span><span><i class="fa-solid fa-bath"></i> 4 Baths</span><span><i class="fa-solid fa-ruler-combined"></i> 3,600 sqft</span></div>
+        </div>
+      </a>
+      <a href="property.html?id=4" class="property-card reveal stagger-3">
+        <div class="property-media">
+          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=600&q=80" alt="Harvest Villa">
+          <span class="property-badge property-badge-rent">For Rent</span>
+        </div>
+        <div class="property-body">
+          <div class="property-price">$3,200<span>/mo</span></div>
+          <h3>Harvest Villa</h3>
+          <p><i class="fa-solid fa-location-dot"></i> Richmond, London</p>
+          <div class="property-meta"><span><i class="fa-solid fa-bed"></i> 3 Beds</span><span><i class="fa-solid fa-bath"></i> 2 Baths</span><span><i class="fa-solid fa-ruler-combined"></i> 1,950 sqft</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="featured">
+  <div class="featured-bg" data-parallax style="background-image: url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=80');"></div>
+  <div class="featured-overlay"></div>
+  <div class="container featured-inner reveal-right">
+    <span class="section-label section-label-light">Featured Property</span>
+    <h2>Royal House</h2>
+    <div class="featured-price">$7,999<span>/mo</span></div>
+    <p>An architectural masterpiece set on 3 private acres, featuring a heated pool, home cinema and panoramic countryside views — designed for those who expect nothing less than extraordinary.</p>
+    <div class="featured-meta"><span><i class="fa-solid fa-bed"></i> 6 Beds</span><span><i class="fa-solid fa-bath"></i> 5 Baths</span><span><i class="fa-solid fa-car"></i> 3 Garages</span><span><i class="fa-solid fa-ruler-combined"></i> 5,400 sqft</span></div>
+    <div class="featured-actions">
+      <a href="property.html?id=5" class="btn btn-primary">View Details</a>
+      <a href="#contact" class="btn btn-outline-light">Schedule A Tour</a>
+    </div>
+  </div>
+</section>
+
+<section class="deals" id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Limited Time</span>
+      <h2>Deal Of The Month</h2>
+    </div>
+    <div class="deal-grid">
+      <div class="deal-card reveal-left">
+        <div class="deal-media">
+          <img class="deal-main" src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=700&q=80" alt="Luxury House exterior">
+          <div class="deal-thumbs">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=200&q=80" alt="Interior">
+            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=200&q=80" alt="Living room">
+            <img src="https://images.unsplash.com/photo-1571624436279-b272aff752b5?auto=format&fit=crop&w=200&q=80" alt="Kitchen">
+          </div>
+        </div>
+        <div class="deal-body">
+          <span class="section-label">Exclusive</span>
+          <h3>Grand Luxury Estate</h3>
+          <p>A statement home with sweeping open-plan interiors, floor-to-ceiling glass and a private landscaped garden.</p>
+          <a href="property.html?id=6" class="btn btn-outline btn-sm">View Details</a>
+        </div>
+      </div>
+      <div class="deal-card reveal-right">
+        <div class="deal-body">
+          <span class="section-label">Exclusive</span>
+          <h3>Country House</h3>
+          <p>Nestled in the countryside, this charming estate blends rustic character with modern comfort across two acres of grounds.</p>
+          <a href="property.html?id=7" class="btn btn-outline btn-sm">View Details</a>
+        </div>
+        <div class="deal-media">
+          <img class="deal-main" src="https://images.unsplash.com/photo-1560184897-ae75f418493e?auto=format&fit=crop&w=700&q=80" alt="Country house exterior">
+          <div class="deal-thumbs">
+            <img src="https://images.unsplash.com/photo-1592595896616-c37162298647?auto=format&fit=crop&w=200&q=80" alt="Bedroom">
+            <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=200&q=80" alt="Garden">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80" alt="Dining">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sell-cta">
+  <div class="sell-cta-bg" data-parallax style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1800&q=80');"></div>
+  <div class="sell-cta-overlay"></div>
+  <div class="container sell-cta-inner reveal">
+    <span class="section-label section-label-light">Free Valuation</span>
+    <h2>Sell Your Home <em>Easy &amp; Fast</em></h2>
+    <p>Get a no-obligation market appraisal from a local Estoria agent within 24 hours.</p>
+    <a href="#contact" class="btn btn-primary">Get Started</a>
+  </div>
+</section>
+
+<section class="types">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Explore</span>
+      <h2>Where To Find Properties</h2>
+    </div>
+    <div class="types-grid">
+      <a href="#properties" class="type-card reveal stagger-1"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=500&q=80" alt="Commercial Property"><span>Commercial Property</span></a>
+      <a href="#properties" class="type-card reveal stagger-2"><img src="https://images.unsplash.com/photo-1494203484021-3c454daf695d?auto=format&fit=crop&w=500&q=80" alt="City Apartments"><span>City Apartments</span></a>
+      <a href="#properties" class="type-card reveal stagger-3"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80" alt="Family Housing"><span>Family Housing</span></a>
+    </div>
+    <div class="section-cta reveal"><a href="#properties" class="btn btn-primary">Browse All</a></div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat-item reveal stagger-1"><i class="fa-solid fa-people-group"></i><div class="stat-number">1500</div><div class="stat-label">Happy Clients</div></div>
+    <div class="stat-item reveal stagger-2"><i class="fa-solid fa-house-flag"></i><div class="stat-number">1900</div><div class="stat-label">Properties Sold</div></div>
+    <div class="stat-item reveal stagger-3"><i class="fa-solid fa-user-tie"></i><div class="stat-number">1125</div><div class="stat-label">Professional Agents</div></div>
+    <div class="stat-item reveal stagger-4"><i class="fa-solid fa-key"></i><div class="stat-number">5000</div><div class="stat-label">Property Rented</div></div>
+  </div>
+</section>
+
+<section class="finder">
+  <div class="container finder-grid">
+    <div class="finder-content reveal-left">
+      <span class="section-label">Local Search</span>
+      <h2>Find Property Near By You</h2>
+      <p>Search live listings across every state we serve, updated daily by our field agents so you always see what's actually available.</p>
+      <a href="#properties" class="btn btn-primary">Search Now</a>
+    </div>
+    <div class="finder-media reveal-right">
+      <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=700&q=80" alt="Map of the United States" onerror="this.src='https://images.unsplash.com/photo-1524661135-423995f22d0b'">
+      <span class="map-pin" style="top:30%;left:25%;"><i class="fa-solid fa-location-dot"></i></span>
+      <span class="map-pin" style="top:45%;left:55%;"><i class="fa-solid fa-location-dot"></i></span>
+      <span class="map-pin" style="top:60%;left:70%;"><i class="fa-solid fa-location-dot"></i></span>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Testimonials</span>
+      <h2>Our 34,000+ Happy Clients</h2>
+    </div>
+    <div class="testimonial-slider reveal">
+      <div class="testimonial-viewport">
+        <div class="testimonial-track">
+          <div class="testimonial-slide">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=160&q=80" alt="Client photo">
+            <p>"Estoria made buying our first home completely stress-free. Our agent answered every question, day or night."</p>
+            <h4>Ronald Richards</h4><span>Homeowner, London</span>
+          </div>
+          <div class="testimonial-slide">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&q=80" alt="Client photo">
+            <p>"Sold our flat in under three weeks at above asking price. The valuation and marketing were spot on."</p>
+            <h4>Jenny Wilson</h4><span>Seller, Richmond</span>
+          </div>
+          <div class="testimonial-slide">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" alt="Client photo">
+            <p>"As an investor I need speed and honesty. Estoria's team delivers both, every single time."</p>
+            <h4>Devon Lane</h4><span>Investor, Kensington</span>
+          </div>
+        </div>
+      </div>
+      <div class="slider-row">
+        <button class="slider-arrow slider-prev" aria-label="Previous testimonial"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="slider-dots"></div>
+        <button class="slider-arrow slider-next" aria-label="Next testimonial"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="call-banner">
+  <div class="container call-banner-inner reveal">
+    <i class="fa-solid fa-phone-volume"></i>
+    <div>
+      <h3>Call us: +1 987 654 3210</h3>
+      <p>Speak with a local agent now — we're available every day of the week.</p>
+    </div>
+    <a href="tel:+19876543210" class="btn btn-outline-light">Call Now</a>
+  </div>
+</section>
+
+<section class="app-promo">
+  <div class="container app-promo-grid">
+    <div class="app-promo-media reveal-left">
+      <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=500&q=80" alt="Estoria mobile app">
+    </div>
+    <div class="app-promo-content reveal-right">
+      <span class="section-label">On The Go</span>
+      <h2>Find Property On <span class="accent">Estoria</span> App</h2>
+      <p>Browse listings, save favourites and message agents directly from your phone — available for iOS and Android.</p>
+      <div class="app-badges">
+        <a href="#" class="app-badge"><i class="fa-brands fa-apple"></i><span><small>Download on the</small>App Store</span></a>
+        <a href="#" class="app-badge"><i class="fa-brands fa-google-play"></i><span><small>Get it on</small>Google Play</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="agents" id="agents">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">The People</span>
+      <h2>Meet Our Agents</h2>
+    </div>
+    <div class="agents-grid">
+      <div class="agent-card reveal stagger-1">
+        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=400&q=80" alt="Agent Marcus Reed">
+        <h4>Marcus Reed</h4><span>Senior Agent</span>
+        <div class="agent-social"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+      <div class="agent-card agent-card-accent reveal stagger-2">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="Agent Sophia Turner">
+        <h4>Sophia Turner</h4><span>Listing Agent</span>
+        <div class="agent-social"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+      <div class="agent-card reveal stagger-3">
+        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Agent Ava Bennett">
+        <h4>Ava Bennett</h4><span>Rentals Specialist</span>
+        <div class="agent-social"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="partners">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Trusted By</span>
+      <h2>Our Partners</h2>
+    </div>
+    <div class="partners-grid reveal">
+      <div class="partner-item"><i class="fa-solid fa-building-columns"></i><span>Metro Bank</span></div>
+      <div class="partner-item"><i class="fa-solid fa-house-lock"></i><span>SafeTitle</span></div>
+      <div class="partner-item"><i class="fa-solid fa-file-contract"></i><span>Notary Co.</span></div>
+      <div class="partner-item"><i class="fa-solid fa-shield-halved"></i><span>HomeGuard</span></div>
+      <div class="partner-item"><i class="fa-solid fa-hand-holding-dollar"></i><span>FundLine</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="ask-property" id="contact">
+  <div class="ask-property-bg" data-parallax style="background-image: url('https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1800&q=80');"></div>
+  <div class="ask-property-overlay"></div>
+  <div class="container ask-property-inner">
+    <div class="section-head reveal">
+      <span class="section-label section-label-light">Get In Touch</span>
+      <h2>Ask For Property</h2>
+    </div>
+    <div class="ask-property-grid">
+      <form class="ask-form reveal-left" id="askForm" novalidate>
+        <div class="form-row">
+          <div class="form-group"><label for="ask-name">Full Name</label><input type="text" id="ask-name" name="name" placeholder="Your name" required></div>
+          <div class="form-group"><label for="ask-email">Email</label><input type="email" id="ask-email" name="email" placeholder="you@example.com" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="ask-phone">Phone</label><input type="tel" id="ask-phone" name="phone" placeholder="+1 (___) ___-____" required></div>
+          <div class="form-group"><label for="ask-type">Property Type</label>
+            <select id="ask-type" name="type" required>
+              <option value="" disabled selected>Select type</option>
+              <option>Buy</option><option>Rent</option><option>Commercial</option><option>Sell My Property</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group"><label for="ask-message">Message</label><textarea id="ask-message" name="message" rows="4" placeholder="Tell us what you're looking for" required></textarea></div>
+        <button type="submit" class="btn btn-primary ask-submit">Send Enquiry</button>
+        <p class="form-success" id="askSuccess" role="status" aria-live="polite" hidden><i class="fa-solid fa-circle-check"></i> Thanks! An agent will reach out within 24 hours.</p>
+      </form>
+      <div class="ask-map reveal-right">
+        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=700&q=80" alt="Map view">
+        <span class="map-pin map-pin-center"><i class="fa-solid fa-location-dot"></i></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="brand">Estoria<span>Realty</span></a>
+      <p>Helping you find, sell and rent exceptional properties since 2011.</p>
+      <div class="footer-social"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a><a href="#properties">Properties</a><a href="#about">About</a><a href="#agents">Agents</a><a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Property Types</h4>
+      <a href="#properties">Apartments</a><a href="#properties">Villas</a><a href="#properties">Commercial</a><a href="#properties">Rentals</a>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Contact Us</h4>
+      <p><i class="fa-solid fa-location-dot"></i> 221 Baker Street, London</p>
+      <p><i class="fa-solid fa-phone"></i> +1 987 654 3210</p>
+      <p><i class="fa-solid fa-envelope"></i> hello@estoriarealty.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">&copy; 2026 Estoria Realty. All rights reserved.</div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

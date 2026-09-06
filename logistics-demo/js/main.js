@@ -1,50 +1,56 @@
+// Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
-const navLinks = document.querySelector('.nav-links');
-
-navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
-
-const backToTop = document.getElementById('backToTop');
-
-backToTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
+const navLinks = document.getElementById('navLinks');
+const navOverlay = document.getElementById('navOverlay');
+function openNav() { navLinks.classList.add('open'); navOverlay.classList.add('open'); }
+function closeNav() { navLinks.classList.remove('open'); navOverlay.classList.remove('open'); }
+navToggle.addEventListener('click', () => (navLinks.classList.contains('open') ? closeNav() : openNav()));
+navOverlay.addEventListener('click', closeNav);
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeNav(); });
 document.querySelectorAll('.nav-links a').forEach((link) => {
-  link.addEventListener('click', () => {
-    document.querySelectorAll('.nav-links a').forEach((l) => l.classList.remove('active'));
-    link.classList.add('active');
-    navLinks.classList.remove('open');
-  });
+  link.addEventListener('click', closeNav);
 });
 
-// Nav dropdown ("More") — click/tap toggle so it works on touch, keyboard, and desktop
-const navDropdown = document.querySelector('.nav-dropdown');
-const navDropdownToggle = document.querySelector('.nav-dropdown-toggle');
+// Back to top + footer docking, batched into one rAF scroll handler
+const backToTop = document.getElementById('backToTop');
+const footerEl = document.querySelector('.site-footer');
+const parallaxEls = document.querySelectorAll('[data-parallax]');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let ticking = false;
 
-navDropdownToggle.addEventListener('click', (e) => {
-  e.stopPropagation();
-  const isOpen = navDropdown.classList.toggle('open');
-  navDropdownToggle.setAttribute('aria-expanded', String(isOpen));
-});
-
-document.addEventListener('click', (e) => {
-  if (!navDropdown.contains(e.target)) {
-    navDropdown.classList.remove('open');
-    navDropdownToggle.setAttribute('aria-expanded', 'false');
+function dockBackToTopAboveFooter() {
+  if (!footerEl) return;
+  const overlap = window.innerHeight - footerEl.getBoundingClientRect().top;
+  if (overlap > -26) {
+    backToTop.style.position = 'absolute';
+    backToTop.style.top = `${footerEl.offsetTop - 74}px`;
+    backToTop.style.bottom = 'auto';
+  } else {
+    backToTop.style.position = 'fixed';
+    backToTop.style.top = 'auto';
+    backToTop.style.bottom = '26px';
   }
-});
+}
 
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    navDropdown.classList.remove('open');
-    navDropdownToggle.setAttribute('aria-expanded', 'false');
+function onScroll() {
+  backToTop.classList.toggle('visible', window.scrollY > 500);
+  dockBackToTopAboveFooter();
+  if (!prefersReducedMotion) {
+    parallaxEls.forEach((el) => {
+      const parent = el.parentElement;
+      const rect = parent.getBoundingClientRect();
+      const offset = rect.top * -0.15;
+      el.style.transform = `translateY(${offset}px)`;
+    });
   }
+  ticking = false;
+}
+window.addEventListener('scroll', () => {
+  if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
 });
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-// Scroll-triggered reveal animations
-const revealEls = document.querySelectorAll('.reveal');
+// Scroll reveal animations
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -56,21 +62,20 @@ const revealObserver = new IntersectionObserver(
   },
   { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
 );
-revealEls.forEach((el) => revealObserver.observe(el));
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach((el) => revealObserver.observe(el));
 
 // Animated stat counters
-const statNumbers = document.querySelectorAll('.stat-number');
 const animateCount = (el) => {
   const raw = el.textContent.trim();
   const target = parseInt(raw, 10);
   if (Number.isNaN(target)) return;
   const suffix = raw.replace(/[0-9]/g, '');
-  const duration = 1200;
+  const duration = 1300;
   const start = performance.now();
   const step = (now) => {
     const progress = Math.min((now - start) / duration, 1);
     const eased = 1 - Math.pow(1 - progress, 3);
-    el.textContent = Math.round(eased * target) + suffix;
+    el.textContent = Math.round(eased * target).toLocaleString('en-US') + suffix;
     if (progress < 1) requestAnimationFrame(step);
   };
   requestAnimationFrame(step);
@@ -86,48 +91,20 @@ const statObserver = new IntersectionObserver(
   },
   { threshold: 0.5 }
 );
-statNumbers.forEach((el) => statObserver.observe(el));
+document.querySelectorAll('.stat-number').forEach((el) => statObserver.observe(el));
 
-// Sticky header shrink on scroll
-const header = document.querySelector('.site-header');
-
-// Parallax hero background — moves slower than the page scroll
-const parallaxEl = document.querySelector('[data-parallax]');
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-const footerEl = document.querySelector('.site-footer');
-function dockBackToTopAboveFooter() {
-  if (!footerEl) return;
-  const overlap = window.innerHeight - footerEl.getBoundingClientRect().top;
-  if (overlap > -26) {
-    backToTop.style.position = 'absolute';
-    backToTop.style.top = `${footerEl.offsetTop - 74}px`;
-    backToTop.style.bottom = 'auto';
-  } else {
-    backToTop.style.position = 'fixed';
-    backToTop.style.top = 'auto';
-    backToTop.style.bottom = '26px';
-  }
-}
-
-let ticking = false;
-const onScroll = () => {
-  header.classList.toggle('scrolled', window.scrollY > 40);
-  backToTop.classList.toggle('visible', window.scrollY > 500);
-  dockBackToTopAboveFooter();
-
-  if (parallaxEl && !prefersReducedMotion) {
-    const offset = window.scrollY * 0.35;
-    parallaxEl.style.transform = `translateY(${offset}px)`;
-  }
-  ticking = false;
-};
-
-window.addEventListener('scroll', () => {
-  if (!ticking) {
-    requestAnimationFrame(onScroll);
-    ticking = true;
-  }
+// Service category tabs
+document.querySelectorAll('.service-tab-btn').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.service-tab-btn').forEach((b) => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('[data-cat-panel]').forEach((panel) => {
+      panel.hidden = panel.dataset.catPanel !== btn.dataset.cat;
+    });
+    document.querySelectorAll(`[data-cat-panel="${btn.dataset.cat}"] .reveal`).forEach((el) => {
+      el.classList.add('in-view');
+    });
+  });
 });
 
 // Testimonial slider
@@ -155,23 +132,16 @@ if (slider) {
     track.style.transform = `translateX(-${current * 100}%)`;
     dots.forEach((d, i) => d.classList.toggle('active', i === current));
   }
-
   function next() { goTo(current + 1); }
   function prev() { goTo(current - 1); }
-
-  function startAutoplay() {
-    autoplayTimer = setInterval(next, 6000);
-  }
-  function stopAutoplay() {
-    clearInterval(autoplayTimer);
-  }
+  function startAutoplay() { autoplayTimer = setInterval(next, 6000); }
+  function stopAutoplay() { clearInterval(autoplayTimer); }
 
   nextBtn.addEventListener('click', () => { next(); stopAutoplay(); startAutoplay(); });
   prevBtn.addEventListener('click', () => { prev(); stopAutoplay(); startAutoplay(); });
   slider.addEventListener('mouseenter', stopAutoplay);
   slider.addEventListener('mouseleave', startAutoplay);
 
-  // Swipe support
   let touchStartX = 0;
   track.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
   track.addEventListener('touchend', (e) => {
@@ -186,30 +156,38 @@ if (slider) {
   startAutoplay();
 }
 
-// Reservation form
-const reservationForm = document.getElementById('reservationForm');
-if (reservationForm) {
-  const dateInput = document.getElementById('res-date');
-  if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach((item) => {
+  const question = item.querySelector('.faq-question');
+  question.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach((i) => {
+      i.classList.remove('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      question.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
 
-  const submitBtn = reservationForm.querySelector('.reservation-submit');
-  const successMsg = document.getElementById('reservationSuccess');
-
-  reservationForm.addEventListener('submit', (e) => {
+// Quick quote form (hero) — carries values through to the full quote page
+const quickQuoteForm = document.getElementById('quickQuoteForm');
+if (quickQuoteForm) {
+  quickQuoteForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (!reservationForm.checkValidity()) {
-      reservationForm.reportValidity();
+    if (!quickQuoteForm.checkValidity()) {
+      quickQuoteForm.reportValidity();
       return;
     }
-    submitBtn.classList.add('is-loading');
-    submitBtn.disabled = true;
-    setTimeout(() => {
-      submitBtn.classList.remove('is-loading');
-      submitBtn.disabled = false;
-      successMsg.hidden = false;
-      reservationForm.reset();
-      successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }, 900);
+    const params = new URLSearchParams({
+      from: document.getElementById('qq-from').value,
+      to: document.getElementById('qq-to').value,
+      cargo: document.getElementById('qq-cargo').value,
+      phone: document.getElementById('qq-phone').value
+    });
+    window.location.href = `quote.html?${params.toString()}`;
   });
 }
 
@@ -226,7 +204,7 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && !window.m
     btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
   });
 
-  document.querySelectorAll('.feature-card').forEach((card) => {
+  document.querySelectorAll('.fleet-card').forEach((card) => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width - 0.5;

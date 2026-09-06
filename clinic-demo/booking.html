@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Book An Appointment — Wellspring Medical Center</title>
+<meta name="description" content="Book an appointment at Wellspring Medical Center in a few simple steps." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/booking.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-staff-snake"></i></span>Wellspring</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="doctors.html">Doctors</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:+924211234567" class="btn btn-outline btn-sm"><i class="fa-solid fa-phone"></i> Call Now</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<section class="booking-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>Book Appointment</span>
+    </nav>
+    <h1>Book Your Appointment</h1>
+    <p>Six quick steps — most patients finish in under two minutes.</p>
+  </div>
+</section>
+
+<section class="booking-wizard">
+  <div class="container">
+    <div class="wizard-progress" id="wizardProgress">
+      <div class="wizard-step-indicator active" data-step="1"><span>1</span>Department</div>
+      <div class="wizard-step-indicator" data-step="2"><span>2</span>Doctor</div>
+      <div class="wizard-step-indicator" data-step="3"><span>3</span>Date</div>
+      <div class="wizard-step-indicator" data-step="4"><span>4</span>Time</div>
+      <div class="wizard-step-indicator" data-step="5"><span>5</span>Your Info</div>
+      <div class="wizard-step-indicator" data-step="6"><span>6</span>Confirm</div>
+    </div>
+
+    <div class="wizard-panel">
+      <!-- Step 1: Department -->
+      <div class="wizard-step active" data-step-panel="1">
+        <h3>Select A Department</h3>
+        <div class="option-grid" id="deptOptions"></div>
+      </div>
+
+      <!-- Step 2: Doctor -->
+      <div class="wizard-step" data-step-panel="2">
+        <h3>Select A Doctor</h3>
+        <div class="option-grid option-grid-doctors" id="doctorOptions"></div>
+      </div>
+
+      <!-- Step 3: Date -->
+      <div class="wizard-step" data-step-panel="3">
+        <h3>Select A Date</h3>
+        <p class="wizard-hint" id="doctorDaysHint"></p>
+        <div class="date-grid" id="dateOptions"></div>
+      </div>
+
+      <!-- Step 4: Time -->
+      <div class="wizard-step" data-step-panel="4">
+        <h3>Select A Time</h3>
+        <div class="time-grid" id="timeOptions"></div>
+      </div>
+
+      <!-- Step 5: Patient Info -->
+      <div class="wizard-step" data-step-panel="5">
+        <h3>Your Information</h3>
+        <form id="patientForm" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label for="p-name">Full Name *</label><input type="text" id="p-name" required></div>
+            <div class="form-group"><label for="p-phone">Phone Number *</label><input type="tel" id="p-phone" placeholder="+92 3XX XXXXXXX" required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="p-email">Email Address *</label><input type="email" id="p-email" required></div>
+            <div class="form-group"><label for="p-dob">Date Of Birth</label><input type="date" id="p-dob"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="p-gender">Gender</label>
+              <select id="p-gender"><option value="" disabled selected>Select</option><option>Female</option><option>Male</option><option>Prefer not to say</option></select>
+            </div>
+            <div class="form-group"><label for="p-type">Appointment Type</label>
+              <select id="p-type"><option>New Patient Visit</option><option>Follow-Up Visit</option><option>Second Opinion</option></select>
+            </div>
+          </div>
+          <div class="form-group"><label for="p-reason">Reason For Visit</label><textarea id="p-reason" rows="3" placeholder="Briefly describe your symptoms or reason for the visit"></textarea></div>
+        </form>
+      </div>
+
+      <!-- Step 6: Confirm -->
+      <div class="wizard-step" data-step-panel="6">
+        <h3>Review &amp; Confirm</h3>
+        <div class="summary-card" id="summaryCard"></div>
+      </div>
+
+      <!-- Success -->
+      <div class="wizard-step" data-step-panel="success">
+        <div class="success-panel">
+          <i class="fa-solid fa-circle-check"></i>
+          <h3>Appointment Confirmed!</h3>
+          <p>A confirmation SMS and email have been sent with your appointment details.</p>
+          <div class="confirmation-card" id="confirmationCard"></div>
+          <a href="index.html" class="btn btn-primary">Back To Home</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="wizard-nav" id="wizardNav">
+      <button type="button" class="btn btn-outline" id="wizardBack" hidden>Back</button>
+      <button type="button" class="btn btn-primary" id="wizardNext" disabled>Continue</button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-staff-snake"></i></span>Wellspring</a>
+      <p>Multi-specialty medical center providing compassionate, modern care since 2009.</p>
+      <div class="footer-social"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html#about">About Us</a><a href="doctors.html">Our Doctors</a><a href="index.html#services">Services</a><a href="booking.html">Book Appointment</a>
+    </div>
+    <div class="footer-col">
+      <h4>Specialties</h4>
+      <a href="doctors.html?dept=Cardiology">Cardiology</a><a href="doctors.html?dept=Pediatrics">Pediatrics</a><a href="doctors.html?dept=Dermatology">Dermatology</a><a href="doctors.html?dept=Dental">Dental</a>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Contact</h4>
+      <p><i class="fa-solid fa-location-dot"></i> 45-C Gulberg III, Lahore</p>
+      <p><i class="fa-solid fa-phone"></i> +92 42 111 234 567</p>
+      <p><i class="fa-solid fa-envelope"></i> info@wellspringmedical.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>&copy; 2026 Wellspring Medical Center. All rights reserved.</span>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/doctors.js"></script>
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

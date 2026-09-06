@@ -30,11 +30,27 @@ backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 's
 const header = document.getElementById('siteHeader');
 const parallaxEls = document.querySelectorAll('[data-parallax]');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const footerEl = document.querySelector('.site-footer');
 let ticking = false;
+
+function dockBackToTopAboveFooter() {
+  if (!footerEl) return;
+  const overlap = window.innerHeight - footerEl.getBoundingClientRect().top;
+  if (overlap > -26) {
+    backToTop.style.position = 'absolute';
+    backToTop.style.top = `${footerEl.offsetTop - 74}px`;
+    backToTop.style.bottom = 'auto';
+  } else {
+    backToTop.style.position = 'fixed';
+    backToTop.style.top = 'auto';
+    backToTop.style.bottom = '26px';
+  }
+}
 
 function onScroll() {
   header.classList.toggle('scrolled', window.scrollY > 40);
   backToTop.classList.toggle('visible', window.scrollY > 500);
+  dockBackToTopAboveFooter();
   if (!prefersReducedMotion) {
     // Offset is relative to each layer's own container position in the
     // viewport (not raw page scrollY), so it stays bounded regardless of
@@ -239,5 +255,33 @@ if (reservationForm) {
       reservationForm.reset();
       successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }, 900);
+  });
+}
+
+// Magnetic buttons + tilt cards — skipped for touch/coarse pointers and reduced-motion preference
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const magnetStrength = 14;
+  document.querySelectorAll('.btn-primary, .btn-outline, .btn-outline-light').forEach((btn) => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = (e.clientX - rect.left - rect.width / 2) / rect.width;
+      const y = (e.clientY - rect.top - rect.height / 2) / rect.height;
+      btn.style.transform = `translate(${x * magnetStrength}px, ${y * magnetStrength}px)`;
+    });
+    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+  });
+
+  document.querySelectorAll('.favorite-card').forEach((card) => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.transition = 'none';
+      card.style.transform = `perspective(700px) rotateX(${-y * 7}deg) rotateY(${x * 7}deg) translateY(-6px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transition = 'transform 0.5s cubic-bezier(0.22,1,0.36,1)';
+      card.style.transform = '';
+    });
   });
 }

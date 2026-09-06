@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wellspring Medical Center — Compassionate Care, Modern Medicine</title>
+<meta name="description" content="Wellspring Medical Center — multi-specialty clinic offering cardiology, dermatology, pediatrics and more, with same-week appointments." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <div class="top-bar-info">
+      <a href="tel:+924211234567"><i class="fa-solid fa-phone"></i> +92 42 111 234 567</a>
+      <a href="mailto:info@wellspringmedical.com"><i class="fa-solid fa-envelope"></i> info@wellspringmedical.com</a>
+    </div>
+    <div class="top-bar-emergency"><i class="fa-solid fa-triangle-exclamation"></i> Emergency: +92 300 1234567</div>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-staff-snake"></i></span>Wellspring</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="doctors.html">Doctors</a>
+      <a href="#services">Services</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:+924211234567" class="btn btn-outline btn-sm"><i class="fa-solid fa-phone"></i> Call Now</a>
+      <a href="booking.html" class="btn btn-primary">Book Appointment</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<section class="hero">
+  <div class="hero-bg" data-parallax style="background-image: url('https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=1800&q=80');"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-inner">
+    <div class="hero-content reveal">
+      <span class="section-label section-label-light">Wellspring Medical Center</span>
+      <h1>Compassionate Care, Backed By Modern Medicine</h1>
+      <p>Multi-specialty care under one roof — 8 specialties, same-week appointments, and a team that actually listens.</p>
+      <div class="hero-actions">
+        <a href="booking.html" class="btn btn-primary btn-lg"><i class="fa-solid fa-calendar-check"></i> Book Appointment</a>
+        <a href="tel:+924211234567" class="btn btn-outline-light btn-lg"><i class="fa-solid fa-phone"></i> Call Now</a>
+      </div>
+      <div class="hero-emergency">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <div><strong>Medical Emergency?</strong><span>Call +92 300 1234567 — available 24/7</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-cue"><span></span></div>
+</section>
+
+<section class="doctors-preview" id="doctors">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Meet Our Team</span>
+      <h2>Featured Doctors</h2>
+      <p>Board-certified specialists across cardiology, pediatrics, dermatology and more.</p>
+    </div>
+    <div class="doctor-grid" id="featuredDoctorsGrid"></div>
+    <div class="section-cta reveal"><a href="doctors.html" class="btn btn-outline">View All Doctors</a></div>
+  </div>
+</section>
+
+<section class="specialties" id="specialties">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Specialties</span>
+      <h2>Medical Specialties</h2>
+    </div>
+    <div class="specialty-grid">
+      <a href="doctors.html?dept=Cardiology" class="specialty-card reveal stagger-1"><i class="fa-solid fa-heart-pulse"></i><span>Cardiology</span></a>
+      <a href="doctors.html?dept=Dermatology" class="specialty-card reveal stagger-2"><i class="fa-solid fa-hand-dots"></i><span>Dermatology</span></a>
+      <a href="doctors.html?dept=Pediatrics" class="specialty-card reveal stagger-3"><i class="fa-solid fa-child-reaching"></i><span>Pediatrics</span></a>
+      <a href="doctors.html?dept=Gynecology" class="specialty-card reveal stagger-4"><i class="fa-solid fa-person-dress"></i><span>Gynecology</span></a>
+      <a href="doctors.html?dept=Orthopedics" class="specialty-card reveal stagger-1"><i class="fa-solid fa-bone"></i><span>Orthopedics</span></a>
+      <a href="doctors.html?dept=ENT" class="specialty-card reveal stagger-2"><i class="fa-solid fa-ear-listen"></i><span>ENT</span></a>
+      <a href="doctors.html?dept=Dental" class="specialty-card reveal stagger-3"><i class="fa-solid fa-tooth"></i><span>Dental</span></a>
+      <a href="doctors.html?dept=General+Medicine" class="specialty-card reveal stagger-4"><i class="fa-solid fa-stethoscope"></i><span>General Medicine</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">What We Offer</span>
+      <h2>Our Services</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal stagger-1"><i class="fa-solid fa-user-doctor"></i><h4>Consultations</h4><p>In-person visits across all 8 specialties with same-week availability.</p></div>
+      <div class="service-card reveal stagger-2"><i class="fa-solid fa-vial"></i><h4>Laboratory Testing</h4><p>On-site blood work and diagnostics with same-day results for most tests.</p></div>
+      <div class="service-card reveal stagger-3"><i class="fa-solid fa-x-ray"></i><h4>Imaging &amp; X-Ray</h4><p>Digital X-ray and ultrasound imaging reviewed by our radiology team.</p></div>
+      <div class="service-card reveal stagger-4"><i class="fa-solid fa-notes-medical"></i><h4>Health Checkups</h4><p>Preventive checkup packages tailored to age and risk factors.</p></div>
+      <div class="service-card reveal stagger-1"><i class="fa-solid fa-dumbbell"></i><h4>Physiotherapy</h4><p>Rehabilitation programs for injury recovery and chronic pain management.</p></div>
+      <div class="service-card reveal stagger-2"><i class="fa-solid fa-kit-medical"></i><h4>Minor Procedures</h4><p>In-clinic minor surgical and dermatological procedures.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-media reveal-left">
+      <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=700&q=80" alt="Wellspring Medical Center reception">
+      <div class="about-badge"><strong>2009</strong><span>Est.</span></div>
+    </div>
+    <div class="about-content reveal-right">
+      <span class="section-label">About Our Clinic</span>
+      <h2>Care That Puts Patients First</h2>
+      <p>Wellspring Medical Center has served this community since 2009, growing from a two-doctor practice into a full multi-specialty clinic — without losing the personal attention that made patients trust us in the first place.</p>
+      <div class="why-items">
+        <div class="why-item"><i class="fa-solid fa-user-doctor"></i><div><h4>Board-Certified Specialists</h4><p>Every doctor is board-certified in their specialty.</p></div></div>
+        <div class="why-item"><i class="fa-solid fa-clock"></i><div><h4>Same-Week Appointments</h4><p>Most patients are seen within 3-5 business days.</p></div></div>
+        <div class="why-item"><i class="fa-solid fa-shield-heart"></i><div><h4>Modern Equipment</h4><p>On-site lab and imaging, no need for outside referrals.</p></div></div>
+        <div class="why-item"><i class="fa-solid fa-comments"></i><div><h4>We Actually Listen</h4><p>Longer appointment slots so you're never rushed.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="facilities" id="facilities">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Our Facility</span>
+      <h2>A Clinic Built Around Comfort</h2>
+    </div>
+    <div class="facility-grid">
+      <div class="facility-item facility-large reveal stagger-1"><img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=700&q=80" alt="Reception area"><span>Reception &amp; Waiting Area</span></div>
+      <div class="facility-item reveal stagger-2"><img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=500&q=80" alt="Consultation room"><span>Consultation Rooms</span></div>
+      <div class="facility-item reveal stagger-3"><img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=500&q=80" alt="Laboratory"><span>On-Site Laboratory</span></div>
+      <div class="facility-item reveal stagger-4"><img src="https://images.unsplash.com/photo-1580281657702-257584239a55?auto=format&fit=crop&w=500&q=80" alt="Diagnostic equipment"><span>Diagnostic Imaging</span></div>
+      <div class="facility-item reveal stagger-1"><img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&w=500&q=80" alt="Pharmacy"><span>In-House Pharmacy</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Patient Stories</span>
+      <h2>What Our Patients Say</h2>
+    </div>
+    <div class="testimonial-slider reveal">
+      <div class="testimonial-viewport">
+        <div class="testimonial-track">
+          <div class="testimonial-slide">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"From booking to follow-up, everything about my visit was smooth. Dr. Ahmed explained my results in a way I actually understood."</p>
+            <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=160&q=80" alt="Patient photo">
+            <h4>Ahmed Raza</h4><span>Patient since 2021</span>
+          </div>
+          <div class="testimonial-slide">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"The pediatrics team is incredible with my daughter — she's never scared to go for a checkup anymore."</p>
+            <img src="https://images.unsplash.com/photo-1587351021759-3e566b3db4f6?auto=format&fit=crop&w=160&q=80" alt="Patient photo" onerror="this.src='https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=160&q=80'">
+            <h4>Fatima Sheikh</h4><span>Patient since 2019</span>
+          </div>
+          <div class="testimonial-slide">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+            <p>"Same-day lab results meant I didn't have to wait a week in anxiety. The whole clinic runs efficiently."</p>
+            <img src="https://images.unsplash.com/photo-1546456073-92b9f0a8d413?auto=format&fit=crop&w=160&q=80" alt="Patient photo">
+            <h4>Usman Farooq</h4><span>Patient since 2022</span>
+          </div>
+        </div>
+      </div>
+      <div class="slider-row">
+        <button class="slider-arrow slider-prev" aria-label="Previous testimonial"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="slider-dots"></div>
+        <button class="slider-arrow slider-next" aria-label="Next testimonial"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="insurance">
+  <div class="container">
+    <p class="trusted-label">We Accept Insurance From</p>
+    <div class="logo-marquee">
+      <div class="logo-marquee-track">
+        <span class="trust-logo"><i class="fa-solid fa-shield-heart"></i> HealthGuard</span>
+        <span class="trust-logo"><i class="fa-solid fa-shield-heart"></i> MediCare Plus</span>
+        <span class="trust-logo"><i class="fa-solid fa-shield-heart"></i> TrustLife</span>
+        <span class="trust-logo"><i class="fa-solid fa-shield-heart"></i> Sehat Insurance</span>
+        <span class="trust-logo"><i class="fa-solid fa-shield-heart"></i> Al-Shifa Cover</span>
+        <span class="trust-logo"><i class="fa-solid fa-shield-heart"></i> HealthGuard</span>
+        <span class="trust-logo"><i class="fa-solid fa-shield-heart"></i> MediCare Plus</span>
+        <span class="trust-logo"><i class="fa-solid fa-shield-heart"></i> TrustLife</span>
+        <span class="trust-logo"><i class="fa-solid fa-shield-heart"></i> Sehat Insurance</span>
+        <span class="trust-logo"><i class="fa-solid fa-shield-heart"></i> Al-Shifa Cover</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hours-location" id="contact">
+  <div class="container hours-location-grid">
+    <div class="hours-card reveal-left">
+      <span class="section-label">Opening Hours</span>
+      <h2>When We're Open</h2>
+      <ul class="hours-list">
+        <li><span>Monday – Friday</span><strong>9:00 AM – 8:00 PM</strong></li>
+        <li><span>Saturday</span><strong>9:00 AM – 5:00 PM</strong></li>
+        <li><span>Sunday</span><strong>Closed (Emergency Only)</strong></li>
+      </ul>
+      <div class="contact-details">
+        <div><i class="fa-solid fa-location-dot"></i><div><strong>Address</strong><span>45-C Gulberg III, Lahore</span></div></div>
+        <div><i class="fa-solid fa-phone"></i><div><strong>Phone</strong><span>+92 42 111 234 567</span></div></div>
+        <div><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp</strong><span>+92 300 1234567</span></div></div>
+      </div>
+    </div>
+    <div class="map-card reveal-right">
+      <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=700&q=80" alt="Map to Wellspring Medical Center">
+      <span class="map-pin-center"><i class="fa-solid fa-location-dot"></i></span>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">FAQ</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">How do I book an appointment? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>Use our online <a href="booking.html">appointment booking</a> page, call us directly, or message us on WhatsApp — whichever is easiest for you.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">Do I need a referral to see a specialist? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>No referral is required — you can book directly with any specialist listed on our <a href="doctors.html">Doctors</a> page.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">What insurance do you accept? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>We accept most major insurance providers including HealthGuard, MediCare Plus, TrustLife and Sehat Insurance. Contact us to confirm your specific plan.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">How much does a consultation cost? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>Consultation fees vary by specialty, typically ranging from PKR 1,800 to 3,500. Exact fees are listed on each doctor's profile.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">Can I cancel or reschedule my appointment? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>Yes, appointments can be rescheduled or cancelled up to 4 hours in advance by calling the clinic or replying to your confirmation message.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">Are walk-ins accepted? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>We recommend booking ahead to guarantee a time slot, but walk-ins are accommodated for General Medicine based on same-day availability.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="final-cta-bg" data-parallax style="background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1800&q=80');"></div>
+  <div class="final-cta-overlay"></div>
+  <div class="container final-cta-inner reveal">
+    <span class="section-label section-label-light">Ready When You Are</span>
+    <h2>Your Health Deserves An Appointment This Week, Not Next Month</h2>
+    <div class="final-cta-actions">
+      <a href="booking.html" class="btn btn-primary btn-lg">Book Appointment</a>
+      <a href="tel:+924211234567" class="btn btn-outline-light btn-lg">Call +92 42 111 234 567</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-staff-snake"></i></span>Wellspring</a>
+      <p>Multi-specialty medical center providing compassionate, modern care since 2009.</p>
+      <div class="footer-social"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#about">About Us</a><a href="doctors.html">Our Doctors</a><a href="#services">Services</a><a href="booking.html">Book Appointment</a>
+    </div>
+    <div class="footer-col">
+      <h4>Specialties</h4>
+      <a href="doctors.html?dept=Cardiology">Cardiology</a><a href="doctors.html?dept=Pediatrics">Pediatrics</a><a href="doctors.html?dept=Dermatology">Dermatology</a><a href="doctors.html?dept=Dental">Dental</a>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Contact</h4>
+      <p><i class="fa-solid fa-location-dot"></i> 45-C Gulberg III, Lahore</p>
+      <p><i class="fa-solid fa-phone"></i> +92 42 111 234 567</p>
+      <p><i class="fa-solid fa-envelope"></i> info@wellspringmedical.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>&copy; 2026 Wellspring Medical Center. All rights reserved.</span>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/doctors.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

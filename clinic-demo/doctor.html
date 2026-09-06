@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title id="pageTitle">Doctor Profile — Wellspring Medical Center</title>
+<meta name="description" content="View doctor qualifications, experience, availability and patient reviews at Wellspring Medical Center." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/doctors.css">
+<link rel="stylesheet" href="css/doctor-profile.css">
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <div class="top-bar-info">
+      <a href="tel:+924211234567"><i class="fa-solid fa-phone"></i> +92 42 111 234 567</a>
+      <a href="mailto:info@wellspringmedical.com"><i class="fa-solid fa-envelope"></i> info@wellspringmedical.com</a>
+    </div>
+    <div class="top-bar-emergency"><i class="fa-solid fa-triangle-exclamation"></i> Emergency: +92 300 1234567</div>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-staff-snake"></i></span>Wellspring</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="doctors.html">Doctors</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#facilities">Facilities</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:+924211234567" class="btn btn-outline btn-sm"><i class="fa-solid fa-phone"></i> Call Now</a>
+      <a href="booking.html" class="btn btn-primary">Book Appointment</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i>
+    <a href="doctors.html">Doctors</a> <i class="fa-solid fa-chevron-right"></i>
+    <span id="breadcrumbName">Doctor</span>
+  </nav>
+</div>
+
+<section class="profile">
+  <div class="container profile-grid" id="profileGrid">
+    <!-- Populated by js/doctor.js -->
+  </div>
+</section>
+
+<section class="related">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">More Specialists</span>
+      <h2>Other Doctors You May Want To See</h2>
+    </div>
+    <div class="doctor-grid" id="relatedDoctorsGrid"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-staff-snake"></i></span>Wellspring</a>
+      <p>Multi-specialty medical center providing compassionate, modern care since 2009.</p>
+      <div class="footer-social"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html#about">About Us</a><a href="doctors.html">Our Doctors</a><a href="index.html#services">Services</a><a href="booking.html">Book Appointment</a>
+    </div>
+    <div class="footer-col">
+      <h4>Specialties</h4>
+      <a href="doctors.html?dept=Cardiology">Cardiology</a><a href="doctors.html?dept=Pediatrics">Pediatrics</a><a href="doctors.html?dept=Dermatology">Dermatology</a><a href="doctors.html?dept=Dental">Dental</a>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Contact</h4>
+      <p><i class="fa-solid fa-location-dot"></i> 45-C Gulberg III, Lahore</p>
+      <p><i class="fa-solid fa-phone"></i> +92 42 111 234 567</p>
+      <p><i class="fa-solid fa-envelope"></i> info@wellspringmedical.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>&copy; 2026 Wellspring Medical Center. All rights reserved.</span>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/doctors.js"></script>
+<script src="js/main.js"></script>
+<script src="js/doctor.js"></script>
+</body>
+</html>

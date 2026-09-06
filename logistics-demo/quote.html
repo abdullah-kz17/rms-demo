@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Get A Quote — Roadline Logistics</title>
+<meta name="description" content="Request a freight quote from Roadline Logistics — FTL, LTL, specialized and warehousing solutions nationwide." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/quote.css">
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <div class="top-bar-info">
+      <a href="tel:+924211234567"><i class="fa-solid fa-phone"></i> +92 42 111 234 567</a>
+      <a href="index.html#contact"><i class="fa-solid fa-location-dot"></i> Lahore &middot; Karachi &middot; Islamabad</a>
+    </div>
+    <div class="top-bar-emergency"><i class="fa-solid fa-headset"></i> 24/7 Dispatch: +92 300 1234567</div>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-truck-fast"></i></span>Roadline</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#fleet">Fleet</a>
+      <a href="index.html#coverage">Coverage</a>
+      <a href="index.html#industries">Industries</a>
+      <a href="track.html">Track Shipment</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="track.html" class="btn btn-outline btn-sm"><i class="fa-solid fa-location-crosshairs"></i> Track</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<section class="quote-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>Get A Quote</span>
+    </nav>
+    <div class="reveal">
+      <span class="section-label">Request A Quote</span>
+      <h1>Tell Us About Your Shipment</h1>
+      <p>Fill out the form below and our dispatch team will get back to you with pricing and availability within one business day.</p>
+    </div>
+  </div>
+</section>
+
+<section class="quote-body">
+  <div class="container quote-grid">
+    <form class="quote-form reveal-left" id="quoteForm" novalidate>
+      <div class="form-section">
+        <h3><i class="fa-solid fa-user"></i> Contact Details</h3>
+        <div class="form-row">
+          <div class="form-group"><label for="q-name">Full Name *</label><input type="text" id="q-name" name="name" placeholder="Your name" required></div>
+          <div class="form-group"><label for="q-company">Company</label><input type="text" id="q-company" name="company" placeholder="Company name"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="q-phone">Phone Number *</label><input type="tel" id="q-phone" name="phone" placeholder="+92 3XX XXXXXXX" required></div>
+          <div class="form-group"><label for="q-email">Email Address *</label><input type="email" id="q-email" name="email" placeholder="you@company.com" required></div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3><i class="fa-solid fa-route"></i> Shipment Route</h3>
+        <div class="form-row">
+          <div class="form-group"><label for="q-from">Pickup Location *</label><input type="text" id="q-from" name="from" placeholder="City / address" required></div>
+          <div class="form-group"><label for="q-to">Destination *</label><input type="text" id="q-to" name="to" placeholder="City / address" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="q-pickup-date">Pickup Date</label><input type="date" id="q-pickup-date" name="pickupDate"></div>
+          <div class="form-group"><label for="q-deadline">Delivery Deadline</label><input type="date" id="q-deadline" name="deadline"></div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3><i class="fa-solid fa-boxes-stacked"></i> Cargo Details</h3>
+        <div class="form-row">
+          <div class="form-group"><label for="q-cargo-type">Cargo Type *</label>
+            <select id="q-cargo-type" name="cargoType" required>
+              <option value="" disabled selected>Select cargo type</option>
+              <option>General Cargo</option><option>FMCG</option><option>Industrial Equipment</option><option>Perishable / Reefer</option><option>Oversized / Project Cargo</option><option>High-Value Cargo</option><option>Container / Import-Export</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="q-vehicle">Vehicle Required</label>
+            <select id="q-vehicle" name="vehicle">
+              <option value="" disabled selected>Select vehicle type</option>
+              <option>22-Wheeler Trailer</option><option>Flatbed Truck</option><option>Container Carrier</option><option>Refrigerated Truck</option><option>Box Truck</option><option>Not Sure — Recommend One</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row form-row-3">
+          <div class="form-group"><label for="q-weight">Weight (tons)</label><input type="number" id="q-weight" name="weight" placeholder="e.g. 12" min="0" step="0.1"></div>
+          <div class="form-group"><label for="q-dimensions">Dimensions (L×W×H ft)</label><input type="text" id="q-dimensions" name="dimensions" placeholder="e.g. 20×8×8"></div>
+          <div class="form-group"><label for="q-pieces">No. Of Pieces</label><input type="number" id="q-pieces" name="pieces" placeholder="e.g. 40" min="1"></div>
+        </div>
+        <div class="form-group"><label for="q-requirements">Special Requirements</label><textarea id="q-requirements" name="requirements" rows="3" placeholder="Temperature control, hazardous materials, fragile handling, etc."></textarea></div>
+        <div class="form-group">
+          <label for="q-file">Attach Document (optional)</label>
+          <div class="file-upload">
+            <input type="file" id="q-file" name="file">
+            <label for="q-file" class="file-upload-label"><i class="fa-solid fa-paperclip"></i> <span id="fileLabel">Choose a file — packing list, cargo photo, etc.</span></label>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg btn-block quote-submit">Submit Quote Request <i class="fa-solid fa-arrow-right"></i></button>
+      <p class="form-success" id="quoteSuccess" role="status" aria-live="polite" hidden><i class="fa-solid fa-circle-check"></i> Thanks! Your quote request has been received — our dispatch team will contact you within one business day.</p>
+    </form>
+
+    <aside class="quote-sidebar reveal-right">
+      <div class="sidebar-card">
+        <i class="fa-solid fa-headset"></i>
+        <h4>Prefer To Talk?</h4>
+        <p>Our dispatch team is available 24/7 for urgent bookings.</p>
+        <a href="tel:+923001234567" class="btn btn-outline btn-block">+92 300 1234567</a>
+      </div>
+      <div class="sidebar-card">
+        <h4>What Happens Next?</h4>
+        <ul class="mini-steps">
+          <li><span>1</span> We review your shipment details</li>
+          <li><span>2</span> You receive pricing within 1 business day</li>
+          <li><span>3</span> Confirm booking &amp; schedule pickup</li>
+        </ul>
+      </div>
+      <div class="sidebar-card sidebar-card-dark">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h4>Fully Insured Shipments</h4>
+        <p>Every quote includes standard cargo insurance coverage at no extra cost.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer" id="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-truck-fast"></i></span>Roadline</a>
+      <p>Nationwide trucking, freight and logistics solutions — GPS-tracked, insured, and available 24/7.</p>
+      <div class="footer-social"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="index.html#services">Full Truckload</a><a href="index.html#services">Less Than Truckload</a><a href="index.html#services">Warehousing</a><a href="index.html#services">Freight Forwarding</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="index.html#fleet">Our Fleet</a><a href="index.html#coverage">Coverage</a><a href="index.html#industries">Industries</a><a href="quote.html">Become A Fleet Partner</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="track.html">Track Shipment</a><a href="quote.html">Get A Quote</a><a href="#">Blog</a><a href="#">Careers</a>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Contact</h4>
+      <p><i class="fa-solid fa-location-dot"></i> 12-B Ferozepur Road, Lahore</p>
+      <p><i class="fa-solid fa-phone"></i> +92 42 111 234 567</p>
+      <p><i class="fa-solid fa-envelope"></i> bookings@roadline.pk</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>&copy; 2026 Roadline Logistics Pvt Ltd. All rights reserved.</span>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/main.js"></script>
+<script src="js/quote.js"></script>
+</body>
+</html>

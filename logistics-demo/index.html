@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Roadline Logistics — Nationwide Trucking &amp; Freight Solutions</title>
+<meta name="description" content="Roadline Logistics — FTL, LTL, specialized and warehousing solutions with nationwide coverage, GPS-tracked fleet, and 24/7 support." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Outfit:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <div class="top-bar-info">
+      <a href="tel:+924211234567"><i class="fa-solid fa-phone"></i> +92 42 111 234 567</a>
+      <a href="#contact"><i class="fa-solid fa-location-dot"></i> Lahore &middot; Karachi &middot; Islamabad</a>
+    </div>
+    <div class="top-bar-emergency"><i class="fa-solid fa-headset"></i> 24/7 Dispatch: +92 300 1234567</div>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#home" class="brand"><span class="brand-mark"><i class="fa-solid fa-truck-fast"></i></span>Roadline</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#services">Services</a>
+      <a href="#fleet">Fleet</a>
+      <a href="#coverage">Coverage</a>
+      <a href="#industries">Industries</a>
+      <a href="track.html">Track Shipment</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="track.html" class="btn btn-outline btn-sm"><i class="fa-solid fa-location-crosshairs"></i> Track</a>
+      <a href="quote.html" class="btn btn-primary">Get A Quote</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<section class="hero" id="home">
+  <div class="hero-bg" data-parallax style="background-image: url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1800&q=80');"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-inner">
+    <div class="hero-content reveal">
+      <span class="section-label section-label-light">Nationwide Freight &amp; Trucking</span>
+      <h1>Your Cargo. On Time. Every Route.</h1>
+      <p>Roadline moves FTL, LTL and specialized cargo across the country with a GPS-tracked fleet, real-time visibility and 24/7 dispatch — trusted by 500+ businesses.</p>
+      <div class="hero-actions">
+        <a href="quote.html" class="btn btn-primary btn-lg"><i class="fa-solid fa-file-invoice"></i> Get A Quote</a>
+        <a href="track.html" class="btn btn-outline-light btn-lg"><i class="fa-solid fa-location-crosshairs"></i> Track Shipment</a>
+      </div>
+    </div>
+    <form class="quick-quote reveal-right" id="quickQuoteForm">
+      <h3 class="quick-quote-title">Get A Fast Quote</h3>
+      <div class="form-group"><label for="qq-from">Pickup City</label><input type="text" id="qq-from" name="from" placeholder="e.g. Lahore" required></div>
+      <div class="form-group"><label for="qq-to">Destination City</label><input type="text" id="qq-to" name="to" placeholder="e.g. Karachi" required></div>
+      <div class="form-group"><label for="qq-cargo">Cargo Type</label>
+        <select id="qq-cargo" name="cargo">
+          <option>General Cargo</option><option>FMCG</option><option>Industrial Equipment</option><option>Perishable / Reefer</option><option>Oversized / Project Cargo</option>
+        </select>
+      </div>
+      <div class="form-group"><label for="qq-phone">Phone Number</label><input type="tel" id="qq-phone" name="phone" placeholder="+92 3XX XXXXXXX" required></div>
+      <button type="submit" class="btn btn-primary btn-block">Get My Quote <i class="fa-solid fa-arrow-right"></i></button>
+    </form>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat-item reveal stagger-1"><i class="fa-solid fa-truck"></i><div class="stat-number">320</div><div class="stat-label">Vehicles In Fleet</div></div>
+    <div class="stat-item reveal stagger-2"><i class="fa-solid fa-box"></i><div class="stat-number">48000</div><div class="stat-label">Deliveries Completed</div></div>
+    <div class="stat-item reveal stagger-3"><i class="fa-solid fa-city"></i><div class="stat-number">60</div><div class="stat-label">Cities Covered</div></div>
+    <div class="stat-item reveal stagger-4"><i class="fa-solid fa-calendar-days"></i><div class="stat-number">18</div><div class="stat-label">Years Of Experience</div></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">What We Move</span>
+      <h2>Services &amp; Solutions</h2>
+      <p>From full truckloads to specialized project cargo, Roadline covers the full freight spectrum.</p>
+    </div>
+    <div class="service-tabs" id="serviceTabs">
+      <button class="service-tab-btn active" data-cat="transport">Transportation</button>
+      <button class="service-tab-btn" data-cat="specialized">Specialized</button>
+      <button class="service-tab-btn" data-cat="logistics">Logistics</button>
+    </div>
+    <div class="services-grid" data-cat-panel="transport">
+      <div class="service-card reveal stagger-1"><i class="fa-solid fa-truck-ramp-box"></i><h4>Full Truckload (FTL)</h4><p>Dedicated trucks for large shipments moving direct, point to point.</p></div>
+      <div class="service-card reveal stagger-2"><i class="fa-solid fa-boxes-stacked"></i><h4>Less Than Truckload (LTL)</h4><p>Cost-efficient shared-load shipping for smaller consignments.</p></div>
+      <div class="service-card reveal stagger-3"><i class="fa-solid fa-route"></i><h4>Dedicated Trucking</h4><p>Fixed vehicles and drivers reserved exclusively for your business.</p></div>
+      <div class="service-card reveal stagger-4"><i class="fa-solid fa-house-chimney"></i><h4>Door-to-Door Delivery</h4><p>Pickup and delivery handled end-to-end, no handoffs.</p></div>
+      <div class="service-card reveal stagger-1"><i class="fa-solid fa-map-location-dot"></i><h4>Regional Transportation</h4><p>Fast, reliable coverage across regional and intercity routes.</p></div>
+      <div class="service-card reveal stagger-2"><i class="fa-solid fa-bolt"></i><h4>Express / Time-Critical</h4><p>Priority dispatch for shipments that can't afford delay.</p></div>
+    </div>
+    <div class="services-grid" data-cat-panel="specialized" hidden>
+      <div class="service-card reveal"><i class="fa-solid fa-weight-hanging"></i><h4>Heavy Haul</h4><p>Specialized rigs for heavy machinery and industrial loads.</p></div>
+      <div class="service-card reveal"><i class="fa-solid fa-cubes-stacked"></i><h4>Oversized Cargo</h4><p>Permits, escorts and route planning for oversized freight.</p></div>
+      <div class="service-card reveal"><i class="fa-solid fa-industry"></i><h4>Project Cargo</h4><p>End-to-end logistics for complex, multi-leg industrial projects.</p></div>
+      <div class="service-card reveal"><i class="fa-solid fa-snowflake"></i><h4>Temperature-Controlled</h4><p>Reefer fleet for pharmaceuticals, produce and perishables.</p></div>
+      <div class="service-card reveal"><i class="fa-solid fa-wine-glass"></i><h4>Fragile Cargo</h4><p>Specialized handling and packaging for delicate shipments.</p></div>
+      <div class="service-card reveal"><i class="fa-solid fa-vault"></i><h4>High-Value Cargo</h4><p>Secured, GPS-monitored transport with insurance options.</p></div>
+    </div>
+    <div class="services-grid" data-cat-panel="logistics" hidden>
+      <div class="service-card reveal"><i class="fa-solid fa-warehouse"></i><h4>Warehousing</h4><p>Secure, monitored storage with flexible short and long-term space.</p></div>
+      <div class="service-card reveal"><i class="fa-solid fa-truck-arrow-right"></i><h4>Distribution</h4><p>Multi-point distribution networks built around your customer base.</p></div>
+      <div class="service-card reveal"><i class="fa-solid fa-motorcycle"></i><h4>Last-Mile Delivery</h4><p>Reliable final-leg delivery direct to consumers or retail points.</p></div>
+      <div class="service-card reveal"><i class="fa-solid fa-rotate-left"></i><h4>Reverse Logistics</h4><p>Returns, exchanges and recall management handled at scale.</p></div>
+      <div class="service-card reveal"><i class="fa-solid fa-diagram-project"></i><h4>3PL &amp; Supply Chain</h4><p>Outsourced logistics management across your entire supply chain.</p></div>
+      <div class="service-card reveal"><i class="fa-solid fa-ship"></i><h4>Freight Forwarding</h4><p>Container transportation and freight coordination, port to door.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why-us">
+  <div class="container why-grid">
+    <div class="why-media reveal-left">
+      <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=700&q=80" alt="Roadline logistics operations">
+    </div>
+    <div class="why-content reveal-right">
+      <span class="section-label">Why Choose Us</span>
+      <h2>Built For Businesses That Can't Afford Delays</h2>
+      <div class="why-items">
+        <div class="why-item"><i class="fa-solid fa-location-crosshairs"></i><div><h4>Real-Time GPS Tracking</h4><p>Every vehicle tracked live, with ETA updates sent straight to you.</p></div></div>
+        <div class="why-item"><i class="fa-solid fa-user-shield"></i><div><h4>Vetted, Trained Drivers</h4><p>Every driver background-checked and safety-certified.</p></div></div>
+        <div class="why-item"><i class="fa-solid fa-headset"></i><div><h4>24/7 Dispatch Support</h4><p>A human on the line any hour, any day of the week.</p></div></div>
+        <div class="why-item"><i class="fa-solid fa-file-shield"></i><div><h4>Fully Insured Cargo</h4><p>Every shipment covered, so you ship with confidence.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fleet" id="fleet">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Our Fleet</span>
+      <h2>The Right Vehicle For Every Load</h2>
+    </div>
+    <div class="fleet-grid">
+      <div class="fleet-card reveal stagger-1">
+        <div class="fleet-media"><img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=500&q=80" alt="22-wheeler trailer"></div>
+        <div class="fleet-body">
+          <h4>22-Wheeler Trailer</h4>
+          <ul><li><i class="fa-solid fa-weight-hanging"></i> Capacity: 40 Tons</li><li><i class="fa-solid fa-boxes-stacked"></i> Industrial &amp; Bulk Cargo</li><li><i class="fa-solid fa-earth-asia"></i> Nationwide Coverage</li></ul>
+        </div>
+      </div>
+      <div class="fleet-card reveal stagger-2">
+        <div class="fleet-media"><img src="https://images.unsplash.com/photo-1519003300449-424ad0405076?auto=format&fit=crop&w=500&q=80" alt="Flatbed truck"></div>
+        <div class="fleet-body">
+          <h4>Flatbed Truck</h4>
+          <ul><li><i class="fa-solid fa-weight-hanging"></i> Capacity: 20 Tons</li><li><i class="fa-solid fa-boxes-stacked"></i> Machinery &amp; Steel</li><li><i class="fa-solid fa-earth-asia"></i> Regional &amp; Long-Haul</li></ul>
+        </div>
+      </div>
+      <div class="fleet-card reveal stagger-3">
+        <div class="fleet-media"><img src="https://images.unsplash.com/photo-1616432043562-3671ea2e5242?auto=format&fit=crop&w=500&q=80" alt="Container truck"></div>
+        <div class="fleet-body">
+          <h4>Container Carrier</h4>
+          <ul><li><i class="fa-solid fa-weight-hanging"></i> Capacity: 30 Tons</li><li><i class="fa-solid fa-boxes-stacked"></i> Import / Export Containers</li><li><i class="fa-solid fa-earth-asia"></i> Port-To-Door</li></ul>
+        </div>
+      </div>
+      <div class="fleet-card reveal stagger-4">
+        <div class="fleet-media"><img src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?auto=format&fit=crop&w=500&q=80" alt="Refrigerated truck"></div>
+        <div class="fleet-body">
+          <h4>Refrigerated Truck</h4>
+          <ul><li><i class="fa-solid fa-weight-hanging"></i> Capacity: 12 Tons</li><li><i class="fa-solid fa-boxes-stacked"></i> Perishables &amp; Pharma</li><li><i class="fa-solid fa-earth-asia"></i> Regional Delivery</li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="section-cta reveal"><a href="quote.html" class="btn btn-primary">Check Fleet Availability</a></div>
+  </div>
+</section>
+
+<section class="coverage" id="coverage">
+  <div class="container coverage-grid">
+    <div class="coverage-content reveal-left">
+      <span class="section-label">Coverage &amp; Network</span>
+      <h2>Nationwide Routes, Local Reliability</h2>
+      <p>Roadline operates branch offices and distribution points across major cities, with regular corridors connecting the country's key industrial and commercial hubs.</p>
+      <div class="corridor">
+        <span>Lahore</span><i class="fa-solid fa-arrow-right"></i>
+        <span>Karachi</span><i class="fa-solid fa-arrow-right"></i>
+        <span>Islamabad</span><i class="fa-solid fa-arrow-right"></i>
+        <span>Faisalabad</span><i class="fa-solid fa-arrow-right"></i>
+        <span>Multan</span><i class="fa-solid fa-arrow-right"></i>
+        <span>Peshawar</span><i class="fa-solid fa-arrow-right"></i>
+        <span>Sialkot</span><i class="fa-solid fa-arrow-right"></i>
+        <span>Quetta</span>
+      </div>
+      <div class="coverage-stats">
+        <div><strong>9</strong><span>Branch Offices</span></div>
+        <div><strong>60+</strong><span>Cities Served</span></div>
+        <div><strong>4</strong><span>Distribution Centers</span></div>
+      </div>
+    </div>
+    <div class="coverage-media reveal-right">
+      <img src="https://images.unsplash.com/photo-1454779132693-e5cd0a216ed3?auto=format&fit=crop&w=700&q=80" alt="Map of coverage network">
+      <span class="map-pin" style="top:22%;left:30%;"><i class="fa-solid fa-location-dot"></i></span>
+      <span class="map-pin" style="top:45%;left:55%;"><i class="fa-solid fa-location-dot"></i></span>
+      <span class="map-pin" style="top:65%;left:35%;"><i class="fa-solid fa-location-dot"></i></span>
+    </div>
+  </div>
+</section>
+
+<section class="how-it-works">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">How It Works</span>
+      <h2>From Quote To Delivery In Four Steps</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal stagger-1"><span class="step-num">01</span><i class="fa-solid fa-file-invoice"></i><h4>Request A Quote</h4><p>Share your route and cargo details — get pricing within hours.</p></div>
+      <div class="step-card reveal stagger-2"><span class="step-num">02</span><i class="fa-solid fa-clipboard-check"></i><h4>Confirm Booking</h4><p>Approve your quote and we schedule the right vehicle for your load.</p></div>
+      <div class="step-card reveal stagger-3"><span class="step-num">03</span><i class="fa-solid fa-truck-fast"></i><h4>Pickup &amp; Transit</h4><p>Your cargo is picked up and tracked live from origin to destination.</p></div>
+      <div class="step-card reveal stagger-4"><span class="step-num">04</span><i class="fa-solid fa-box-circle-check"></i><h4>Delivery &amp; POD</h4><p>Signed proof of delivery sent to you the moment cargo arrives.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="industries" id="industries">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Who We Serve</span>
+      <h2>Industries We Serve</h2>
+    </div>
+    <div class="industries-grid">
+      <div class="industry-card reveal stagger-1"><i class="fa-solid fa-industry"></i><span>Manufacturing</span></div>
+      <div class="industry-card reveal stagger-2"><i class="fa-solid fa-cart-shopping"></i><span>FMCG</span></div>
+      <div class="industry-card reveal stagger-3"><i class="fa-solid fa-store"></i><span>Retail</span></div>
+      <div class="industry-card reveal stagger-4"><i class="fa-solid fa-laptop"></i><span>E-commerce</span></div>
+      <div class="industry-card reveal stagger-1"><i class="fa-solid fa-helmet-safety"></i><span>Construction</span></div>
+      <div class="industry-card reveal stagger-2"><i class="fa-solid fa-wheat-awn"></i><span>Agriculture</span></div>
+      <div class="industry-card reveal stagger-3"><i class="fa-solid fa-car"></i><span>Automotive</span></div>
+      <div class="industry-card reveal stagger-4"><i class="fa-solid fa-pills"></i><span>Pharmaceuticals</span></div>
+      <div class="industry-card reveal stagger-1"><i class="fa-solid fa-oil-well"></i><span>Oil &amp; Gas</span></div>
+      <div class="industry-card reveal stagger-2"><i class="fa-solid fa-vial"></i><span>Chemicals</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="safety-tech">
+  <div class="container safety-tech-grid">
+    <div class="safety-col reveal-left">
+      <span class="section-label">Safety &amp; Compliance</span>
+      <h3>Safety Isn't A Department. It's How We Operate.</h3>
+      <ul class="check-list">
+        <li><i class="fa-solid fa-check-circle"></i> Certified driver training &amp; background checks</li>
+        <li><i class="fa-solid fa-check-circle"></i> Scheduled vehicle inspections &amp; preventive maintenance</li>
+        <li><i class="fa-solid fa-check-circle"></i> Full cargo insurance on every shipment</li>
+        <li><i class="fa-solid fa-check-circle"></i> ISO 9001 &amp; ISO 39001 certified operations</li>
+      </ul>
+    </div>
+    <div class="safety-col reveal-right">
+      <span class="section-label">Technology</span>
+      <h3>Built On A Modern Logistics Stack</h3>
+      <ul class="check-list">
+        <li><i class="fa-solid fa-check-circle"></i> Live GPS tracking &amp; automated ETA updates</li>
+        <li><i class="fa-solid fa-check-circle"></i> Digital proof of delivery &amp; e-documentation</li>
+        <li><i class="fa-solid fa-check-circle"></i> Customer portal with real-time shipment dashboards</li>
+        <li><i class="fa-solid fa-check-circle"></i> Route optimization &amp; fleet management software</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Client Words</span>
+      <h2>Trusted By Businesses Across The Country</h2>
+    </div>
+    <div class="testimonial-slider reveal">
+      <div class="testimonial-viewport">
+        <div class="testimonial-track">
+          <div class="testimonial-slide">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"Roadline has run our Lahore-Karachi FMCG distribution for three years without a single missed delivery window."</p>
+            <img src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=160&q=80" alt="Client photo">
+            <h4>Bilal Ahmed</h4><span>Supply Chain Head, Verdant Foods</span>
+          </div>
+          <div class="testimonial-slide">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"Their GPS tracking portal alone justified the switch — our team finally has real visibility into every shipment."</p>
+            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=160&q=80" alt="Client photo">
+            <h4>Sana Malik</h4><span>Operations Director, Nimbus Retail</span>
+          </div>
+          <div class="testimonial-slide">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+            <p>"We needed a partner who could handle oversized industrial equipment safely. Roadline delivered, on schedule, every time."</p>
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=160&q=80" alt="Client photo">
+            <h4>Usman Tariq</h4><span>Plant Manager, Meridian Industries</span>
+          </div>
+        </div>
+      </div>
+      <div class="slider-row">
+        <button class="slider-arrow slider-prev" aria-label="Previous testimonial"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="slider-dots"></div>
+        <button class="slider-arrow slider-next" aria-label="Next testimonial"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="clients">
+  <div class="container">
+    <p class="trusted-label">Trusted By 500+ Businesses Nationwide</p>
+    <div class="logo-marquee">
+      <div class="logo-marquee-track">
+        <span class="trust-logo"><i class="fa-solid fa-leaf"></i> Verdant Foods</span>
+        <span class="trust-logo"><i class="fa-solid fa-cube"></i> Nimbus Retail</span>
+        <span class="trust-logo"><i class="fa-solid fa-industry"></i> Meridian Industries</span>
+        <span class="trust-logo"><i class="fa-solid fa-bolt"></i> Voltix Energy</span>
+        <span class="trust-logo"><i class="fa-solid fa-gem"></i> Lucida Textiles</span>
+        <span class="trust-logo"><i class="fa-solid fa-anchor"></i> Harborline Group</span>
+        <span class="trust-logo"><i class="fa-solid fa-leaf"></i> Verdant Foods</span>
+        <span class="trust-logo"><i class="fa-solid fa-cube"></i> Nimbus Retail</span>
+        <span class="trust-logo"><i class="fa-solid fa-industry"></i> Meridian Industries</span>
+        <span class="trust-logo"><i class="fa-solid fa-bolt"></i> Voltix Energy</span>
+        <span class="trust-logo"><i class="fa-solid fa-gem"></i> Lucida Textiles</span>
+        <span class="trust-logo"><i class="fa-solid fa-anchor"></i> Harborline Group</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">FAQ</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">What areas do you cover? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>We operate across 60+ cities nationwide with branch offices in 9 major hubs, plus select international freight-forwarding routes.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">Do you provide both FTL and LTL? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>Yes — we run dedicated Full Truckload service as well as cost-efficient Less Than Truckload shipping for smaller consignments.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">Can I track my shipment in real time? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>Every vehicle is GPS-tracked. Enter your tracking number on our <a href="track.html">Track Shipment</a> page for live status and location.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">Do you handle oversized or specialized cargo? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>Yes — heavy haul, oversized and project cargo are handled by our specialized fleet with permits and route planning included.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">How quickly can you arrange a truck? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>Standard bookings are confirmed within hours; urgent/express dispatch can typically be arranged same-day, subject to availability.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">Do you provide cargo insurance? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>Yes, every shipment is covered under our standard cargo insurance policy, with additional high-value coverage available on request.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="final-cta-bg" data-parallax style="background-image: url('https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1800&q=80');"></div>
+  <div class="final-cta-overlay"></div>
+  <div class="container final-cta-inner reveal">
+    <span class="section-label section-label-light">Let's Get Moving</span>
+    <h2>Ready To Ship With A Partner You Can Track, Trust And Call At 2AM?</h2>
+    <div class="final-cta-actions">
+      <a href="quote.html" class="btn btn-primary btn-lg">Get A Free Quote</a>
+      <a href="track.html" class="btn btn-outline-light btn-lg">Track A Shipment</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info reveal-left">
+      <span class="section-label">Get In Touch</span>
+      <h2>Contact Roadline Logistics</h2>
+      <p>Speak with our dispatch team for booking, or reach a branch office directly below.</p>
+      <div class="contact-details">
+        <div><i class="fa-solid fa-phone"></i><div><strong>Call Dispatch</strong><span>+92 42 111 234 567</span></div></div>
+        <div><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp</strong><span>+92 300 1234567</span></div></div>
+        <div><i class="fa-solid fa-envelope"></i><div><strong>Email Us</strong><span>bookings@roadline.pk</span></div></div>
+        <div><i class="fa-solid fa-clock"></i><div><strong>Business Hours</strong><span>Mon–Sat, 8am–8pm &middot; 24/7 Dispatch</span></div></div>
+      </div>
+    </div>
+    <div class="branches-grid reveal-right">
+      <div class="branch-card">
+        <h4><i class="fa-solid fa-location-dot"></i> Lahore (Head Office)</h4>
+        <p>12-B Ferozepur Road, Lahore</p>
+        <span>+92 42 111 234 567</span>
+      </div>
+      <div class="branch-card">
+        <h4><i class="fa-solid fa-location-dot"></i> Karachi</h4>
+        <p>Plot 45, SITE Industrial Area, Karachi</p>
+        <span>+92 21 111 234 567</span>
+      </div>
+      <div class="branch-card">
+        <h4><i class="fa-solid fa-location-dot"></i> Islamabad</h4>
+        <p>I-9 Industrial Sector, Islamabad</p>
+        <span>+92 51 111 234 567</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" id="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="brand"><span class="brand-mark"><i class="fa-solid fa-truck-fast"></i></span>Roadline</a>
+      <p>Nationwide trucking, freight and logistics solutions — GPS-tracked, insured, and available 24/7.</p>
+      <div class="footer-social"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">Full Truckload</a><a href="#services">Less Than Truckload</a><a href="#services">Warehousing</a><a href="#services">Freight Forwarding</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#fleet">Our Fleet</a><a href="#coverage">Coverage</a><a href="#industries">Industries</a><a href="quote.html">Become A Fleet Partner</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="track.html">Track Shipment</a><a href="quote.html">Get A Quote</a><a href="#">Blog</a><a href="#">Careers</a>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Contact</h4>
+      <p><i class="fa-solid fa-location-dot"></i> 12-B Ferozepur Road, Lahore</p>
+      <p><i class="fa-solid fa-phone"></i> +92 42 111 234 567</p>
+      <p><i class="fa-solid fa-envelope"></i> bookings@roadline.pk</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>&copy; 2026 Roadline Logistics Pvt Ltd. All rights reserved.</span>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title id="pageTitle">Article — The Daily Loom</title>
+<meta name="description" content="Read the full story on The Daily Loom." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/post.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">The Daily <span>Loom</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" aria-expanded="false">Categories <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="nav-dropdown-menu">
+          <a href="index.html#categories">Culture</a>
+          <a href="index.html#categories">Travel</a>
+          <a href="index.html#categories">Food</a>
+          <a href="index.html#categories">Life</a>
+        </div>
+      </div>
+      <a href="index.html#about">About</a>
+      <a href="index.html#footer">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <a href="index.html#newsletter" class="btn btn-primary">Subscribe</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="search-panel" id="searchPanel">
+    <div class="container">
+      <form id="searchForm"><i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Search articles, authors, topics..." aria-label="Search"><button type="button" class="icon-btn" id="searchClose" aria-label="Close search"><i class="fa-solid fa-xmark"></i></button></form>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i>
+    <span id="breadcrumbCategory">Category</span> <i class="fa-solid fa-chevron-right"></i>
+    <span id="breadcrumbTitle">Article</span>
+  </nav>
+
+  <div class="post-hero-head" id="postHeroHead">
+    <!-- Populated by js/post.js -->
+  </div>
+</div>
+
+<div class="post-hero-image">
+  <img id="postHeroImage" src="" alt="">
+</div>
+
+<section>
+  <div class="container post-layout">
+    <div class="post-main">
+      <div class="post-content" id="postContent"></div>
+      <div class="post-tags" id="postTags"></div>
+      <div class="post-share">
+        <span>Share this story</span>
+        <a href="#" aria-label="Share on Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" aria-label="Share on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Share on Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        <a href="#" aria-label="Copy link"><i class="fa-solid fa-link"></i></a>
+      </div>
+      <div class="author-bio-card" id="authorBioCard"></div>
+
+      <div class="comments-section">
+        <h3>Comments (<span id="commentCount">3</span>)</h3>
+        <div id="commentsList">
+          <div class="comment">
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=100&q=80" alt="Elena Ford">
+            <div class="comment-body">
+              <div class="comment-head"><strong>Elena Ford</strong><span>2 days ago</span></div>
+              <p>This one hit close to home — I've been trying to do the same thing with my mornings. Great piece.</p>
+            </div>
+          </div>
+          <div class="comment comment-reply">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Ravi Chandra">
+            <div class="comment-body">
+              <div class="comment-head"><strong>Ravi Chandra</strong><span>1 day ago</span></div>
+              <p>Same here. Small changes like this add up more than people expect.</p>
+            </div>
+          </div>
+          <div class="comment">
+            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=100&q=80" alt="Sofia Marchetti">
+            <div class="comment-body">
+              <div class="comment-head"><strong>Sofia Marchetti</strong><span>5 hours ago</span></div>
+              <p>Really well written. Looking forward to the next one in this series.</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="comment-form" id="commentForm" novalidate>
+          <h4>Leave A Comment</h4>
+          <div class="form-row">
+            <input type="text" placeholder="Your name" required aria-label="Your name">
+            <input type="email" placeholder="Your email" required aria-label="Your email">
+          </div>
+          <textarea placeholder="Write your comment..." required aria-label="Your comment"></textarea>
+          <button type="submit" class="btn btn-primary btn-sm">Post Comment</button>
+          <p class="comment-success" id="commentSuccess" role="status" aria-live="polite" hidden><i class="fa-solid fa-circle-check"></i> Thanks! Your comment is awaiting moderation.</p>
+        </form>
+      </div>
+    </div>
+
+    <aside class="post-sidebar">
+      <div class="sidebar-card post-toc">
+        <h4>In This Article</h4>
+        <ol id="postToc"></ol>
+      </div>
+      <div class="sidebar-card">
+        <h4>More To Read</h4>
+        <ul class="mini-post-list" id="miniPostList"></ul>
+      </div>
+      <div class="sidebar-card newsletter-box">
+        <i class="fa-solid fa-envelope-open-text"></i>
+        <h4>Never Miss A Story</h4>
+        <p>One thoughtful email a week. No spam, unsubscribe anytime.</p>
+        <form id="sidebarNewsletter">
+          <input type="email" placeholder="you@example.com" required aria-label="Email address">
+          <button type="submit" class="btn btn-primary btn-sm">Join</button>
+        </form>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="related">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Keep Reading</span>
+      <h2>Related Stories</h2>
+    </div>
+    <div class="post-grid" id="relatedGrid"></div>
+  </div>
+</section>
+
+<footer class="site-footer" id="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand">The Daily <span>Loom</span></a>
+      <p>Essays and stories on culture, travel, food and life — published every weekday.</p>
+      <div class="footer-social"><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-pinterest"></i></a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <a href="index.html#latest">Culture</a><a href="index.html#latest">Travel</a><a href="index.html#latest">Food</a><a href="index.html#latest">Life</a><a href="index.html#latest">Tech</a>
+    </div>
+    <div class="footer-col">
+      <h4>The Loom</h4>
+      <a href="index.html">Home</a><a href="index.html#about">About</a><a href="index.html#newsletter">Newsletter</a><a href="index.html#footer">Contact</a>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Get In Touch</h4>
+      <p><i class="fa-solid fa-envelope"></i> hello@dailyloom.com</p>
+      <p><i class="fa-solid fa-location-dot"></i> Portland, Oregon</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>&copy; 2026 The Daily Loom. All rights reserved.</span>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/posts.js"></script>
+<script src="js/main.js"></script>
+<script src="js/post.js"></script>
+</body>
+</html>

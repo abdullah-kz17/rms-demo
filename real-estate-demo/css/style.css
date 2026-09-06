@@ -1,7 +1,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 html { overflow-x: hidden; }
-body { width: 100%; }
+body { width: 100%; overflow-x: hidden; overflow-x: clip; }
 body { font-family: var(--font-body); color: var(--color-text); background: var(--color-white); line-height: 1.6; }
 img { display: block; max-width: 100%; }
 a { text-decoration: none; color: inherit; }
@@ -326,3 +326,4 @@ h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--color-dark); fon
   .header-actions .btn-primary { display: none; }
   .ask-form { padding: 24px; }
 }
+

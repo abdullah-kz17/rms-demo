@@ -8,6 +8,8 @@ body {
   background: var(--color-white);
   line-height: 1.6;
   width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img { max-width: 100%; display: block; }
@@ -863,3 +865,4 @@ h2 { font-size: var(--fs-h2); letter-spacing: 1px; text-transform: uppercase; }
   .about-img-float { width: 60%; height: 170px; }
   .reservation-form .form-row { grid-template-columns: 1fr; }
 }
+

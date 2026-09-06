@@ -11,6 +11,8 @@ body {
   background: var(--color-white);
   line-height: 1.6;
   width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img { max-width: 100%; display: block; }
@@ -968,3 +970,4 @@ h1, h2, h3, h4 {
   .experience-img-float { width: 65%; }
   .reservation-form .form-row { grid-template-columns: 1fr; }
 }
+

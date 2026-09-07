@@ -152,7 +152,7 @@
     let camZ = 6;
     watchSize(canvas, (w, h) => {
       applySize(renderer, camera, w, h);
-      camZ = fitCameraDistance(camera, 2.7, 1.2);
+      camZ = fitCameraDistance(camera, 2.7, 1.08);
       camera.position.z = camZ;
     });
 
@@ -389,11 +389,20 @@
     render();
   }
 
-  initHeroParticles();
+  // Phone browsers cap how many WebGL contexts can stay alive at once (often as
+  // few as a handful), and are the most likely to silently drop or refuse to
+  // create the later ones on a page with this many scenes. Rather than gamble
+  // on that budget, the purely decorative/ambient scenes are skipped on small
+  // screens — the hero core, intro and showcase (the pieces that actually carry
+  // the "wow") always render, and every ambient section has a CSS-only glow
+  // fallback so nothing is left visually blank.
+  const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
+
+  if (!isSmallScreen) initHeroParticles();
   initHeroCore();
   initIntro();
-  initFieldScene('servicesCanvas', 'box', 0x7c5cff);
+  if (!isSmallScreen) initFieldScene('servicesCanvas', 'box', 0x7c5cff);
   initShowcase();
-  initFieldScene('processCanvas', 'octa', 0x00e5ff);
-  initCta();
+  if (!isSmallScreen) initFieldScene('processCanvas', 'octa', 0x00e5ff);
+  if (!isSmallScreen) initCta();
 })();

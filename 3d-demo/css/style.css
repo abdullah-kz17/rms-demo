@@ -79,7 +79,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); color: #fff; font-weight: 700
    exists to size the canvas, it carries no border/background/radius of its own */
 .hero-model { position: relative; display: flex; align-items: center; justify-content: center; }
 .hero-model-frame {
-  position: relative; width: 100%; max-width: 620px; aspect-ratio: 1 / 1;
+  position: relative; width: 100%; max-width: 760px; aspect-ratio: 1 / 1;
   animation: heroFrameFloat 6s ease-in-out infinite;
 }
 #heroCanvas { width: 100%; height: 100%; display: block; }
@@ -114,30 +114,30 @@ h1, h2, h3, h4 { font-family: var(--font-heading); color: #fff; font-weight: 700
 .intro-feature p { font-size: 0.9rem; color: var(--color-text-light); }
 
 /* Section background canvases — bounded, low-opacity WebGL layers that sit
-   behind a section's content without ever competing with its readability */
+   behind a section's content without ever competing with its readability.
+   On mobile these are skipped entirely (see three-scene.js) since phone GPUs/
+   browsers cap concurrent WebGL contexts hard — a CSS-only glow (below) is the
+   guaranteed fallback so the section is never left visually flat. */
 .section-bg-canvas { position: absolute; inset: 0; z-index: 0; opacity: 0.5; pointer-events: none; }
 .services, .process { position: relative; overflow: hidden; }
 .services > .container, .process > .container { position: relative; z-index: 2; }
+.services::before, .services::after, .process::before, .process::after {
+  content: ''; position: absolute; width: 320px; height: 320px; border-radius: 50%;
+  filter: blur(60px); z-index: 0; pointer-events: none; animation: glowDrift 9s ease-in-out infinite;
+}
+.services::before, .process::before { top: -60px; left: -60px; background: radial-gradient(circle, rgba(124,92,255,0.3), transparent 70%); }
+.services::after, .process::after { bottom: -80px; right: -60px; background: radial-gradient(circle, rgba(0,229,255,0.22), transparent 70%); animation-delay: 2.4s; }
+@keyframes glowDrift { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(24px, -18px); } }
+@media (prefers-reduced-motion: reduce) { .services::before, .services::after, .process::before, .process::after { animation: none; } }
 
 /* Services */
 .services { padding: 120px 0; background: var(--color-dark-2); }
 .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
 .service-card { background: var(--color-panel); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 34px 28px; transition: transform var(--duration-base) var(--ease-soft), border-color var(--duration-base) var(--ease-soft), box-shadow var(--duration-base) var(--ease-soft); }
 .service-card:hover { transform: translateY(-8px); border-color: rgba(124,92,255,0.4); box-shadow: var(--shadow-card-hover); }
+.service-icon { width: 58px; height: 58px; border-radius: var(--radius-sm); background: linear-gradient(135deg, rgba(124,92,255,0.18), rgba(0,229,255,0.12)); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--color-accent-2); margin-bottom: 22px; }
 .service-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
 .service-card p { font-size: 0.9rem; color: var(--color-text-light); }
-
-/* Service icon — a real 3D cube (two faces, front/back) that spins on its Y axis */
-.service-icon-3d { width: 58px; height: 58px; margin-bottom: 22px; perspective: 400px; }
-.service-icon-face { position: absolute; width: 58px; height: 58px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--color-accent-2); backface-visibility: hidden; }
-.service-icon-3d { position: relative; transform-style: preserve-3d; animation: iconCubeSpin 7s ease-in-out infinite; }
-.service-icon-front { background: linear-gradient(135deg, rgba(124,92,255,0.22), rgba(0,229,255,0.14)); border: 1px solid var(--color-border); transform: translateZ(14px); }
-.service-icon-back { background: linear-gradient(135deg, rgba(0,229,255,0.18), rgba(124,92,255,0.24)); border: 1px solid var(--color-border); transform: translateZ(-14px) rotateY(180deg); }
-@keyframes iconCubeSpin { 0%, 35% { transform: rotateY(0deg); } 65%, 100% { transform: rotateY(180deg); } }
-.service-card:nth-child(2) .service-icon-3d { animation-delay: 0.6s; }
-.service-card:nth-child(3) .service-icon-3d { animation-delay: 1.2s; }
-.service-card:nth-child(4) .service-icon-3d { animation-delay: 1.8s; }
-@media (prefers-reduced-motion: reduce) { .service-icon-3d { animation: none; } }
 
 /* Showcase (interactive 3D viewer) */
 .showcase { padding: 120px 0; }
@@ -218,6 +218,13 @@ h1, h2, h3, h4 { font-family: var(--font-heading); color: #fff; font-weight: 700
 /* CTA */
 .cta-banner { position: relative; padding: 140px 0; text-align: center; overflow: hidden; background: var(--color-dark-2); border-top: 1px solid var(--color-border); }
 #ctaCanvas { position: absolute; inset: 0; z-index: 0; opacity: 0.7; }
+.cta-banner::before {
+  content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 480px; height: 480px; border-radius: 50%; z-index: 0; pointer-events: none;
+  background: radial-gradient(circle, rgba(0,229,255,0.18), transparent 70%); filter: blur(50px);
+  animation: glowDrift 10s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) { .cta-banner::before { animation: none; } }
 .cta-inner { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; }
 .cta-inner h2 { font-size: 2.5rem; margin-bottom: 18px; }
 .cta-inner p { color: var(--color-text); margin-bottom: 34px; }
@@ -280,7 +287,14 @@ h1, h2, h3, h4 { font-family: var(--font-heading); color: #fff; font-weight: 700
 .nav-overlay.open { opacity: 1; visibility: visible; }
 
 @media (max-width: 992px) {
-  .nav-links { display: none; }
+  .nav-links {
+    position: fixed; top: 0; right: -300px; width: 280px; height: 100vh; height: 100dvh;
+    background: var(--color-dark-2); border-left: 1px solid var(--color-border);
+    flex-direction: column; align-items: flex-start; padding: 100px 30px 30px; gap: 22px;
+    box-shadow: -10px 0 40px rgba(0,0,0,0.5); transition: right var(--duration-base) var(--ease-soft);
+    z-index: 999; overflow-y: auto;
+  }
+  .nav-links.open { right: 0; }
   .nav-toggle { display: flex; }
   .hero-text h1 { font-size: 2.6rem; }
   .hero-inner { grid-template-columns: 1fr; text-align: center; }
@@ -288,7 +302,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); color: #fff; font-weight: 700
   .hero-actions, .hero-stats { justify-content: center; }
   .hero-text > p { margin-left: auto; margin-right: auto; }
   .hero-model { margin-top: 20px; }
-  .hero-model-frame { max-width: 420px; }
+  .hero-model-frame { max-width: 480px; }
   .intro-grid, .showcase-grid, .contact-grid { grid-template-columns: 1fr; }
   .services-grid, .process-grid { grid-template-columns: repeat(2, 1fr); }
   .work-grid { grid-template-columns: repeat(2, 1fr); }
@@ -299,7 +313,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); color: #fff; font-weight: 700
   .hero { padding: 120px 0 60px; }
   .hero-text h1 { font-size: 2.1rem; }
   .hero-stats { gap: 26px; }
-  .hero-model-frame { max-width: 320px; }
+  .hero-model-frame { max-width: 360px; }
   .hero-model-badge { font-size: 0.68rem; padding: 6px 12px; }
   .hero-model-badge-1 { top: 2%; left: 2%; }
   .hero-model-badge-2 { bottom: 2%; right: 2%; }
@@ -313,6 +327,6 @@ h1, h2, h3, h4 { font-family: var(--font-heading); color: #fff; font-weight: 700
   .footer-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .ask-form { padding: 24px; }
-  .hero-model-frame { max-width: 260px; }
+  .hero-model-frame { max-width: 300px; }
   .hero-model-badge { display: none; }
 }

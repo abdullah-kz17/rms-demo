@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aventra Travel — Explore More, Worry Less</title>
+<meta name="description" content="Aventra Travel — a boutique travel agency crafting guided tours, beach escapes and adventure trips around the world." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#home" class="brand">Aventra<span>Travel</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#packages">Packages</a>
+      <a href="#about">About</a>
+      <a href="#guides">Guides</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:+19876543210" class="header-phone"><i class="fa-solid fa-phone"></i> +1 987 654 3210</a>
+      <a href="#contact" class="btn btn-primary">Plan My Trip</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<section class="hero" id="home">
+  <div class="hero-bg" data-parallax style="background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1800&q=80');"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-inner">
+    <div class="hero-text reveal">
+      <span class="section-label section-label-light">Aventra Travel</span>
+      <h1>Explore More,<br>Worry Less</h1>
+      <p>Hand-built tours across 40+ destinations, backed by local guides, honest pricing and a team that actually answers the phone.</p>
+      <form class="hero-search" id="heroSearch">
+        <div class="hero-search-field">
+          <i class="fa-solid fa-location-dot"></i>
+          <input type="text" placeholder="Where do you want to go?" aria-label="Destination">
+        </div>
+        <div class="hero-search-field">
+          <i class="fa-solid fa-compass"></i>
+          <select aria-label="Trip type">
+            <option>Beach</option>
+            <option>Adventure</option>
+            <option>Culture</option>
+            <option>Wildlife</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+      </form>
+      <div class="hero-stats">
+        <div><strong>34,000+</strong><span>Happy Travelers</span></div>
+        <div><strong>1,900+</strong><span>Tours Completed</span></div>
+        <div><strong>40+</strong><span>Destinations</span></div>
+      </div>
+    </div>
+    <div class="hero-card reveal-right">
+      <span class="tag">Featured Trip</span>
+      <h2>Maldives Overwater Retreat</h2>
+      <div class="hero-card-price">$3,450<span style="font-size:0.7rem;font-weight:500;color:var(--color-text-light);">/person</span></div>
+      <div class="hero-card-meta"><span><i class="fa-solid fa-calendar-days"></i> 5 Days</span><span><i class="fa-solid fa-user-group"></i> 2-6 People</span><span><i class="fa-solid fa-star"></i> 4.9 (129 reviews)</span></div>
+      <a href="tour.html?id=7" class="btn btn-outline-light btn-sm">View Details</a>
+    </div>
+  </div>
+  <div class="hero-scroll-cue"><span></span></div>
+</section>
+
+<section class="intro">
+  <div class="container intro-grid">
+    <div class="intro-media reveal-left">
+      <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=700&q=80" alt="Aventra Travel guides planning a trip" />
+    </div>
+    <div class="intro-content reveal-right">
+      <span class="section-label">Who We Are</span>
+      <h2>Your Trusted Partner In Every Journey</h2>
+      <p>For over 12 years Aventra Travel has designed trips that feel personal — not packaged. Every itinerary is built by a destination specialist, refined with local guides, and backed by round-the-clock support while you're on the road.</p>
+      <div class="intro-features">
+        <div class="intro-feature">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <div><h4>Hand-Built Itineraries</h4><p>No copy-paste packages — every trip is planned around what you actually want.</p></div>
+        </div>
+        <div class="intro-feature">
+          <i class="fa-solid fa-headset"></i>
+          <div><h4>24/7 On-Trip Support</h4><p>A real person on call for the entire length of your journey.</p></div>
+        </div>
+        <div class="intro-feature">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+          <div><h4>Best Price Guarantee</h4><p>Transparent pricing with no hidden fees, ever.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quiz">
+  <div class="container quiz-inner">
+    <div class="section-head reveal">
+      <span class="section-label section-label-light">Find Your Trip</span>
+      <h2 style="color:#fff;">What Kind Of Traveler Are You?</h2>
+    </div>
+    <div class="quiz-chips reveal" id="quizChips">
+      <button type="button" class="quiz-chip active" data-style="Beach"><i class="fa-solid fa-umbrella-beach"></i> Beach Escapes</button>
+      <button type="button" class="quiz-chip" data-style="Adventure"><i class="fa-solid fa-person-hiking"></i> Adventure</button>
+      <button type="button" class="quiz-chip" data-style="Culture"><i class="fa-solid fa-landmark"></i> Culture</button>
+      <button type="button" class="quiz-chip" data-style="Wildlife"><i class="fa-solid fa-paw"></i> Wildlife</button>
+    </div>
+    <div class="quiz-result reveal" id="quizResult"></div>
+  </div>
+</section>
+
+<section class="packages" id="packages">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Handpicked</span>
+      <h2>Our Most Loved Tour Packages</h2>
+    </div>
+    <div class="package-grid" id="packageGrid"></div>
+  </div>
+</section>
+
+<section class="featured">
+  <div class="featured-bg" data-parallax style="background-image: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1600&q=80');"></div>
+  <div class="featured-overlay"></div>
+  <div class="container featured-inner reveal-right">
+    <span class="section-label section-label-light">Featured Trip</span>
+    <h2>Kenya Safari Expedition</h2>
+    <div class="featured-price">$2,890<span>/person</span></div>
+    <p>Five days of dawn and dusk game drives across the Maasai Mara from a private tented camp — wake to the sound of the savanna and end each day around a campfire under genuinely dark skies.</p>
+    <div class="featured-meta"><span><i class="fa-solid fa-calendar-days"></i> 5 Days</span><span><i class="fa-solid fa-user-group"></i> 2-8 People</span><span><i class="fa-solid fa-star"></i> 5.0 (96 reviews)</span></div>
+    <div class="featured-actions">
+      <a href="tour.html?id=3" class="btn btn-primary">View Details</a>
+      <a href="#contact" class="btn btn-outline-light">Ask A Question</a>
+    </div>
+  </div>
+</section>
+
+<section class="deals" id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Limited Time</span>
+      <h2>Deal Of The Month</h2>
+    </div>
+    <div class="deal-grid">
+      <div class="deal-card reveal-left">
+        <div class="deal-media">
+          <img class="deal-main" src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=700&q=80" alt="Swiss Alps mountains">
+          <div class="deal-thumbs">
+            <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=200&q=80" alt="Alpine lake">
+            <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=200&q=80" alt="Mountain village">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=200&q=80" alt="Cable car view">
+          </div>
+        </div>
+        <div class="deal-body">
+          <span class="section-label">Save 15%</span>
+          <h3>Swiss Alps Adventure</h3>
+          <p>Seven days chasing alpine views across the Bernese Oberland, from cable cars up to Jungfraujoch to a via ferrata for the adventurous.</p>
+          <a href="tour.html?id=2" class="btn btn-outline btn-sm">View Details</a>
+        </div>
+      </div>
+      <div class="deal-card reveal-right">
+        <div class="deal-body">
+          <span class="section-label">Save 10%</span>
+          <h3>Kyoto Cultural Journey</h3>
+          <p>Six days moving through Kyoto's temples, bamboo groves and geisha districts at an unhurried pace, with a private tea ceremony included.</p>
+          <a href="tour.html?id=5" class="btn btn-outline btn-sm">View Details</a>
+        </div>
+        <div class="deal-media">
+          <img class="deal-main" src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=700&q=80" alt="Kyoto temple">
+          <div class="deal-thumbs">
+            <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=200&q=80" alt="Temple gate">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=200&q=80" alt="Garden path">
+            <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=200&q=80" alt="Lantern street">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="plan-cta">
+  <div class="plan-cta-bg" data-parallax style="background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1800&q=80');"></div>
+  <div class="plan-cta-overlay"></div>
+  <div class="container plan-cta-inner reveal">
+    <span class="section-label section-label-light">Custom Trips</span>
+    <h2>Can't Find The <em>Perfect Trip?</em></h2>
+    <p>Tell us your dates, budget and travel style — we'll build a custom itinerary just for you, free of charge.</p>
+    <a href="#contact" class="btn btn-primary">Start Planning</a>
+  </div>
+</section>
+
+<section class="types">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Explore</span>
+      <h2>Browse By Destination Type</h2>
+    </div>
+    <div class="types-grid">
+      <a href="tour.html?id=1" class="type-card reveal stagger-1"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=500&q=80" alt="Beach Getaways"><span>Beach Getaways</span></a>
+      <a href="tour.html?id=2" class="type-card reveal stagger-2"><img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=500&q=80" alt="Mountain Adventures"><span>Mountain Adventures</span></a>
+      <a href="tour.html?id=3" class="type-card reveal stagger-3"><img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=500&q=80" alt="Wildlife Safaris"><span>Wildlife Safaris</span></a>
+    </div>
+    <div class="section-cta reveal"><a href="#packages" class="btn btn-primary">Browse All Trips</a></div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat-item reveal stagger-1"><i class="fa-solid fa-people-group"></i><div class="stat-number">34000</div><div class="stat-label">Happy Travelers</div></div>
+    <div class="stat-item reveal stagger-2"><i class="fa-solid fa-plane-departure"></i><div class="stat-number">1900</div><div class="stat-label">Tours Completed</div></div>
+    <div class="stat-item reveal stagger-3"><i class="fa-solid fa-earth-americas"></i><div class="stat-number">40</div><div class="stat-label">Destinations</div></div>
+    <div class="stat-item reveal stagger-4"><i class="fa-solid fa-user-tie"></i><div class="stat-number">120</div><div class="stat-label">Expert Guides</div></div>
+  </div>
+</section>
+
+<section class="finder">
+  <div class="container finder-grid">
+    <div class="finder-content reveal-left">
+      <span class="section-label">Global Reach</span>
+      <h2>We Take You Everywhere</h2>
+      <p>From alpine peaks to overwater villas, our destination specialists have walked every trail and stayed at every property we recommend.</p>
+      <a href="#packages" class="btn btn-primary">See All Destinations</a>
+    </div>
+    <div class="finder-media reveal-right">
+      <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=700&q=80" alt="World map">
+      <span class="map-pin" style="top:30%;left:25%;"><i class="fa-solid fa-location-dot"></i></span>
+      <span class="map-pin" style="top:45%;left:55%;"><i class="fa-solid fa-location-dot"></i></span>
+      <span class="map-pin" style="top:60%;left:70%;"><i class="fa-solid fa-location-dot"></i></span>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Testimonials</span>
+      <h2>Our 34,000+ Happy Travelers</h2>
+    </div>
+    <div class="testimonial-slider reveal">
+      <div class="testimonial-viewport">
+        <div class="testimonial-track">
+          <div class="testimonial-slide">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=160&q=80" alt="Traveler photo">
+            <p>"Our Bali trip was planned around exactly what we wanted — no filler days, no tourist traps. Our guide felt like a friend by day two."</p>
+            <h4>Ronald Richards</h4><span>Bali Beach Escape</span>
+          </div>
+          <div class="testimonial-slide">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&q=80" alt="Traveler photo">
+            <p>"The Kyoto tea ceremony and the ryokan night were the highlight of our year. Every detail was handled before we even thought to ask."</p>
+            <h4>Jenny Wilson</h4><span>Kyoto Cultural Journey</span>
+          </div>
+          <div class="testimonial-slide">
+            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=160&q=80" alt="Traveler photo">
+            <p>"Waking up to elephants outside our tent in the Mara is something I'll never forget. Aventra's guide knew exactly where to be, and when."</p>
+            <h4>Devon Lane</h4><span>Kenya Safari Expedition</span>
+          </div>
+        </div>
+      </div>
+      <div class="slider-row">
+        <button class="slider-arrow slider-prev" aria-label="Previous testimonial"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="slider-dots"></div>
+        <button class="slider-arrow slider-next" aria-label="Next testimonial"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="call-banner">
+  <div class="container call-banner-inner reveal">
+    <i class="fa-solid fa-phone-volume"></i>
+    <div>
+      <h3>Call us: +1 987 654 3210</h3>
+      <p>Speak with a destination specialist now — we're available every day of the week.</p>
+    </div>
+    <a href="tel:+19876543210" class="btn btn-outline-light">Call Now</a>
+  </div>
+</section>
+
+<section class="app-promo">
+  <div class="container app-promo-grid">
+    <div class="app-promo-media reveal-left">
+      <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=500&q=80" alt="Aventra Travel mobile app">
+    </div>
+    <div class="app-promo-content reveal-right">
+      <span class="section-label">On The Go</span>
+      <h2>Plan And Track Trips On The <span class="accent">Aventra</span> App</h2>
+      <p>Browse itineraries, message your guide and access your bookings offline — available for iOS and Android.</p>
+      <div class="app-badges">
+        <a href="#" class="app-badge"><i class="fa-brands fa-apple"></i><span><small>Download on the</small>App Store</span></a>
+        <a href="#" class="app-badge"><i class="fa-brands fa-google-play"></i><span><small>Get it on</small>Google Play</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="guides" id="guides">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">The People</span>
+      <h2>Meet Our Destination Guides</h2>
+    </div>
+    <div class="guides-grid">
+      <div class="guide-card reveal stagger-1">
+        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=400&q=80" alt="Guide Wayan Surya">
+        <h4>Wayan Surya</h4><span>Bali Destination Expert</span>
+        <div class="guide-social"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+      <div class="guide-card guide-card-accent reveal stagger-2">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="Guide Lena Fischer">
+        <h4>Lena Fischer</h4><span>Alpine Trek Leader</span>
+        <div class="guide-social"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+      <div class="guide-card reveal stagger-3">
+        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Guide Amara Odhiambo">
+        <h4>Amara Odhiambo</h4><span>Safari Guide &amp; Naturalist</span>
+        <div class="guide-social"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="partners">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Trusted By</span>
+      <h2>Our Travel Partners</h2>
+    </div>
+    <div class="partners-grid reveal">
+      <div class="partner-item"><i class="fa-solid fa-plane"></i><span>SkyLine Air</span></div>
+      <div class="partner-item"><i class="fa-solid fa-hotel"></i><span>Meridian Hotels</span></div>
+      <div class="partner-item"><i class="fa-solid fa-shield-halved"></i><span>TravelSafe</span></div>
+      <div class="partner-item"><i class="fa-solid fa-ship"></i><span>Oceanic Cruises</span></div>
+      <div class="partner-item"><i class="fa-solid fa-car"></i><span>RoamCar Rentals</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="plan-trip" id="contact">
+  <div class="plan-trip-bg" data-parallax style="background-image: url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1800&q=80');"></div>
+  <div class="plan-trip-overlay"></div>
+  <div class="container plan-trip-inner">
+    <div class="section-head reveal">
+      <span class="section-label section-label-light">Get In Touch</span>
+      <h2>Plan Your Trip</h2>
+    </div>
+    <div class="plan-trip-grid">
+      <form class="ask-form reveal-left" id="askForm" novalidate>
+        <div class="form-row">
+          <div class="form-group"><label for="ask-name">Full Name</label><input type="text" id="ask-name" name="name" placeholder="Your name" required></div>
+          <div class="form-group"><label for="ask-email">Email</label><input type="email" id="ask-email" name="email" placeholder="you@example.com" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="ask-phone">Phone</label><input type="tel" id="ask-phone" name="phone" placeholder="+1 (___) ___-____" required></div>
+          <div class="form-group"><label for="ask-type">Trip Type</label>
+            <select id="ask-type" name="type" required>
+              <option value="" disabled selected>Select type</option>
+              <option>Beach</option><option>Adventure</option><option>Culture</option><option>Wildlife</option><option>Custom Trip</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group"><label for="ask-message">Message</label><textarea id="ask-message" name="message" rows="4" placeholder="Tell us where you'd like to go" required></textarea></div>
+        <button type="submit" class="btn btn-primary ask-submit">Send Enquiry</button>
+        <p class="form-success" id="askSuccess" role="status" aria-live="polite" hidden><i class="fa-solid fa-circle-check"></i> Thanks! A travel specialist will reach out within 24 hours.</p>
+      </form>
+      <div class="ask-map reveal-right">
+        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=700&q=80" alt="Map view">
+        <span class="map-pin map-pin-center"><i class="fa-solid fa-location-dot"></i></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="brand">Aventra<span>Travel</span></a>
+      <p>Crafting hand-built tours and unforgettable escapes since 2014.</p>
+      <div class="footer-social"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a><a href="#packages">Packages</a><a href="#about">About</a><a href="#guides">Guides</a><a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Trip Types</h4>
+      <a href="#packages">Beach Escapes</a><a href="#packages">Adventure</a><a href="#packages">Culture</a><a href="#packages">Wildlife Safaris</a>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Contact Us</h4>
+      <p><i class="fa-solid fa-location-dot"></i> 221 Baker Street, London</p>
+      <p><i class="fa-solid fa-phone"></i> +1 987 654 3210</p>
+      <p><i class="fa-solid fa-envelope"></i> hello@aventratravel.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">&copy; 2026 Aventra Travel. All rights reserved.</div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/tours.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

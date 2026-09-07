@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title id="pageTitle">Tour — Aventra Travel</title>
+<meta name="description" content="View tour package details, itinerary, pricing and guide contact information at Aventra Travel." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/tour.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">Aventra<span>Travel</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#packages">Packages</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#guides">Guides</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:+19876543210" class="header-phone"><i class="fa-solid fa-phone"></i> +1 987 654 3210</a>
+      <a href="index.html#contact" class="btn btn-primary">Plan My Trip</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i>
+    <a href="index.html#packages">Packages</a> <i class="fa-solid fa-chevron-right"></i>
+    <span id="breadcrumbName">Tour</span>
+  </nav>
+</div>
+
+<section class="tour-detail">
+  <div class="container pd-layout">
+    <div class="pd-main" id="pdMain">
+      <!-- Populated by js/tour.js -->
+    </div>
+    <aside class="pd-sidebar">
+      <div class="guide-card-mini">
+        <img id="guideImage" src="" alt="Tour guide">
+        <div>
+          <h4 id="guideName">Guide Name</h4>
+          <span id="guideRole">Guide</span>
+          <a id="guidePhone" href="tel:+19876543210"><i class="fa-solid fa-phone"></i> +1 987 654 3210</a>
+        </div>
+      </div>
+
+      <form class="ask-form" id="askForm" novalidate>
+        <h4>Request This Trip</h4>
+        <div class="form-group"><label for="ask-name">Full Name</label><input type="text" id="ask-name" name="name" placeholder="Your name" required></div>
+        <div class="form-group"><label for="ask-email">Email</label><input type="email" id="ask-email" name="email" placeholder="you@example.com" required></div>
+        <div class="form-group"><label for="ask-phone">Phone</label><input type="tel" id="ask-phone" name="phone" placeholder="+1 (___) ___-____" required></div>
+        <div class="form-group"><label for="ask-message">Message</label><textarea id="ask-message" name="message" rows="3" placeholder="I'm interested in this trip..." required></textarea></div>
+        <button type="submit" class="btn btn-primary ask-submit btn-block">Send Enquiry</button>
+        <p class="form-success" id="askSuccess" role="status" aria-live="polite" hidden><i class="fa-solid fa-circle-check"></i> Thanks! A travel specialist will reach out within 24 hours.</p>
+      </form>
+
+      <div class="pd-cost">
+        <h4>Trip Cost Estimator</h4>
+        <div class="form-group"><label for="ccTravelers">Number of Travelers</label><input type="number" id="ccTravelers" value="2" min="1" step="1"></div>
+        <div class="form-group"><label for="ccExtras">Optional Add-ons ($)</label><input type="number" id="ccExtras" value="0" min="0" step="10"></div>
+        <div class="pd-cost-result">
+          <span>Est. Total Cost</span>
+          <strong id="ccResult">$0</strong>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="related">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Similar Trips</span>
+      <h2>You May Also Like</h2>
+    </div>
+    <div class="package-grid" id="relatedGrid"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand">Aventra<span>Travel</span></a>
+      <p>Crafting hand-built tours and unforgettable escapes since 2014.</p>
+      <div class="footer-social"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a><a href="index.html#packages">Packages</a><a href="index.html#about">About</a><a href="index.html#guides">Guides</a><a href="index.html#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Trip Types</h4>
+      <a href="index.html#packages">Beach Escapes</a><a href="index.html#packages">Adventure</a><a href="index.html#packages">Culture</a><a href="index.html#packages">Wildlife Safaris</a>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Contact Us</h4>
+      <p><i class="fa-solid fa-location-dot"></i> 221 Baker Street, London</p>
+      <p><i class="fa-solid fa-phone"></i> +1 987 654 3210</p>
+      <p><i class="fa-solid fa-envelope"></i> hello@aventratravel.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">&copy; 2026 Aventra Travel. All rights reserved.</div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/tours.js"></script>
+<script src="js/main.js"></script>
+<script src="js/tour.js"></script>
+</body>
+</html>

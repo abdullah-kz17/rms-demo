@@ -48,6 +48,17 @@
     return Math.max(distForHeight, distForWidth) * margin;
   }
 
+  // Same idea for a rectangular spread of content (a starfield or a scattered
+  // shape field) instead of a single sphere — without this, content authored to
+  // look right on a wide desktop container gets pushed outside the frustum on a
+  // narrow/tall mobile one and simply never renders.
+  function fitCameraToBox(camera, halfWidth, halfHeight, margin) {
+    const vFov = (camera.fov * Math.PI) / 180;
+    const distForHeight = halfHeight / Math.tan(vFov / 2);
+    const distForWidth = halfWidth / (Math.tan(vFov / 2) * camera.aspect);
+    return Math.max(distForHeight, distForWidth) * margin;
+  }
+
   /* ---------------- Ambient background starfield (full hero bleed) ---------------- */
   function initHeroParticles() {
     const canvas = document.getElementById('heroParticles');
@@ -57,14 +68,14 @@
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 100);
-    camera.position.z = 9;
 
+    const starHalfW = 17, starHalfH = 12;
     const starCount = 500;
     const starGeo = new THREE.BufferGeometry();
     const positions = new Float32Array(starCount * 3);
     for (let i = 0; i < starCount; i++) {
-      positions[i * 3] = (Math.random() - 0.5) * 34;
-      positions[i * 3 + 1] = (Math.random() - 0.5) * 24;
+      positions[i * 3] = (Math.random() - 0.5) * starHalfW * 2;
+      positions[i * 3 + 1] = (Math.random() - 0.5) * starHalfH * 2;
       positions[i * 3 + 2] = (Math.random() - 0.5) * 20;
     }
     starGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
@@ -72,7 +83,10 @@
     const stars = new THREE.Points(starGeo, starMat);
     scene.add(stars);
 
-    watchSize(canvas, (w, h) => applySize(renderer, camera, w, h));
+    watchSize(canvas, (w, h) => {
+      applySize(renderer, camera, w, h);
+      camera.position.z = fitCameraToBox(camera, starHalfW, starHalfH, 1.05);
+    });
 
     function render() {
       stars.rotation.y += 0.0006;
@@ -138,7 +152,7 @@
     let camZ = 6;
     watchSize(canvas, (w, h) => {
       applySize(renderer, camera, w, h);
-      camZ = fitCameraDistance(camera, 2.1, 1.55);
+      camZ = fitCameraDistance(camera, 2.7, 1.2);
       camera.position.z = camZ;
     });
 
@@ -299,8 +313,8 @@
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 100);
-    camera.position.z = 10;
 
+    const fieldHalfW = 8, fieldHalfH = 4.5;
     const group = new THREE.Group();
     const count = 16;
     const shapes = [];
@@ -309,7 +323,7 @@
       const geo = shapeType === 'octa' ? new THREE.OctahedronGeometry(size, 0) : new THREE.BoxGeometry(size, size, size);
       const mat = new THREE.MeshBasicMaterial({ color, wireframe: true, transparent: true, opacity: 0.28 + Math.random() * 0.2 });
       const mesh = new THREE.Mesh(geo, mat);
-      mesh.position.set((Math.random() - 0.5) * 16, (Math.random() - 0.5) * 9, (Math.random() - 0.5) * 8);
+      mesh.position.set((Math.random() - 0.5) * fieldHalfW * 2, (Math.random() - 0.5) * fieldHalfH * 2, (Math.random() - 0.5) * 8);
       mesh.userData.spin = { x: (Math.random() - 0.5) * 0.006, y: (Math.random() - 0.5) * 0.006 };
       mesh.userData.drift = { y: 0.15 + Math.random() * 0.2, phase: Math.random() * Math.PI * 2 };
       group.add(mesh);
@@ -317,7 +331,10 @@
     }
     scene.add(group);
 
-    watchSize(canvas, (w, h) => applySize(renderer, camera, w, h));
+    watchSize(canvas, (w, h) => {
+      applySize(renderer, camera, w, h);
+      camera.position.z = fitCameraToBox(camera, fieldHalfW, fieldHalfH, 1.15);
+    });
 
     let t = 0;
     function render() {
@@ -343,14 +360,14 @@
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
-    camera.position.z = 8;
 
+    const ctaHalfW = 11, ctaHalfH = 6;
     const count = 320;
     const geo = new THREE.BufferGeometry();
     const positions = new Float32Array(count * 3);
     for (let i = 0; i < count; i++) {
-      positions[i * 3] = (Math.random() - 0.5) * 22;
-      positions[i * 3 + 1] = (Math.random() - 0.5) * 12;
+      positions[i * 3] = (Math.random() - 0.5) * ctaHalfW * 2;
+      positions[i * 3 + 1] = (Math.random() - 0.5) * ctaHalfH * 2;
       positions[i * 3 + 2] = (Math.random() - 0.5) * 14;
     }
     geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
@@ -358,7 +375,10 @@
     const points = new THREE.Points(geo, mat);
     scene.add(points);
 
-    watchSize(canvas, (w, h) => applySize(renderer, camera, w, h));
+    watchSize(canvas, (w, h) => {
+      applySize(renderer, camera, w, h);
+      camera.position.z = fitCameraToBox(camera, ctaHalfW, ctaHalfH, 1.05);
+    });
 
     function render() {
       points.rotation.y += 0.0009;

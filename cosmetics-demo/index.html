@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rosalie — Clean Beauty, Naturally You</title>
+<meta name="description" content="Rosalie — clean, cruelty-free skincare, makeup and fragrance crafted to bring out your natural glow." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="announce-bar">
+  <div class="announce-track">
+    <span><i class="fa-solid fa-truck-fast"></i> Free shipping on orders over $50</span>
+    <span><i class="fa-solid fa-leaf"></i> 100% cruelty-free & vegan</span>
+    <span><i class="fa-solid fa-gift"></i> Free gift on orders over $75</span>
+    <span><i class="fa-solid fa-truck-fast"></i> Free shipping on orders over $50</span>
+    <span><i class="fa-solid fa-leaf"></i> 100% cruelty-free & vegan</span>
+    <span><i class="fa-solid fa-gift"></i> Free gift on orders over $75</span>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="brand">Rosalie</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" aria-expanded="false">Categories <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="nav-dropdown-menu">
+          <a href="#shop-category">Skincare</a>
+          <a href="#shop-category">Makeup</a>
+          <a href="#shop-category">Haircare</a>
+          <a href="#shop-category">Fragrance</a>
+          <a href="#shop-category">Bath &amp; Body</a>
+        </div>
+      </div>
+      <a href="#deals">Deals</a>
+      <a href="#brand-story">About</a>
+      <a href="#footer">Contact</a>
+    </nav>
+    <div class="header-search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Search products..." aria-label="Search products">
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Account"><i class="fa-regular fa-user"></i></button>
+      <button class="icon-btn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+      <button class="icon-btn cart-btn" id="cartBtn" aria-label="Cart"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count" id="cartCount">0</span></button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-content reveal">
+      <span class="section-label">New Collection</span>
+      <h1>Clean Beauty, <em>Naturally You</em></h1>
+      <p>Skincare, makeup and fragrance made with clean ingredients you can actually pronounce — formulated to enhance, never mask, your natural glow.</p>
+      <div class="hero-actions">
+        <a href="#featured" class="btn btn-primary">Shop Now</a>
+        <a href="#shop-category" class="btn btn-outline">Browse Categories</a>
+      </div>
+    </div>
+    <div class="hero-media reveal-right">
+      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80" alt="Rosalie beauty products flatlay">
+      <div class="hero-badge"><strong>25%</strong><span>Off Skincare</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="shop-category" id="shop-category">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Explore</span>
+      <h2>Shop By Category</h2>
+    </div>
+    <div class="category-grid">
+      <a href="#featured" class="category-card reveal stagger-1"><span class="category-card-media"><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=400&q=80" alt="Skincare"></span><span>Skincare</span></a>
+      <a href="#featured" class="category-card reveal stagger-2"><span class="category-card-media"><img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=400&q=80" alt="Makeup"></span><span>Makeup</span></a>
+      <a href="#featured" class="category-card reveal stagger-3"><span class="category-card-media"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=400&q=80" alt="Haircare"></span><span>Haircare</span></a>
+      <a href="#featured" class="category-card reveal stagger-4"><span class="category-card-media"><img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=400&q=80" alt="Fragrance"></span><span>Fragrance</span></a>
+      <a href="#featured" class="category-card reveal stagger-1"><span class="category-card-media"><img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=400&q=80" alt="Bath and Body"></span><span>Bath &amp; Body</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="products-section" id="featured">
+  <div class="container">
+    <div class="section-head-row reveal">
+      <div><span class="section-label">Handpicked</span><h2>Featured Products</h2></div>
+    </div>
+    <div class="product-grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<section class="products-section bg-tint" id="new-arrivals">
+  <div class="container">
+    <div class="section-head-row reveal">
+      <div><span class="section-label">Just Landed</span><h2>New Arrivals</h2></div>
+    </div>
+    <div class="product-grid" id="newArrivalsGrid"></div>
+  </div>
+</section>
+
+<section class="products-section" id="best-sellers">
+  <div class="container">
+    <div class="section-head-row reveal">
+      <div><span class="section-label">Customer Favourites</span><h2>Best Sellers</h2></div>
+    </div>
+    <div class="product-grid" id="bestSellersGrid"></div>
+  </div>
+</section>
+
+<section class="deals" id="deals">
+  <div class="deals-bg" data-parallax style="background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1800&q=80');"></div>
+  <div class="deals-overlay"></div>
+  <div class="container deals-inner">
+    <div class="deals-head reveal">
+      <span class="section-label section-label-light">Flash Sale</span>
+      <h2>Special Offers End In</h2>
+      <div class="countdown" id="countdown">
+        <div><span id="cdHours">00</span><small>Hours</small></div>
+        <div><span id="cdMinutes">00</span><small>Minutes</small></div>
+        <div><span id="cdSeconds">00</span><small>Seconds</small></div>
+      </div>
+    </div>
+    <div class="product-grid product-grid-light" id="dealsGrid"></div>
+  </div>
+</section>
+
+<section class="collection">
+  <div class="container collection-grid">
+    <div class="collection-media reveal-left">
+      <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=800&q=80" alt="Rosalie Bloom Collection">
+    </div>
+    <div class="collection-content reveal-right">
+      <span class="section-label">Featured Collection</span>
+      <h2>The Bloom Edit</h2>
+      <p>A curated capsule of six essentials built around soft florals and clean actives — a simple routine that does more with less. Fewer, better products.</p>
+      <a href="#featured" class="btn btn-primary">Shop The Edit</a>
+    </div>
+  </div>
+</section>
+
+<section class="brand-story" id="brand-story">
+  <div class="container brand-story-grid">
+    <div class="brand-story-content reveal-left">
+      <span class="section-label">Our Story</span>
+      <h2>Beauty That's Honest With Your Skin</h2>
+      <p>Rosalie started in 2019 with a simple frustration: ingredient lists we couldn't read and promises brands couldn't keep. We work with small-batch labs, test every formula on real skin, and never dilute a product to hit a price point.</p>
+      <div class="brand-stats">
+        <div><strong>85k+</strong><span>Happy Customers</span></div>
+        <div><strong>4.7/5</strong><span>Average Rating</span></div>
+        <div><strong>6</strong><span>Years In Business</span></div>
+      </div>
+    </div>
+    <div class="brand-story-media reveal-right">
+      <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?auto=format&fit=crop&w=700&q=80" alt="Rosalie product craftsmanship">
+    </div>
+  </div>
+</section>
+
+<section class="ingredients">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Our Promise</span>
+      <h2>Clean, Conscious, Cruelty-Free</h2>
+    </div>
+    <div class="ingredients-grid">
+      <div class="ingredient-item reveal stagger-1"><i class="fa-solid fa-leaf"></i><h4>Clean Ingredients</h4><p>No parabens, sulfates or phthalates, ever.</p></div>
+      <div class="ingredient-item reveal stagger-2"><i class="fa-solid fa-paw"></i><h4>Cruelty-Free</h4><p>Never tested on animals, always Leaping Bunny certified.</p></div>
+      <div class="ingredient-item reveal stagger-3"><i class="fa-solid fa-recycle"></i><h4>Sustainable Packaging</h4><p>Recyclable glass and refillable containers.</p></div>
+      <div class="ingredient-item reveal stagger-4"><i class="fa-solid fa-user-doctor"></i><h4>Dermatologist Tested</h4><p>Every formula tested for sensitive skin.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Customer Love</span>
+      <h2>What Our Customers Are Saying</h2>
+    </div>
+    <div class="review-grid">
+      <div class="review-card reveal stagger-1">
+        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"The rosewater serum genuinely changed my skin in two weeks. My redness is down and my makeup sits so much better now."</p>
+        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=200&q=80" alt="Customer photo of serum" class="review-photo">
+        <div class="review-author"><strong>Sophie Bennett</strong><span>Verified Buyer</span></div>
+      </div>
+      <div class="review-card reveal stagger-2">
+        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+        <p>"That matte lipstick lasted through an entire wedding, food and all. Rosewood is now permanently in my bag."</p>
+        <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=200&q=80" alt="Customer photo of lipstick" class="review-photo">
+        <div class="review-author"><strong>Maya Torres</strong><span>Verified Buyer</span></div>
+      </div>
+      <div class="review-card reveal stagger-3">
+        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"The body butter smells incredible and actually absorbs — no greasy residue on my sheets for once. Repurchasing already."</p>
+        <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=200&q=80" alt="Customer photo of body butter" class="review-photo">
+        <div class="review-author"><strong>Isabelle Cho</strong><span>Verified Buyer</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="container trust-grid">
+    <div class="trust-item reveal stagger-1"><i class="fa-solid fa-truck-fast"></i><h4>Free Shipping</h4><p>On all orders over $50</p></div>
+    <div class="trust-item reveal stagger-2"><i class="fa-solid fa-rotate-left"></i><h4>Easy Returns</h4><p>30-day hassle-free returns</p></div>
+    <div class="trust-item reveal stagger-3"><i class="fa-solid fa-lock"></i><h4>Secure Payment</h4><p>100% encrypted checkout</p></div>
+    <div class="trust-item reveal stagger-4"><i class="fa-solid fa-headset"></i><h4>24/7 Support</h4><p>Real humans, real fast</p></div>
+  </div>
+</section>
+
+<section class="newsletter-cta">
+  <div class="container newsletter-cta-inner reveal">
+    <span class="section-label section-label-light">Join The List</span>
+    <h2>Get 15% Off Your First Order</h2>
+    <p>Subscribe for early access to new launches, restocks and subscriber-only discounts.</p>
+    <form class="cta-form" id="ctaNewsletter">
+      <input type="email" placeholder="Enter your email" required aria-label="Email address">
+      <button type="submit" class="btn btn-primary">Get My Code</button>
+    </form>
+    <p class="form-success" id="ctaSuccess" role="status" aria-live="polite" hidden><i class="fa-solid fa-circle-check"></i> Check your inbox — your code is on its way.</p>
+  </div>
+</section>
+
+<section class="social">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Tag Us</span>
+      <h2>@Rosalie On Instagram</h2>
+    </div>
+    <div class="social-grid reveal">
+      <a href="#" class="social-item"><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=300&q=80" alt="Instagram post"><span><i class="fa-brands fa-instagram"></i></span></a>
+      <a href="#" class="social-item"><img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=300&q=80" alt="Instagram post"><span><i class="fa-brands fa-instagram"></i></span></a>
+      <a href="#" class="social-item"><img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=300&q=80" alt="Instagram post"><span><i class="fa-brands fa-instagram"></i></span></a>
+      <a href="#" class="social-item"><img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=300&q=80" alt="Instagram post"><span><i class="fa-brands fa-instagram"></i></span></a>
+      <a href="#" class="social-item"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=300&q=80" alt="Instagram post"><span><i class="fa-brands fa-instagram"></i></span></a>
+      <a href="#" class="social-item"><img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=300&q=80" alt="Instagram post"><span><i class="fa-brands fa-instagram"></i></span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" id="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand">Rosalie</a>
+      <p>Clean, cruelty-free skincare, makeup and fragrance since 2019.</p>
+      <div class="footer-social"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-tiktok"></i></a><a href="#"><i class="fa-brands fa-pinterest"></i></a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="#shop-category">Skincare</a><a href="#shop-category">Makeup</a><a href="#shop-category">Haircare</a><a href="#shop-category">Fragrance</a><a href="#shop-category">Bath &amp; Body</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="#brand-story">About</a><a href="#footer">Contact</a><a href="#">FAQ</a><a href="#">Shipping &amp; Returns</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>We Accept</h4>
+      <div class="payment-icons">
+        <i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i><i class="fa-brands fa-cc-paypal"></i><i class="fa-brands fa-apple-pay"></i>
+      </div>
+      <p><i class="fa-solid fa-envelope"></i> hello@rosaliebeauty.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>&copy; 2026 Rosalie. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

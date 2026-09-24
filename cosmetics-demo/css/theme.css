@@ -1,0 +1,32 @@
+:root {
+  --color-accent: #c98a9c;
+  --color-accent-dark: #a96b7d;
+  --color-sale: #c1544a;
+  --color-dark: #2b1f24;
+  --color-dark-2: #362830;
+  --color-cream: #fdf5f2;
+  --color-white: #ffffff;
+  --color-text: #6e5c62;
+  --color-text-light: #a39195;
+  --color-border: #f0dfe0;
+
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Poppins', sans-serif;
+
+  --ease-standard: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 0.25s;
+  --duration-base: 0.5s;
+  --duration-slow: 0.9s;
+  --reveal-distance: 32px;
+
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+
+  --shadow-card: 0 10px 30px rgba(43, 31, 36, 0.08);
+  --shadow-card-hover: 0 20px 45px rgba(43, 31, 36, 0.16);
+  --shadow-image: 0 25px 60px rgba(43, 31, 36, 0.2);
+
+  --container-width: 1240px;
+}

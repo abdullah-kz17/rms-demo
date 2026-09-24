@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Pixelync — Request A Quote</title>
+<meta name="description" content="Get in touch with Pixelync. Request a quote or ask a question — a consultant replies within one business day." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><img src="images/logo-icon.svg" alt="Pixelync" class="brand-mark">Pixelync</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#industries">Industries</a>
+      <a href="index.html#blog">Blog</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="contact.html" class="btn btn-primary">Get Started</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<section class="project-hero-header">
+  <div class="page-header-mesh"></div>
+  <div class="container">
+    <div class="breadcrumb reveal">
+      <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size:0.65rem"></i>
+      <span>Contact</span>
+    </div>
+    <span class="section-label reveal">Get In Touch</span>
+    <h1 class="reveal">Let's Talk About Your Project</h1>
+    <p class="reveal">Fill out the form below or reach us directly — a consultant will follow up within one business day.</p>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container contact-grid">
+    <div class="contact-info reveal-left">
+      <span class="section-label">Get In Touch</span>
+      <h2>Request A Quote</h2>
+      <p>Fill out the form and a solutions consultant will follow up within one business day — or reach us directly below.</p>
+      <div class="contact-details">
+        <div><i class="fa-solid fa-phone"></i><div><strong>Call Us</strong><span>+92 346 0219660</span></div></div>
+        <div><i class="fa-solid fa-envelope"></i><div><strong>Email Us</strong><span>info.pixelync@gmail.com</span></div></div>
+        <div><i class="fa-solid fa-location-dot"></i><div><strong>Visit Us</strong><span>Lahore, Pakistan</span></div></div>
+      </div>
+      <div class="contact-map">
+        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=700&q=80" alt="Map to Pixelync office">
+        <span class="map-pin-center"><i class="fa-solid fa-location-dot"></i></span>
+      </div>
+    </div>
+    <form class="contact-form reveal-right" id="contactForm" novalidate>
+      <input type="text" name="company_website" id="c-honeypot" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="form-row">
+        <div class="form-group icon-field">
+          <label for="c-name">Full Name</label>
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="c-name" name="name" placeholder="Your name" required>
+          <span class="field-error">Please enter your name.</span>
+        </div>
+        <div class="form-group icon-field">
+          <label for="c-email">Work Email</label>
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" id="c-email" name="email" placeholder="you@company.com" required>
+          <span class="field-error">Please enter a valid email.</span>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group icon-field">
+          <label for="c-phone">Phone / WhatsApp</label>
+          <i class="fa-solid fa-phone"></i>
+          <input type="tel" id="c-phone" name="phone" placeholder="+92 300 1234567">
+        </div>
+        <div class="form-group icon-field">
+          <label for="c-company">Company</label>
+          <i class="fa-solid fa-building"></i>
+          <input type="text" id="c-company" name="company" placeholder="Company name" required>
+          <span class="field-error">Please enter your company name.</span>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="c-service">Service Needed</label>
+          <select id="c-service" name="service" required>
+            <option value="" disabled selected>Select a service</option>
+            <option>Web &amp; App Development</option><option>Cloud &amp; DevOps</option><option>Data &amp; AI</option><option>Mobile App Development</option><option>UI/UX Design</option><option>IT Consulting</option>
+          </select>
+          <span class="field-error">Please select a service.</span>
+        </div>
+        <div class="form-group">
+          <label for="c-budget">Estimated Budget</label>
+          <select id="c-budget" name="budget">
+            <option value="" disabled selected>Select a range</option>
+            <option>Under $5,000</option><option>$5,000 – $15,000</option><option>$15,000 – $50,000</option><option>$50,000+</option><option>Not Sure Yet</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Preferred Contact Method</label>
+        <div class="radio-pills">
+          <label class="radio-pill"><input type="radio" name="contact_method" value="Email" checked><span>Email</span></label>
+          <label class="radio-pill"><input type="radio" name="contact_method" value="Phone"><span>Phone Call</span></label>
+          <label class="radio-pill"><input type="radio" name="contact_method" value="WhatsApp"><span>WhatsApp</span></label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="c-message">Project Details</label>
+        <textarea id="c-message" name="message" rows="4" maxlength="600" placeholder="Tell us about your project..." required></textarea>
+        <div class="char-count"><span id="c-message-count">0</span>/600</div>
+        <span class="field-error">Please tell us a bit about your project.</span>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block contact-submit">Request A Quote</button>
+      <p class="form-privacy-note"><i class="fa-solid fa-lock"></i> Your information stays private and is never shared with third parties.</p>
+      <div class="form-success" id="contactSuccess" role="status" aria-live="polite" hidden>
+        <i class="fa-solid fa-circle-check"></i>
+        <div><strong>Thanks — your message is in!</strong><span>A consultant will reach out within one business day.</span></div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Questions</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">How much does a typical project cost? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>Most engagements range from $5k for a focused MVP to $50k+ for multi-month platform builds. We scope every project individually after a free discovery call.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">How long does it take to get started? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>We can typically kick off discovery within a week of your first call, and have a scoped proposal back to you within two weeks after that.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">Do you offer ongoing support after launch? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>Yes — every project includes a support retainer option with the same engineers who built it, not a separate support desk.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" id="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand"><img src="images/logo-icon.svg" alt="Pixelync" class="brand-mark">Pixelync</a>
+      <p>Digital solutions for growing businesses — software, cloud, data and design, delivered by senior teams who stay.</p>
+      <div class="footer-social"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-github"></i></a><a href="#"><i class="fa-brands fa-dribbble"></i></a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="index.html#services">Web &amp; App Development</a><a href="index.html#services">Cloud &amp; DevOps</a><a href="index.html#services">Data &amp; AI</a><a href="index.html#services">Mobile App Development</a><a href="index.html#services">UI/UX Design</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About</a><a href="projects/index.html">Projects</a><a href="about.html#team">Team</a><a href="index.html#blog">Blog</a><a href="contact.html">Careers</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="index.html#blog">Blog</a><a href="index.html#blog">Guides</a><a href="index.html#blog">Whitepapers</a><a href="contact.html#faq">FAQ</a>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Contact</h4>
+      <p><i class="fa-solid fa-location-dot"></i> Lahore, Pakistan</p>
+      <p><i class="fa-solid fa-phone"></i> +92 346 0219660</p>
+      <p><i class="fa-solid fa-envelope"></i> info.pixelync@gmail.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>&copy; 2026 Pixelync Digital Solutions Inc. All rights reserved.</span>
+      <div class="footer-legal"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html">Terms &amp; Conditions</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

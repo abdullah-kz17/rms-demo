@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TableWise — Restaurant Booking App Case Study | Pixelync</title>
+<meta name="description" content="How Pixelync built TableWise, a cross-platform reservation and table management app for independent restaurants." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" type="image/svg+xml" href="../images/logo-icon.svg">
+<link rel="stylesheet" href="../css/theme.css">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="../index.html" class="brand"><img src="../images/logo-icon.svg" alt="Pixelync" class="brand-mark">Pixelync</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../index.html#services">Services</a>
+      <a href="index.html" class="active">Projects</a>
+      <a href="../index.html#industries">Industries</a>
+      <a href="../index.html#blog">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="../contact.html" class="btn btn-primary">Get Started</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<section class="project-hero-header">
+  <div class="page-header-mesh"></div>
+  <div class="container">
+    <div class="breadcrumb reveal">
+      <a href="../index.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size:0.65rem"></i>
+      <a href="index.html">Projects</a> <i class="fa-solid fa-chevron-right" style="font-size:0.65rem"></i>
+      <span>TableWise</span>
+    </div>
+    <span class="section-label reveal">Mobile App</span>
+    <h1 class="reveal">TableWise — A Reservation App Built For Independent Restaurants</h1>
+    <p class="reveal">Pixelync designed and built TableWise, a cross-platform booking and table management app that helps independent restaurants replace spreadsheets and phone-only reservations.</p>
+    <div class="project-meta-row reveal">
+      <div><span>Client</span><strong>TableWise Hospitality</strong></div>
+      <div><span>Industry</span><strong>Restaurants / Hospitality</strong></div>
+      <div><span>Timeline</span><strong>10 Weeks</strong></div>
+      <div><span>Services</span><strong>Mobile Dev, UI/UX</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="project-cover">
+  <div class="container">
+    <img class="reveal" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80" alt="TableWise restaurant booking app cover image">
+  </div>
+</section>
+
+<section class="overview">
+  <div class="container overview-grid">
+    <div class="overview-content reveal-left">
+      <h2>The Challenge</h2>
+      <p>TableWise's founding restaurant group managed reservations across a shared spreadsheet and a landline, which meant double-bookings during peak hours and no visibility into table turnover across their three locations.</p>
+      <ul>
+        <li>Double-bookings during Friday and Saturday peak service</li>
+        <li>No shared visibility across the group's three locations</li>
+        <li>Guests had no way to book or manage reservations online</li>
+      </ul>
+      <h2>The Solution</h2>
+      <p>We built a cross-platform app in Flutter for hosts and a lightweight web widget for guest-facing bookings, backed by Firebase for real-time table state. Stripe handles optional deposit collection for large parties.</p>
+      <ul>
+        <li>Real-time table availability shared across all locations</li>
+        <li>Guest-facing booking widget embeddable on any website</li>
+        <li>Automated SMS confirmations and reminders</li>
+        <li>Deposit collection for parties of six or more</li>
+      </ul>
+      <h2>The Outcome</h2>
+      <p>Within the first month, TableWise eliminated double-bookings entirely across all three locations and cut no-shows meaningfully thanks to automated reminders — freeing host staff to focus on the floor instead of the phone.</p>
+    </div>
+    <aside class="sidebar-card reveal-right">
+      <h4>Project Snapshot</h4>
+      <div class="fact-row"><span>Client</span><span>TableWise Hospitality</span></div>
+      <div class="fact-row"><span>Industry</span><span>Hospitality</span></div>
+      <div class="fact-row"><span>Timeline</span><span>10 Weeks</span></div>
+      <div class="fact-row"><span>Team Size</span><span>2 Engineers</span></div>
+      <div class="fact-row"><span>Launch</span><span>2025</span></div>
+      <h4 style="margin-top:24px;">Tech Stack</h4>
+      <div class="sidebar-stack">
+        <span>Flutter</span><span>Firebase</span><span>Stripe</span><span>Twilio</span>
+      </div>
+      <a href="../contact.html" class="btn btn-primary btn-block">Start A Similar Project</a>
+    </aside>
+  </div>
+</section>
+
+<section class="project-gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Gallery</span>
+      <h2>A Closer Look</h2>
+    </div>
+    <div class="gallery-grid">
+      <img class="reveal" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="TableWise host dashboard on tablet">
+      <img class="reveal" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="TableWise guest booking screen">
+    </div>
+  </div>
+</section>
+
+<section class="project-results">
+  <div class="container stats-grid">
+    <div class="stat-item reveal stagger-1"><i class="fa-solid fa-calendar-check"></i><div class="stat-number">100</div><div class="stat-label">% Of Double-Bookings Eliminated</div></div>
+    <div class="stat-item reveal stagger-2"><i class="fa-solid fa-bell"></i><div class="stat-number">38</div><div class="stat-label">% Fewer No-Shows</div></div>
+    <div class="stat-item reveal stagger-3"><i class="fa-solid fa-store"></i><div class="stat-number">3</div><div class="stat-label">Locations Live On Launch Day</div></div>
+    </div>
+</section>
+
+<section class="project-quote">
+  <div class="container">
+    <blockquote class="reveal">Our host staff finally trust the system. We haven't touched the old spreadsheet since the week TableWise launched.</blockquote>
+    <div class="project-quote-author reveal">
+      <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=160&q=80" alt="TableWise client photo">
+      <div><h4>Bilal Ahmed</h4><span>Operations Lead, TableWise Hospitality</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="project-nav-strip">
+  <div class="container project-nav-links">
+    <a href="urbancart-ecommerce.html" class="project-nav-link"><i class="fa-solid fa-arrow-left"></i><div><span>Previous</span><strong>UrbanCart</strong></div></a>
+    <a href="index.html" class="project-nav-all">All Projects</a>
+    <a href="ledgerly-invoicing.html" class="project-nav-link next"><i class="fa-solid fa-arrow-right"></i><div><span>Next</span><strong>Ledgerly</strong></div></a>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="cta-banner-bg" data-parallax style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=80');"></div>
+  <div class="cta-banner-overlay"></div>
+  <div class="container cta-banner-inner reveal">
+    <span class="section-label section-label-light">Let's Work Together</span>
+    <h2>Have A Similar Project In Mind?</h2>
+    <p>Tell us about your project and we'll get back to you within one business day with next steps.</p>
+    <a href="../contact.html" class="btn btn-primary">Book A Consultation</a>
+  </div>
+</section>
+
+<footer class="site-footer" id="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="brand"><img src="../images/logo-icon.svg" alt="Pixelync" class="brand-mark">Pixelync</a>
+      <p>Digital solutions for growing businesses — software, cloud, data and design, delivered by senior teams who stay.</p>
+      <div class="footer-social"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-github"></i></a><a href="#"><i class="fa-brands fa-dribbble"></i></a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="../index.html#services">Web &amp; App Development</a><a href="../index.html#services">Cloud &amp; DevOps</a><a href="../index.html#services">Data &amp; AI</a><a href="../index.html#services">Mobile App Development</a><a href="../index.html#services">UI/UX Design</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="../about.html">About</a><a href="index.html">Projects</a><a href="../about.html#team">Team</a><a href="../index.html#blog">Blog</a><a href="../contact.html">Careers</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="../index.html#blog">Blog</a><a href="../index.html#blog">Guides</a><a href="../index.html#blog">Whitepapers</a><a href="../contact.html#faq">FAQ</a>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Contact</h4>
+      <p><i class="fa-solid fa-location-dot"></i> Lahore, Pakistan</p>
+      <p><i class="fa-solid fa-phone"></i> +92 346 0219660</p>
+      <p><i class="fa-solid fa-envelope"></i> info.pixelync@gmail.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>&copy; 2026 Pixelync Digital Solutions Inc. All rights reserved.</span>
+      <div class="footer-legal"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-service.html">Terms &amp; Conditions</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,14 +1,18 @@
 :root {
-  --color-accent: #4f46e5;
-  --color-accent-dark: #4338ca;
-  --color-teal: #f59e0b;
-  --color-dark: #0d1526;
-  --color-dark-2: #141d33;
-  --color-cream: #f5f7fb;
+  --color-accent: #2563eb;
+  --color-accent-dark: #1d4ed8;
+  --color-accent-light: #60a5fa;
+  --color-teal: #0ea5e9;
+  --color-dark: #0b1220;
+  --color-dark-2: #111a2e;
+  --color-cream: #f4f7fd;
   --color-white: #ffffff;
-  --color-text: #5b6478;
-  --color-text-light: #939cb0;
-  --color-border: #e7eaf2;
+  --color-text: #55607a;
+  --color-text-light: #8b94ac;
+  --color-border: #e4e9f5;
+
+  --gradient-brand: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  --gradient-brand-hover: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
 
   --font-heading: 'Manrope', sans-serif;
   --font-body: 'Inter', sans-serif;

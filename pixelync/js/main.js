@@ -23,6 +23,7 @@ backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 's
 const parallaxEls = document.querySelectorAll('[data-parallax]');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const footerEl = document.querySelector('.site-footer');
+const siteHeader = document.getElementById('siteHeader');
 let ticking = false;
 
 function dockBackToTopAboveFooter() {
@@ -41,6 +42,7 @@ function dockBackToTopAboveFooter() {
 
 function onScroll() {
   backToTop.classList.toggle('visible', window.scrollY > 500);
+  siteHeader.classList.toggle('is-scrolled', window.scrollY > 12);
   dockBackToTopAboveFooter();
   if (!prefersReducedMotion) {
     parallaxEls.forEach((el) => {

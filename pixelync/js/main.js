@@ -1,3 +1,8 @@
+// Scroll progress bar
+const scrollProgress = document.createElement('div');
+scrollProgress.className = 'scroll-progress';
+document.body.appendChild(scrollProgress);
+
 // Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
@@ -44,6 +49,8 @@ function onScroll() {
   backToTop.classList.toggle('visible', window.scrollY > 500);
   siteHeader.classList.toggle('is-scrolled', window.scrollY > 12);
   dockBackToTopAboveFooter();
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  scrollProgress.style.width = `${docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0}%`;
   if (!prefersReducedMotion) {
     parallaxEls.forEach((el) => {
       const parent = el.parentElement;
@@ -240,7 +247,7 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && !window.m
     btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
   });
 
-  document.querySelectorAll('.service-card').forEach((card) => {
+  document.querySelectorAll('.service-card, .project-card').forEach((card) => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width - 0.5;

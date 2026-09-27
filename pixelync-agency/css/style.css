@@ -325,10 +325,6 @@ p { color: var(--muted); }
   transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
 .process-step:hover { transform: translate(-3px,-3px); box-shadow: 8px 9px 0 rgba(28,28,51,0.85); }
-.process-step:not(:last-child)::after {
-  content: '\f105'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: var(--ink); opacity: 0.3;
-  position: absolute; top: 50%; right: -26px; transform: translateY(-50%); font-size: 1.1rem; z-index: 2;
-}
 .process-num {
   position: absolute; top: -16px; left: 50%; transform: translateX(-50%) rotate(-3deg);
   width: 34px; height: 34px; border-radius: 8px; background: var(--orange); color: var(--ink); border: 1.5px solid var(--ink);
@@ -471,7 +467,6 @@ p { color: var(--muted); }
   .work-grid-3, .testimonial-row, .team-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
   .stats-grid { grid-template-columns: 1fr 1fr; gap: 34px; }
   .process-steps { grid-template-columns: 1fr; gap: 36px; max-width: 360px; margin: 0 auto; }
-  .process-step:not(:last-child)::after { content: '\f107'; top: auto; right: 50%; bottom: -30px; left: auto; transform: translateX(50%); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 480px) {
